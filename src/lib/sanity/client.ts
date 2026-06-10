@@ -1,11 +1,9 @@
 import { createClient, type SanityClient } from '@sanity/client';
-import { env } from '$env/dynamic/public';
+import { projectId, dataset } from './config';
 
-/* Without a projectId the site runs on local fixtures (kickoff fallback) —
- * queries.ts switches on `client` being null, nothing else needs to know. */
-export const projectId = env.PUBLIC_SANITY_PROJECT_ID || undefined;
-export const dataset = env.PUBLIC_SANITY_DATASET || 'production';
-
+/* Server-side only (queries run in load functions at build time) — keeping
+ * @sanity/client out of the browser bundle is a first-load JS budget rule.
+ * queries.ts switches to fixtures when this is null. */
 export const client: SanityClient | null = projectId
 	? createClient({
 			projectId,

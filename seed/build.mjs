@@ -45,6 +45,9 @@ const ndjsonDocs = [
 		descriptors: w.descriptors,
 		standfirst: w.standfirst,
 		cover: assetImage(w.cover),
+		...(w.coverLoop
+			? { coverLoop: { _type: 'file', _sanityAsset: `file@file://./images/${w.coverLoop.file}` } }
+			: {}),
 		hero:
 			w.hero?.kind === 'embed'
 				? { kind: 'embed', embedUrl: w.hero.embedUrl, poster: assetImage(w.hero.poster) }
@@ -121,7 +124,10 @@ const fixtureImg = (img) => {
 		height: m.height,
 		alt: img.alt,
 		...(img.caption ? { caption: img.caption } : {}),
-		lqip: m.lqip
+		lqip: m.lqip,
+		...(m.variants?.length
+			? { variants: m.variants.map((v) => ({ url: `/seed/${v.file}`, width: v.width })) }
+			: {})
 	};
 };
 
@@ -139,6 +145,7 @@ const fixtures = {
 		tags: [w.medium, ...w.descriptors],
 		standfirst: w.standfirst,
 		cover: fixtureImg(w.cover),
+		...(w.coverLoop ? { coverLoop: { url: `/seed/${w.coverLoop.file}` } } : {}),
 		hero:
 			w.hero?.kind === 'embed'
 				? { kind: 'embed', embedUrl: w.hero.embedUrl, poster: fixtureImg(w.hero.poster) }

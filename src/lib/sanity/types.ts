@@ -14,6 +14,9 @@ export type Img = {
 	/** tiny base64 preview rendered behind the real image */
 	lqip?: string;
 	sanityRef?: string;
+	/** fixture mode only: pre-generated width variants standing in for the
+	 * CDN's on-the-fly resizes, so srcset behavior matches live mode */
+	variants?: { url: string; width: number }[];
 };
 
 /** One paragraph-level block of portable text, reduced to what the site
@@ -27,6 +30,13 @@ export type Block =
 	| { kind: 'image'; image: Img };
 
 export type Credit = { role: string; names: string[] };
+
+/** The slice of a work the Deck serializes into the homepage payload —
+ * card anatomy only, so galleries and article bodies never ship there. */
+export type WorkCard = Pick<
+	Work,
+	'title' | 'slug' | 'year' | 'tags' | 'cover' | 'coverLoop'
+>;
 
 export type Work = {
 	title: string;

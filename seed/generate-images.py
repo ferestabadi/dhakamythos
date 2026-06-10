@@ -99,6 +99,10 @@ SPECS = [
     ('scrap-8.jpg', 800, 1000, 'magenta', 108),
 ]
 
+# widths mirror the CDN srcset ladders in src/lib/sanity/image.ts; fixture
+# mode serves these so srcset behavior (and perf) matches live mode
+VARIANT_WIDTHS = [256, 480, 512, 768, 1080]
+
 OUT.mkdir(parents=True, exist_ok=True)
 STATIC.mkdir(parents=True, exist_ok=True)
 manifest = {}
@@ -106,8 +110,18 @@ for name, w, h, pal, seed in SPECS:
     img = compose(w, h, PALETTES[pal], seed)
     img.save(OUT / name, 'JPEG', quality=80, optimize=True)
     img.save(STATIC / name, 'JPEG', quality=80, optimize=True)
-    manifest[name] = {'width': w, 'height': h, 'lqip': lqip(img)}
-    print(f'{name}  {(OUT / name).stat().st_size // 1024}KB')
+    # variants ship as WebP to mirror the CDN's auto(format) delivery
+    variants = []
+    stem = name.rsplit('.', 1)[0]
+    for vw in VARIANT_WIDTHS:
+        if vw >= w:
+            continue
+        vimg = img.resize((vw, round(h * vw / w)), Image.LANCZOS)
+        vname = f'{stem}-{vw}w.webp'
+        vimg.save(STATIC / vname, 'WEBP', quality=72, method=6)
+        variants.append({'file': vname, 'width': vw})
+    manifest[name] = {'width': w, 'height': h, 'lqip': lqip(img), 'variants': variants}
+    print(f'{name}  {(OUT / name).stat().st_size // 1024}KB (+{len(variants)} variants)')
 
 MANIFEST.write_text(json.dumps(manifest, indent='\t') + '\n')
 print(f'manifest → {MANIFEST}')

@@ -9,7 +9,11 @@ const here = dirname(fileURLToPath(import.meta.url));
 const fixtures = JSON.parse(readFileSync(join(here, '../src/lib/sanity/fixtures-data.json'), 'utf8'));
 const ndjson = readFileSync(join(here, 'production.ndjson'), 'utf8').trim().split('\n').map(JSON.parse);
 
-const RESERVED = ['index', 'archive', 'collective', 'open-calls', 'legal'];
+/* the schema is the canonical reserved-slug list — read it, don't copy it */
+const schemaSrc = readFileSync(join(here, '../studio/schemaTypes/index.ts'), 'utf8');
+const RESERVED = JSON.parse(
+	schemaSrc.match(/RESERVED_SLUGS = (\[[^\]]*\])/)[1].replace(/'/g, '"')
+);
 const MEDIUMS = ['Text', 'Photo', 'Video', 'Interactive', 'Mixed'];
 const failures = [];
 const check = (ok, msg) => ok || failures.push(msg);

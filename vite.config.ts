@@ -15,6 +15,10 @@ export default defineConfig({
 
 			adapter: adapter(),
 
+			// site CSS is small — inlining it removes the render-blocking
+			// stylesheet round-trip from the LCP critical path on 4G
+			inlineStyleThreshold: 24576,
+
 			prerender: {
 				// the crawler folds the /index href into the already-visited /,
 				// so the Index view must be an explicit entry

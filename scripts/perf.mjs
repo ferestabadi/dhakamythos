@@ -16,6 +16,8 @@ import { homedir } from 'node:os';
 const args = process.argv.slice(2);
 const skipBuild = args.includes('--no-build');
 const path = (args.find((a) => a.startsWith('--path=')) ?? '--path=/').slice('--path='.length);
+// lab numbers are noisy on a busy machine — gate on the median of N runs
+const runs = Number((args.find((a) => a.startsWith('--runs=')) ?? '--runs=1').slice('--runs='.length));
 const PORT = 4173;
 const URL = `http://localhost:${PORT}${path}`;
 
@@ -41,18 +43,21 @@ preview.on('error', (err) => {
 try {
 	await waitForServer(URL);
 	mkdirSync('reports', { recursive: true });
-	execSync(
-		`npx lighthouse ${URL} --only-categories=performance ` +
-			`--output=json --output=html --output-path=reports/lighthouse ` +
-			`--chrome-flags="--headless=new" --quiet`,
-		{ stdio: 'inherit', env: { ...process.env, CHROME_PATH: chromePath() } }
-	);
+	const reports = [];
+	for (let i = 0; i < runs; i++) {
+		execSync(
+			`npx lighthouse ${URL} --only-categories=performance ` +
+				`--output=json --output=html --output-path=reports/lighthouse ` +
+				`--chrome-flags="--headless=new" --quiet`,
+			{ stdio: 'inherit', env: { ...process.env, CHROME_PATH: chromePath() } }
+		);
+		reports.push(JSON.parse(readFileSync('reports/lighthouse.report.json', 'utf8')));
+	}
 
-	const report = JSON.parse(readFileSync('reports/lighthouse.report.json', 'utf8'));
 	let failed = false;
-	console.log(`\nPerf gate — ${URL}`);
+	console.log(`\nPerf gate — ${URL}${runs > 1 ? ` (median of ${runs})` : ''}`);
 	for (const b of BUDGETS) {
-		const v = b.value(report);
+		const v = median(reports.map(b.value));
 		const ok = b.min !== undefined ? v >= b.min : v <= b.max;
 		failed ||= !ok;
 		const bound = b.min !== undefined ? `>= ${b.min}` : `<= ${b.max}`;
@@ -66,6 +71,11 @@ try {
 
 function round(v) {
 	return Math.round(v * 1000) / 1000;
+}
+
+function median(values) {
+	const s = [...values].sort((a, b) => a - b);
+	return s[Math.floor(s.length / 2)];
 }
 
 /* chrome-launcher only knows stock install locations; fall back to a

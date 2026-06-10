@@ -16,6 +16,7 @@ export const works = [
 		standfirst:
 			'Eleven rooftops recorded at the hour the rain arrives — a photographic score of corrugated iron, water and waiting.',
 		cover: { file: 'cover-tin-roof-frequencies.jpg', alt: 'Magenta and pink fields crossed by dark ink strokes' },
+		coverLoop: { file: 'loop-tin-roof.webm' },
 		gallery: [
 			{ file: 'gallery-tinroof-1.jpg', alt: 'Pink field with a diagonal band', caption: 'Rooftop I, Lalbagh' },
 			{ file: 'gallery-tinroof-2.jpg', alt: 'Layered magenta rectangles', caption: 'Rooftop VII, Hazaribagh' }
