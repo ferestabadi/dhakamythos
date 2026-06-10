@@ -171,6 +171,31 @@ body {
 	white-space: nowrap;
 }
 
+/* ---- reveals (docs/DESIGN.md motion grammar) ----
+   applied by the reveal action; without JS nothing is ever hidden */
+.reveal-init {
+	opacity: 0;
+	transform: translateY(24px);
+	transition:
+		opacity var(--dur-base) var(--ease-out),
+		transform var(--dur-base) var(--ease-out);
+}
+
+.reveal-init.revealed {
+	opacity: 1;
+	transform: none;
+}
+
+/* ---- view transitions: container transform timing ---- */
+::view-transition-group(*) {
+	animation-duration: var(--dur-base);
+}
+
+::view-transition-old(root),
+::view-transition-new(root) {
+	animation-duration: var(--dur-fast);
+}
+
 /* ---- reduced motion: non-essential motion off, fades only ---- */
 
 @media (prefers-reduced-motion: reduce) {
@@ -178,8 +203,10 @@ body {
 	*::before,
 	*::after {
 		animation-duration: 1ms !important;
+		animation-delay: 0ms !important;
 		animation-iteration-count: 1 !important;
 		transition-duration: var(--dur-fast) !important;
+		transition-delay: 0ms !important;
 		transition-property: opacity !important;
 		scroll-behavior: auto !important;
 	}
