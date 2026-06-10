@@ -22,3 +22,7 @@ Thumbs.db
 vite.config.js.timestamp-*
 vite.config.ts.timestamp-*
 reports/
+
+# Sanity studio build artifacts
+studio/dist/
+studio/.sanity/

@@ -10,7 +10,8 @@
 		"prepare": "svelte-kit sync || echo ''",
 		"check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
 		"check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
-		"perf": "node scripts/perf.mjs"
+		"perf": "node scripts/perf.mjs",
+		"studio": "cd studio && npm run dev"
 	},
 	"devDependencies": {
 		"@sveltejs/adapter-vercel": "^6.3.3",
@@ -23,5 +24,9 @@
 		"tailwindcss": "^4.3.0",
 		"typescript": "^6.0.3",
 		"vite": "^8.0.16"
+	},
+	"dependencies": {
+		"@sanity/client": "^7.22.1",
+		"@sanity/image-url": "^2.1.1"
 	}
 }
