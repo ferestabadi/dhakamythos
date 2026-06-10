@@ -2,6 +2,7 @@
 	import LqipImage from '$lib/components/LqipImage.svelte';
 	import Prose from '$lib/components/Prose.svelte';
 	import VideoChrome from '$lib/components/VideoChrome.svelte';
+	import { loadPiece, warmUpPiece } from '$lib/pieces/load';
 	import { reveal } from '$lib/reveal';
 	import { ogImageUrl } from '$lib/sanity/image';
 	import { absUrl } from '$lib/site';
@@ -10,6 +11,12 @@
 	const work = $derived(data.work);
 	const next = $derived(data.next);
 	const words = $derived(work.title.split(' '));
+
+	const pieceKey = $derived(work.interactive ? work.componentKey : undefined);
+
+	$effect(() => {
+		if (pieceKey) warmUpPiece(pieceKey);
+	});
 
 	/* The grammar staggers per LINE; lines only exist after layout. Words
 	   carry a half-step fallback for the no-JS/hard-load render, and this
@@ -56,13 +63,31 @@
 		<p class="standfirst type-body">{work.standfirst}</p>
 	</header>
 
-	<div class="hero">
-		{#if work.hero.kind === 'embed'}
-			<VideoChrome embedUrl={work.hero.embedUrl} poster={work.hero.poster} title={work.title} />
-		{:else}
-			<LqipImage img={work.cover} role="hero" eager priority vtName="work-{work.slug}" />
-		{/if}
-	</div>
+	{#if pieceKey}
+		<!-- interactive works mount the piece full-bleed below the standfirst;
+		     the cover keeps the morph target and acts as the no-JS fallback -->
+		<div class="hero piece">
+			{#await loadPiece(pieceKey)}
+				<span class="cover-fallback" style:view-transition-name="work-{work.slug}">
+					<LqipImage img={work.cover} role="hero" eager priority />
+				</span>
+			{:then Piece}
+				{#if Piece}
+					<Piece />
+				{:else}
+					<LqipImage img={work.cover} role="hero" eager priority vtName="work-{work.slug}" />
+				{/if}
+			{/await}
+		</div>
+	{:else}
+		<div class="hero">
+			{#if work.hero.kind === 'embed'}
+				<VideoChrome embedUrl={work.hero.embedUrl} poster={work.hero.poster} title={work.title} />
+			{:else}
+				<LqipImage img={work.cover} role="hero" eager priority vtName="work-{work.slug}" />
+			{/if}
+		</div>
+	{/if}
 
 	{#if work.gallery.length}
 		<div class="gallery">
