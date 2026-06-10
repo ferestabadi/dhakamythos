@@ -1,0 +1,186 @@
+/* dhakamythos — design tokens (single source: docs/DESIGN.md)
+   Tokens, not values: components reference these custom properties or the
+   Tailwind names mapped from them below. Never hardcode a hex or ms value. */
+
+@import 'tailwindcss';
+
+:root {
+	/* color */
+	--ground: #fafaf7; /* page field */
+	--ink: #141414; /* text, lines on hover states */
+	--muted: #6e6e68; /* metadata, captions, counters */
+	--line: #e4e4df; /* hairline rules, index row dividers */
+	--overlay: rgba(20, 20, 20, 0.94); /* contact overlay scrim */
+	/* --accent reserved, unset — artwork is the accent at launch */
+
+	/* space */
+	--gutter: clamp(16px, 4vw, 48px); /* page side margins */
+	--space-1: 4px;
+	--space-2: 8px;
+	--space-3: 12px;
+	--space-4: 16px;
+	--space-5: 24px;
+	--space-6: 32px;
+	--space-7: 48px;
+	--space-8: 64px;
+	--space-9: 96px;
+	--space-10: 128px;
+
+	/* shape */
+	--radius: 0; /* sharp everywhere */
+
+	/* motion */
+	--dur-fast: 240ms; /* hovers, fades */
+	--dur-base: 600ms; /* reveals, morph */
+	--dur-slow: 900ms; /* page transitions */
+	--ease-out: cubic-bezier(0.16, 1, 0.3, 1); /* default (expo-out) */
+	--ease-inout: cubic-bezier(0.83, 0, 0.17, 1); /* overlays, exits */
+	--stagger: 70ms; /* sequenced reveals */
+
+	/* z-scale */
+	--z-nav: 50;
+	--z-overlay: 60;
+	--z-transition: 70;
+	--z-cursor: 80;
+}
+
+/* Tailwind reads the tokens — utilities like bg-ground, text-ink, border-line,
+   duration-base, ease-out-token resolve to the custom properties above. */
+@theme inline {
+	--color-ground: var(--ground);
+	--color-ink: var(--ink);
+	--color-muted: var(--muted);
+	--color-line: var(--line);
+	--radius-token: var(--radius);
+	--ease-out-token: var(--ease-out);
+	--ease-inout-token: var(--ease-inout);
+	--font-sans: 'Geist', 'Geist Fallback', system-ui, sans-serif;
+}
+
+/* Geist — one variable WOFF2, latin subset, self-hosted, preloaded in
+   app.html. Never blocks render. */
+@font-face {
+	font-family: 'Geist';
+	src: url('/fonts/geist-var-latin.woff2') format('woff2');
+	font-weight: 100 900;
+	font-style: normal;
+	font-display: swap;
+}
+
+/* Metric-matched Arial so the swap causes no CLS (values computed from the
+   shipped font files — see docs/PERFORMANCE.md fonts rule). */
+@font-face {
+	font-family: 'Geist Fallback';
+	src: local('Arial');
+	size-adjust: 105.89%;
+	ascent-override: 94.91%;
+	descent-override: 27.86%;
+	line-gap-override: 0%;
+}
+
+/* ---- base ---- */
+
+html {
+	background: var(--ground);
+	color: var(--ink);
+	font-family: 'Geist', 'Geist Fallback', system-ui, sans-serif;
+	-webkit-text-size-adjust: 100%;
+}
+
+body {
+	margin: 0;
+	min-height: 100dvh;
+}
+
+/* Focus visible everywhere — accessibility floor */
+:focus-visible {
+	outline: 2px solid var(--ink);
+	outline-offset: 4px;
+}
+
+::selection {
+	background: var(--ink);
+	color: var(--ground);
+}
+
+/* ---- type roles (docs/DESIGN.md type system) ---- */
+
+.type-display {
+	font-size: clamp(2.6rem, 9vw, 7.5rem);
+	font-weight: 500;
+	letter-spacing: -0.02em;
+	line-height: 0.95;
+}
+
+.type-title {
+	font-size: clamp(1.4rem, 4vw, 2.2rem);
+	font-weight: 500;
+	letter-spacing: -0.01em;
+	line-height: 1.1;
+}
+
+.type-body {
+	font-size: 1rem;
+	font-weight: 400;
+	letter-spacing: 0;
+	line-height: 1.6;
+}
+
+.type-meta {
+	font-size: 0.75rem;
+	font-weight: 500;
+	letter-spacing: 0.08em;
+	text-transform: uppercase;
+	line-height: 1.2;
+}
+
+.type-counter {
+	font-size: 0.75rem;
+	font-weight: 400;
+	letter-spacing: 0.04em;
+	line-height: 1;
+	font-variant-numeric: tabular-nums;
+}
+
+/* Bare text control — buttons and links rendered as plain words (nav, video
+   chrome, overlay closers). Clears UA chrome and keeps the 44px hit floor;
+   pair it with a type role class for the metrics. */
+.text-button {
+	display: inline-flex;
+	align-items: center;
+	min-height: 44px;
+	border: 0;
+	background: none;
+	padding: 0;
+	color: inherit;
+	font-family: inherit;
+	text-decoration: none;
+	cursor: pointer;
+}
+
+/* Screen-reader-only text — every page keeps exactly one h1 even when the
+   design carries no visible title (the Deck). */
+.visually-hidden {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	margin: -1px;
+	padding: 0;
+	overflow: hidden;
+	clip-path: inset(50%);
+	white-space: nowrap;
+}
+
+/* ---- reduced motion: non-essential motion off, fades only ---- */
+
+@media (prefers-reduced-motion: reduce) {
+	*,
+	*::before,
+	*::after {
+		animation-duration: 1ms !important;
+		animation-iteration-count: 1 !important;
+		transition-duration: var(--dur-fast) !important;
+		transition-property: opacity !important;
+		scroll-behavior: auto !important;
+	}
+}
