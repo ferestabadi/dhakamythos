@@ -20,9 +20,9 @@ export default defineConfig({
 			inlineStyleThreshold: 24576,
 
 			prerender: {
-				// the crawler folds the /index href into the already-visited /,
-				// so the Index view must be an explicit entry
-				entries: ['*', '/index/']
+				// /index/ — the crawler folds its href into the already-visited /;
+				// /404 — unlinked by design, emits the 404.html Vercel serves
+				entries: ['*', '/index/', '/404']
 			}
 		})
 	]

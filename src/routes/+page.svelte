@@ -1,6 +1,7 @@
 <script lang="ts">
 	import Deck from '$lib/components/Deck.svelte';
-	import { imgProps } from '$lib/sanity/image';
+	import { imgProps, ogImageUrl } from '$lib/sanity/image';
+	import { absUrl } from '$lib/site';
 
 	let { data } = $props();
 
@@ -15,6 +16,14 @@
 		name="description"
 		content="dhakamythos — an art collective in Dhaka publishing works of text, photo, video and interaction."
 	/>
+	<meta property="og:title" content="DHAKAMYTHOS" />
+	<meta
+		property="og:description"
+		content="An art collective in Dhaka publishing works of text, photo, video and interaction."
+	/>
+	{#if data.works[0]}
+		<meta property="og:image" content={absUrl(ogImageUrl(data.works[0].cover))} />
+	{/if}
 	{#if lcp}
 		<link
 			rel="preload"

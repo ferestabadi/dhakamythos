@@ -193,8 +193,9 @@ function toOpenCall(raw: any): OpenCall {
 
 export async function getOpenCalls(): Promise<OpenCall[]> {
 	if (!client) return fixtures.openCalls;
+	// status desc puts "open" before "closed"
 	const raw = await client.fetch(
-		`*[_type == "openCall" && defined(slug.current)] | order(status asc, deadline desc) ${OPEN_CALL}`
+		`*[_type == "openCall" && defined(slug.current)] | order(status desc, deadline desc) ${OPEN_CALL}`
 	);
 	return raw.map(toOpenCall);
 }

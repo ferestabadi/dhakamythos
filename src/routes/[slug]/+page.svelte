@@ -3,6 +3,8 @@
 	import Prose from '$lib/components/Prose.svelte';
 	import VideoChrome from '$lib/components/VideoChrome.svelte';
 	import { reveal } from '$lib/reveal';
+	import { ogImageUrl } from '$lib/sanity/image';
+	import { absUrl } from '$lib/site';
 
 	let { data } = $props();
 	const work = $derived(data.work);
@@ -35,6 +37,12 @@
 <svelte:head>
 	<title>{work.title} — DHAKAMYTHOS</title>
 	<meta name="description" content={work.standfirst} />
+	<meta property="og:title" content="{work.title} — DHAKAMYTHOS" />
+	<meta property="og:description" content={work.standfirst} />
+	<meta property="og:type" content="article" />
+	<meta property="og:url" content={absUrl(`/${work.slug}`)} />
+	<meta property="og:image" content={absUrl(ogImageUrl(work.cover))} />
+	<meta name="twitter:card" content="summary_large_image" />
 </svelte:head>
 
 <article class="case">

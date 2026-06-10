@@ -27,7 +27,8 @@
 			<a
 				class="text-button type-meta"
 				{href}
-				aria-current={page.url.pathname === href ? 'page' : undefined}>{label}</a
+				aria-current={page.url.pathname.replace(/\/$/, '') === href ? 'page' : undefined}
+				>{label}</a
 			>
 		{/each}
 	</nav>

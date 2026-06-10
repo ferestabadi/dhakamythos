@@ -8,7 +8,7 @@
 	import ContactOverlay from '$lib/components/ContactOverlay.svelte';
 	import CursorLabel from '$lib/components/CursorLabel.svelte';
 
-	let { children } = $props();
+	let { children, data } = $props();
 
 	// The Deck owns the whole viewport; every other route flows below the nav
 	// and ends in the fat footer.
@@ -55,9 +55,9 @@
 	{/key}
 {/if}
 {#if !isDeck}
-	<FatFooter />
+	<FatFooter {...data.contact} />
 {/if}
-<ContactOverlay />
+<ContactOverlay {...data.contact} />
 <CursorLabel />
 
 <style>
