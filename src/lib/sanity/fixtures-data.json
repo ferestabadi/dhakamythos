@@ -1,0 +1,536 @@
+{
+	"works": [
+		{
+			"title": "Tin Roof Frequencies",
+			"slug": "tin-roof-frequencies",
+			"year": 2026,
+			"publishedAt": "2026-05-12T10:00:00Z",
+			"medium": "Photo",
+			"descriptors": [
+				"Series"
+			],
+			"tags": [
+				"Photo",
+				"Series"
+			],
+			"standfirst": "Eleven rooftops recorded at the hour the rain arrives — a photographic score of corrugated iron, water and waiting.",
+			"cover": {
+				"url": "/seed/cover-tin-roof-frequencies.jpg",
+				"width": 1600,
+				"height": 2000,
+				"alt": "Magenta and pink fields crossed by dark ink strokes",
+				"lqip": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wAARCAAUABADASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwDemLyB0Lna3XgVSmjEeMEnPrViW4iSVlZ8MCQRTPLa7GbcbwvBx2oOuLsUb3/j9n/66H+davh8fuZv94fyoooJn8B//9k="
+			},
+			"hero": {
+				"kind": "cover"
+			},
+			"gallery": [
+				{
+					"url": "/seed/gallery-tinroof-1.jpg",
+					"width": 1600,
+					"height": 1200,
+					"alt": "Pink field with a diagonal band",
+					"caption": "Rooftop I, Lalbagh",
+					"lqip": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wAARCAAPABQDASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwDdF6kylkzn3qN9ReI4j2k98jpWRkjocVc0+xlukdkKjacHJoOzlildmpa38s0ZZgmQccCii1sJYYyrFMk54NFBjLlvof/Z"
+				},
+				{
+					"url": "/seed/gallery-tinroof-2.jpg",
+					"width": 1600,
+					"height": 1200,
+					"alt": "Layered magenta rectangles",
+					"caption": "Rooftop VII, Hazaribagh",
+					"lqip": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wAARCAAPABQDASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwDal1NJCdyFBjGc5qJbqF/uMWPoFNVyYkJwDIffgVFIzuNobYvovAoO5QXQddu7zZDQIAMYkbmirmnaTaXVv5kyszbiM7sUUyHUjF2P/9k="
+				}
+			],
+			"body": [],
+			"credits": [
+				{
+					"role": "Photography",
+					"names": [
+						"Anika Rahman"
+					]
+				},
+				{
+					"role": "Sequencing",
+					"names": [
+						"Nusrat Jahan"
+					]
+				}
+			],
+			"interactive": false
+		},
+		{
+			"title": "City Memory Map",
+			"slug": "city-memory-map",
+			"year": 2026,
+			"publishedAt": "2026-03-02T10:00:00Z",
+			"medium": "Interactive",
+			"descriptors": [
+				"Map"
+			],
+			"tags": [
+				"Interactive",
+				"Map"
+			],
+			"standfirst": "A pannable map of remembered Dhaka. Drift through the districts people carry in their heads — drawn from memory, not satellites.",
+			"cover": {
+				"url": "/seed/cover-city-memory-map.jpg",
+				"width": 1600,
+				"height": 2000,
+				"alt": "Marigold and ochre blocks with thin ink lines",
+				"lqip": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wAARCAAUABADASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwABIbNaWkXQimkbYxUrjdSy6XHEpk3M6ZxyMZqJUZWJL/LjAUDAFec6jhojpUVLc37xA1pID2GRWHRRVYr4kKjsf//Z"
+			},
+			"hero": {
+				"kind": "cover"
+			},
+			"gallery": [],
+			"body": [],
+			"credits": [
+				{
+					"role": "Concept",
+					"names": [
+						"Tanvir Ahmed",
+						"Anika Rahman"
+					]
+				},
+				{
+					"role": "Code",
+					"names": [
+						"Tanvir Ahmed"
+					]
+				}
+			],
+			"interactive": true,
+			"componentKey": "city-memory"
+		},
+		{
+			"title": "Buriganga Night Crossing",
+			"slug": "buriganga-night-crossing",
+			"year": 2025,
+			"publishedAt": "2025-11-19T10:00:00Z",
+			"medium": "Video",
+			"descriptors": [
+				"Film"
+			],
+			"tags": [
+				"Video",
+				"Film"
+			],
+			"standfirst": "Eight minutes on a wooden launch between Sadarghat and Keraniganj, shot in one take after the generators fail.",
+			"cover": {
+				"url": "/seed/cover-buriganga-night-crossing.jpg",
+				"width": 1600,
+				"height": 2000,
+				"alt": "Indigo fields over a pale ground, like river light",
+				"lqip": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wAARCAAUABADASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwDode+bTWC8ncOBXMxWblPMmzHGO5HJrpLg5ZmxjJ6VRvAWtZef4a3g7KxLNKb/AFr/AFohUGVQQCM+lFFR0Gf/2Q=="
+			},
+			"hero": {
+				"kind": "embed",
+				"embedUrl": "https://vimeo.com/76979871",
+				"poster": {
+					"url": "/seed/poster-buriganga-night-crossing.jpg",
+					"width": 1600,
+					"height": 900,
+					"alt": "Wide indigo composition with a single bright band",
+					"lqip": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wAARCAALABQDASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwDXvri6lkG1vIwOikmobLzJrxIrl5JAecFiVNS3X+u/CpdKAa+JIztjJHtyK22iI1UhiRdqxoB6BRRUlFYjP//Z"
+				}
+			},
+			"gallery": [],
+			"body": [],
+			"credits": [
+				{
+					"role": "Direction",
+					"names": [
+						"Fahim Chowdhury"
+					]
+				},
+				{
+					"role": "Sound",
+					"names": [
+						"Sadia Islam"
+					]
+				}
+			],
+			"interactive": false
+		},
+		{
+			"title": "Monsoon Ledger",
+			"slug": "monsoon-ledger",
+			"year": 2025,
+			"publishedAt": "2025-07-30T10:00:00Z",
+			"medium": "Photo",
+			"descriptors": [
+				"Series"
+			],
+			"tags": [
+				"Photo",
+				"Series"
+			],
+			"standfirst": "A season of water kept like accounts: nine photographs of the city balancing its books with the sky.",
+			"cover": {
+				"url": "/seed/cover-monsoon-ledger.jpg",
+				"width": 1600,
+				"height": 2000,
+				"alt": "Teal washes with hairline ink rules, like wet paper",
+				"lqip": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wAARCAAUABADASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwCaaxmhlZGA4PXPWktVlguRJnaV5BFdFLje2cde9V0sRPLvzhPeq5jncNdCUfOxZuuatW/3D9aKKlmsdz//2Q=="
+			},
+			"hero": {
+				"kind": "cover"
+			},
+			"gallery": [
+				{
+					"url": "/seed/gallery-monsoon-1.jpg",
+					"width": 1600,
+					"height": 1200,
+					"alt": "Pale teal field with an ellipse of deeper green",
+					"caption": "Entry 2, Old Town",
+					"lqip": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wAARCAAPABQDASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwCwNLfHzK5PsKP7NlU5RWPsa6MwmQ5ChB9c09LeNeSNx9TVcxh7JM55NKnZckqvt1orpqKXMyvYxP/Z"
+				},
+				{
+					"url": "/seed/gallery-monsoon-2.jpg",
+					"width": 1600,
+					"height": 1200,
+					"alt": "Two overlapping teal rectangles",
+					"caption": "Entry 5, Mirpur",
+					"lqip": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wAARCAAPABQDASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwDpjqUTDEe7PuKw54Io2Z3C7Sc7m71Fm5l5G2FfXq1OS2QNufMj/wB5zmrtY5XNy3I9sL8pbyOPVUOKK61I0CKAo6UVPMaeyP/Z"
+				},
+				{
+					"url": "/seed/gallery-monsoon-3.jpg",
+					"width": 1600,
+					"height": 1200,
+					"alt": "Teal band across a light ground",
+					"caption": "Entry 9, balance",
+					"lqip": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wAARCAAPABQDASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwCOCCZmVlXAz948CumtJpVgCF9+OjGo10NPM3y3Ekn1FWVtmUYVcD61TdzCEHEN+fvFif8AexRTvIk9P1oqS9T/2Q=="
+				}
+			],
+			"body": [],
+			"credits": [
+				{
+					"role": "Photography",
+					"names": [
+						"Anika Rahman"
+					]
+				}
+			],
+			"interactive": false
+		},
+		{
+			"title": "Forty Mosques, One Azan",
+			"slug": "forty-mosques-one-azan",
+			"year": 2024,
+			"publishedAt": "2024-12-05T10:00:00Z",
+			"medium": "Mixed",
+			"descriptors": [
+				"Sound",
+				"Essay"
+			],
+			"tags": [
+				"Mixed",
+				"Sound",
+				"Essay"
+			],
+			"standfirst": "Forty muezzins begin within ninety seconds of each other. A listening essay on how a city agrees on time without a clock.",
+			"cover": {
+				"url": "/seed/cover-forty-mosques-one-azan.jpg",
+				"width": 1600,
+				"height": 2000,
+				"alt": "Moss green planes stacked like evening rooftops",
+				"lqip": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wAARCAAUABADASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwCe0VXuQGAI54NakEUaSqyIqsOhApgsmiuWcQFUBOD2qwiEHOBWNrCLsf71jv5A6DtU2B6CiitEM//Z"
+			},
+			"hero": {
+				"kind": "cover"
+			},
+			"gallery": [],
+			"body": [
+				{
+					"kind": "text",
+					"style": "normal",
+					"spans": [
+						{
+							"text": "Stand on any roof in the old city at dusk and the call to prayer does not arrive once — it arrives as weather. One minaret begins, then a second a street over, then ten more, each slightly behind or ahead, until the air itself seems to hold the note."
+						}
+					]
+				},
+				{
+					"kind": "text",
+					"style": "normal",
+					"spans": [
+						{
+							"text": "This piece keeps a written log of one such evening alongside a single continuous recording. Nothing is mixed, nothing corrected. The drift between voices is the work."
+						}
+					]
+				}
+			],
+			"credits": [
+				{
+					"role": "Recording",
+					"names": [
+						"Fahim Chowdhury"
+					]
+				},
+				{
+					"role": "Text",
+					"names": [
+						"Nusrat Jahan"
+					]
+				}
+			],
+			"interactive": false
+		},
+		{
+			"title": "Rickshaw Alphabet",
+			"slug": "rickshaw-alphabet",
+			"year": 2024,
+			"publishedAt": "2024-06-14T10:00:00Z",
+			"medium": "Text",
+			"descriptors": [
+				"Essay"
+			],
+			"tags": [
+				"Text",
+				"Essay"
+			],
+			"standfirst": "Twenty-six letters traced through the hand-painted typography of Dhaka’s rickshaw fleet — an essay on ornament, speed and survival.",
+			"cover": {
+				"url": "/seed/cover-rickshaw-alphabet.jpg",
+				"width": 1600,
+				"height": 2000,
+				"alt": "Brick red and orange forms with painted black strokes",
+				"lqip": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wAARCAAUABADASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwDrEnO4BuhqRpRnag3NWPc3hiiYq25h+VZTahdqfluJBn0Nc6qdDpVG+pZuf9Q1Zr9RRRWK3OmOx//Z"
+			},
+			"hero": {
+				"kind": "cover"
+			},
+			"gallery": [],
+			"body": [
+				{
+					"kind": "text",
+					"style": "normal",
+					"spans": [
+						{
+							"text": "Every rickshaw in this city is a manifesto in enamel paint. The painters never trained as typographers, and that is exactly why the letters live: a B that bulges like a film star’s cheek, an R with a tail long enough to seat a passenger."
+						}
+					]
+				},
+				{
+					"kind": "text",
+					"style": "normal",
+					"spans": [
+						{
+							"text": "For one year we photographed every letterform we could find, sorted them into an alphabet, and asked the painters what they thought of the categories. They mostly thought the categories were funny."
+						}
+					]
+				},
+				{
+					"kind": "text",
+					"style": "normal",
+					"spans": [
+						{
+							"text": "What follows is that alphabet, letter by letter, with the painters’ own commentary kept intact. It is an essay about writing systems, but it is also a ledger of a trade that may not survive the electric decade."
+						}
+					]
+				}
+			],
+			"credits": [
+				{
+					"role": "Text",
+					"names": [
+						"Nusrat Jahan"
+					]
+				},
+				{
+					"role": "Photography",
+					"names": [
+						"Anika Rahman",
+						"Fahim Chowdhury"
+					]
+				}
+			],
+			"interactive": false
+		}
+	],
+	"openCalls": [
+		{
+			"title": "Mythologies of the new city",
+			"slug": "mythologies-of-the-new-city",
+			"status": "open",
+			"deadline": "2026-08-31",
+			"summary": "Send work that treats Dhaka as a living myth — any medium, any scale.",
+			"brief": [
+				{
+					"kind": "text",
+					"style": "normal",
+					"spans": [
+						{
+							"text": "Every city runs on stories it tells about itself. We are collecting work — text, photo, video, sound, software — that treats the newest parts of Dhaka as mythological ground: the metro line as river spirit, the high-rise as haunted hill."
+						}
+					]
+				},
+				{
+					"kind": "text",
+					"style": "normal",
+					"spans": [
+						{
+							"text": "Selected works are produced with the collective and published here as part of the next cycle. We cover modest production costs and credit everything. Send a sketch, not a thesis."
+						}
+					]
+				}
+			],
+			"submissionUrl": "https://tally.so/r/placeholder",
+			"results": []
+		}
+	],
+	"scraps": [
+		{
+			"image": {
+				"url": "/seed/scrap-1.jpg",
+				"width": 800,
+				"height": 1000,
+				"alt": "Brick red study with ink strokes",
+				"lqip": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wAARCAAUABADASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwDf1i8jSNoCxLnoifeNc68crMRMSAP4Af510g02ODITLM3V2OWJqvJozyyFvNXntXNOMmzrpzhFWNqlooroOQ//2Q=="
+			},
+			"note": "Letterform tracing, R for rickshaw",
+			"date": "2024-03-18"
+		},
+		{
+			"image": {
+				"url": "/seed/scrap-2.jpg",
+				"width": 800,
+				"height": 600,
+				"alt": "Grey study with a pale band",
+				"lqip": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wAARCAAPABQDASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwDe1ZlW4QuwVdvJJx3rJd4pHPkQtKc9RkL+da8mixM4mkleVwOsnzVC1u4YhVGM8U0Jmb9kmbktGn+yATRWl5En939aKYj/2Q=="
+			},
+			"note": "Contact sheet edge, Sadarghat fog",
+			"date": "2024-08-02"
+		},
+		{
+			"image": {
+				"url": "/seed/scrap-3.jpg",
+				"width": 800,
+				"height": 800,
+				"alt": "Ochre square study",
+				"lqip": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wAARCAAUABQDASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwCSMBmwakCKCCByK054orVfmCiPt61Tis7q6JMEW2PPDvxmuRxdzoTRdF7cYGZP0FFRf2LIeXO5vXdRVe+T7pbsLKGSNLiUGWVucuc4rRwPSiito7GctwoooqiT/9k="
+			},
+			"note": "Pigment test for the Ledger covers",
+			"date": "2025-01-26"
+		},
+		{
+			"image": {
+				"url": "/seed/scrap-4.jpg",
+				"width": 800,
+				"height": 1100,
+				"alt": "Tall teal study",
+				"lqip": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wAARCAAUAA8DASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwDWm1AvIYbILI/dyfkX/GrmnadGg8+dvPnb+NuQPoK5+Cd0Ty1CgD0FaehzSC7MRYlHBOPQ+tU0YQld6mXtCyuB2Nbmgwp5bzY+fO36CiinLYVPc//Z"
+			},
+			"note": "Monsoon Ledger outtake, entry 4",
+			"date": "2025-06-11"
+		},
+		{
+			"image": {
+				"url": "/seed/scrap-5.jpg",
+				"width": 800,
+				"height": 640,
+				"alt": "Indigo study with one bright line",
+				"lqip": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wAARCAAQABQDASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwC7PbM88jAjliazpLPyWPnzIg9uSfwrp/s5zzGSfpTl0y0kXdLaoX9T1rf2lhWI9DXOmR+Q5CZONw560Vfghjt4xHCgRB0AorBu7Gf/2Q=="
+			},
+			"note": "Night crossing, exposure rehearsal",
+			"date": "2025-10-04"
+		},
+		{
+			"image": {
+				"url": "/seed/scrap-6.jpg",
+				"width": 800,
+				"height": 900,
+				"alt": "Moss green stacked planes",
+				"lqip": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wAARCAAUABIDASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwCytpNcDM7+Wn/PNev4mt7S4khswkagAHqO9Z2frWpYqPs4rKO4i1RSUVoMwa1rH/j3FFFRHcRZoooqxn//2Q=="
+			},
+			"note": "Roofline sketch for the azan log",
+			"date": "2024-11-12"
+		},
+		{
+			"image": {
+				"url": "/seed/scrap-7.jpg",
+				"width": 800,
+				"height": 760,
+				"alt": "Marigold study with grid lines",
+				"lqip": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wAARCAATABQDASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwDopyPOf61HyfasS8lmF3MBKwAcgAN2zVnTJS0cnmOWIbua8ycWtWdUXfQ6OOGMRr8gPHeisbe3Z2/OitlXil8JHs33My8/4/Jv+ujfzqXTfuS/79FFKrsENy7RRRXMbH//2Q=="
+			},
+			"note": "Memory map, first street grid",
+			"date": "2026-01-20"
+		},
+		{
+			"image": {
+				"url": "/seed/scrap-8.jpg",
+				"width": 800,
+				"height": 1000,
+				"alt": "Magenta study, vertical bands",
+				"lqip": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wAARCAAUABADASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwDXtBE04xIJZTW4OgrjoJWgmSVTypzXYLggMAORnpQzetujjkALqD3IFdkBgADoKKKGFbof/9k="
+			},
+			"note": "Tin roof series, colour key",
+			"date": "2026-04-07"
+		}
+	],
+	"members": [
+		{
+			"name": "Anika Rahman",
+			"role": "Photography",
+			"link": "https://instagram.com/dhakamythos"
+		},
+		{
+			"name": "Fahim Chowdhury",
+			"role": "Film and sound"
+		},
+		{
+			"name": "Nusrat Jahan",
+			"role": "Words"
+		},
+		{
+			"name": "Tanvir Ahmed",
+			"role": "Code"
+		}
+	],
+	"legalPages": [
+		{
+			"title": "Privacy",
+			"slug": "privacy",
+			"body": [
+				{
+					"kind": "text",
+					"style": "normal",
+					"spans": [
+						{
+							"text": "This site keeps no accounts and sets no tracking cookies. Hosting infrastructure (Vercel) records standard access logs; submissions through open-call forms go to Tally and are covered by their privacy terms. Write to us to have anything you sent removed."
+						}
+					]
+				}
+			]
+		}
+	],
+	"settings": {
+		"siteTitle": "DHAKAMYTHOS",
+		"manifesto": [
+			{
+				"kind": "text",
+				"style": "normal",
+				"spans": [
+					{
+						"text": "dhakamythos is a collective making work about the city that raised us. We publish essays, photographs, films and software pieces — things to read, watch and touch — and we treat all of it as one continuous mythology of Dhaka."
+					}
+				]
+			},
+			{
+				"kind": "text",
+				"style": "normal",
+				"spans": [
+					{
+						"text": "Everything here is made to be seen on a phone on a slow connection, because that is where the city reads. Open calls are how we grow; if the work above feels like a language you speak, send us something."
+					}
+				]
+			}
+		],
+		"email": "hello@dhakamythos.com",
+		"instagram": "https://instagram.com/dhakamythos",
+		"cityLine": "Dhaka, Bangladesh",
+		"press": []
+	}
+}
