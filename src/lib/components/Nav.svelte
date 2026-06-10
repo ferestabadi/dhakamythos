@@ -86,9 +86,9 @@
 		gap: var(--space-5);
 	}
 
+	/* color shifts instantly — only transform and opacity ever animate */
 	.row a {
 		color: var(--muted);
-		transition: color var(--dur-fast) var(--ease-out);
 	}
 
 	.row a:hover,

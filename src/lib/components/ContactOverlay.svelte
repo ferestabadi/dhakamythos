@@ -87,6 +87,9 @@
 	}
 
 	.email {
+		display: inline-flex;
+		align-items: center;
+		min-height: 44px;
 		color: inherit;
 		text-decoration: none;
 		overflow-wrap: anywhere;

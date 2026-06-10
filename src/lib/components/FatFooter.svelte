@@ -40,6 +40,9 @@
 	}
 
 	.email {
+		display: inline-flex;
+		align-items: center;
+		min-height: 44px;
 		color: var(--ink);
 		text-decoration: none;
 		overflow-wrap: anywhere;
