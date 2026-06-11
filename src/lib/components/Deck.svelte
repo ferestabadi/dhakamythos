@@ -9,13 +9,12 @@
 	const looping = $derived(n > 1);
 
 	let rail: HTMLUListElement | undefined = $state();
-	/* Clones render only after hydration: prerendered HTML carries one
-	   canonical set (no duplicate content, works without JS), then the list
-	   is tripled and silently re-centred for the loop. */
-	let cloned = $state(false);
 	/* §5.1: the list is duplicated once when under 20 tiles, so the dense
-	   overlapped rail can wrap a wide window without showing its own seam */
-	const strip = $derived(cloned && n < 20 ? [...works, ...works] : works);
+	   overlapped rail reads full at any position. There are no loop clones —
+	   the frame loop wraps each tile's drawn position around the strip's
+	   cycle (the source's own rail math), so the DOM never re-lays-out
+	   after hydration (CLS 0) and the prerendered markup is the final one. */
+	const strip = $derived(n > 1 && n < 20 ? [...works, ...works] : works);
 	let active = $state(0);
 	/* armed drag scales the whole scene down (grammar §6.2) */
 	let dragScaled = $state(false);
@@ -27,15 +26,19 @@
 	   a diagonal rail. */
 	const DEPTH_PER_STEP = 38;
 	const SWEEP_STEPS = 20;
+	/* the rail line's rise: px up per px of rightward offset from center —
+	   the source's high camera (y 13.33 looking at origin) projects the rail
+	   as a diagonal from bottom-left to top-right (operator call, 2026-06-11) */
+	const RISE = 0.45;
 
 	let step = 1; // card stride in px (one li), remeasured lazily
 	let railW = 0;
 	let tiles: HTMLLIElement[] = [];
 	let tileCenters: number[] = [];
-	/* every li is exactly one stride wide, so a copy is step × tiles-per-copy
-	   — exact, where scrollWidth would fold in padding and card overflow and
-	   make each clone wrap drift by the error */
-	const setWidth = () => (cloned && tiles.length ? step * (tiles.length / 3) : 0);
+	/* every li is exactly one stride wide, so the strip's cycle is
+	   step × tile count — exact, where scrollWidth would fold in padding
+	   and card overflow */
+	const span = () => step * tiles.length;
 
 	function measure() {
 		if (!rail) return;
@@ -46,19 +49,14 @@
 		);
 		railW = rail.clientWidth;
 		step = tiles.length > 1 ? tiles[1].offsetLeft - tiles[0].offsetLeft : railW;
-		lastPos = -1; // force a transform pass with the new geometry
+		lastPos = NaN; // force a transform pass with the new geometry
 	}
 
+	// open with the first work centered, pre-paint
 	$effect(() => {
-		if (rail && looping) cloned = true;
-	});
-
-	// after the clones exist, start on the canonical (middle) set pre-paint
-	$effect(() => {
-		if (cloned && rail) {
-			measure();
-			pos = target = setWidth();
-		}
+		if (!rail) return;
+		measure();
+		pos = target = tileCenters.length ? tileCenters[0] - railW / 2 : 0;
 	});
 
 	function mod(v: number, m: number) {
@@ -84,7 +82,7 @@
 	let pos = 0; // virtual scroll position along the strip, px
 	let target = 0;
 	let virtual = $state(false); // flips once JS takes the rail over
-	let lastPos = -1;
+	let lastPos = NaN;
 	let centered: HTMLLIElement | null = null;
 	let coarsePointer = false;
 	let reduceMotion = false;
@@ -103,16 +101,16 @@
 		if (reduceMotion) pos = target;
 		else if (Math.abs(d) >= 0.5) pos += d * (dragScaled ? DRAG_LERP : LERP);
 		else pos = target;
-		// clone wrap: keep the window inside the middle set, mid-glide too
-		const set = cloned ? setWidth() : 0;
-		if (set > 0) {
-			while (pos < set * 0.5) {
-				pos += set;
-				target += set;
+		const cycle = looping ? span() : 0;
+		// keep the numbers small — the rail is cyclic, so this is invisible
+		if (cycle > 0) {
+			while (pos < -cycle) {
+				pos += cycle;
+				target += cycle;
 			}
-			while (pos >= set * 1.5) {
-				pos -= set;
-				target -= set;
+			while (pos > cycle) {
+				pos -= cycle;
+				target -= cycle;
 			}
 		}
 		// the sweep's expo-out tail; reduced motion collapses it mid-flight
@@ -130,34 +128,32 @@
 				}
 			}
 		}
-		/* drawn position = eased position + sweep offset, wrapped back into
-		   the middle set so the strip stays populated through the glide */
-		let drawn = pos + introOffset;
-		if (set > 0) drawn = set * 0.5 + mod(drawn - set * 0.5, set);
+		const drawn = pos + introOffset;
 		if (drawn === lastPos) return;
 		lastPos = drawn;
-		const mid = drawn + railW / 2;
-		const x = (-drawn).toFixed(2);
+		const mid = railW / 2;
 		const depthPerPx = step > 1 ? DEPTH_PER_STEP / step : 0;
 		let nearest = -1;
 		let nearestDist = Infinity;
 		for (let i = 0; i < tiles.length; i++) {
-			const off = tileCenters[i] - mid;
-			const dist = Math.abs(off);
-			if (dist < nearestDist) {
-				nearestDist = dist;
+			/* each tile's screen center wraps around the strip's cycle —
+			   the source's rail math, so the window reads full at any
+			   position with no DOM clones */
+			let c = tileCenters[i] - drawn;
+			if (cycle > 0) c = mid + mod(c - mid + cycle / 2, cycle) - cycle / 2;
+			const off = c - mid;
+			if (Math.abs(off) < nearestDist) {
+				nearestDist = Math.abs(off);
 				nearest = i;
 			}
 			/* depth from the half-frame-clamped offset: past the frame edge a
 			   tile is off-screen, and an unclamped translateZ would run toward
 			   the perspective distance and blow the projection up */
-			const zoff = Math.max(-railW / 2, Math.min(railW / 2, off));
+			const zoff = Math.max(-mid, Math.min(mid, off));
 			tiles[i].style.transform =
-				`translate3d(${x}px, 0, 0) perspective(var(--deck-perspective)) rotateY(var(--deck-rot)) translateZ(${(-zoff * depthPerPx).toFixed(1)}px)`;
-			if (dist <= railW) {
-				// nearer (left) tiles paint over receded ones where they overlap
-				tiles[i].style.zIndex = String(200 - Math.round(off / step));
-			}
+				`translate3d(${(c - tileCenters[i]).toFixed(2)}px, ${(-off * RISE).toFixed(2)}px, 0) perspective(var(--deck-perspective)) rotateY(var(--deck-rot)) translateZ(${(-zoff * depthPerPx).toFixed(1)}px)`;
+			// nearer (left) tiles paint over receded ones where they overlap
+			tiles[i].style.zIndex = String(200 - Math.round(off / step));
 		}
 		/* touch stand-in for hover: flip the auto-offset class only when the
 		   centered tile changes (Card.svelte styles it) */
@@ -166,7 +162,7 @@
 			centered = tiles[nearest];
 			centered.classList.add('is-center');
 		}
-		active = mod(Math.round(drawn / step), n);
+		if (nearest >= 0) active = nearest % n;
 	}
 
 	$effect(() => {
@@ -244,23 +240,34 @@
 
 	/* Wheel feeds the target on both axes (§6.2 folds deltaX in — trackpad
 	   pans and mouse wheels land in the same lerp); the frame loop supplies
-	   the glide, and reduced motion collapses it to an instant step. */
-	function wheel(el: HTMLElement) {
+	   the glide, and reduced motion collapses it to an instant step.
+	   Listens on the window: scrolling ANYWHERE on the home page moves the
+	   carousel (operator call, 2026-06-11 — the home is one instrument).
+	   Only the open contact overlay takes the wheel back. */
+	function wheel(_el: HTMLElement) {
 		const onWheel = (e: WheelEvent) => {
+			if (appState.contactOpen) return;
 			e.preventDefault();
 			const lines = e.deltaMode === 1 ? 40 : 1; // Firefox reports lines
 			target += (e.deltaY + e.deltaX) * lines * WHEEL_GAIN;
 		};
-		el.addEventListener('wheel', onWheel, { passive: false });
-		return { destroy: () => el.removeEventListener('wheel', onWheel) };
+		window.addEventListener('wheel', onWheel, { passive: false });
+		return { destroy: () => window.removeEventListener('wheel', onWheel) };
 	}
 
 	let dragged = 0;
+	/* The drag surface is the whole deck section, not the rail — a swipe or
+	   press-drag anywhere on the home page moves the carousel (operator
+	   call, 2026-06-11). Touch folds BOTH axes into the stride (an up-swipe
+	   advances like a down-scroll); a mouse drag stays x-only. */
 	function drag(el: HTMLElement) {
 		let startX = 0;
+		let startY = 0;
 		let lastX = 0;
+		let lastY = 0;
 		let startTarget = 0;
 		let gain = 1;
+		let bothAxes = false;
 		let pointerId: number | null = null;
 		let armed = false;
 		let armTimer: ReturnType<typeof setTimeout> | undefined;
@@ -272,6 +279,7 @@
 			armed = true;
 			target = pos; // the hand takes the rail from any in-flight glide
 			startX = lastX;
+			startY = lastY;
 			startTarget = target;
 			el.classList.add('dragging');
 			dragScaled = true;
@@ -282,24 +290,34 @@
 			}
 		};
 		let downX = 0;
+		let downY = 0;
 		const down = (e: PointerEvent) => {
+			if (appState.contactOpen) return;
 			if (e.pointerType === 'mouse' && e.button !== 0) return;
 			pointerId = e.pointerId;
 			lastX = downX = e.clientX;
+			lastY = downY = e.clientY;
 			dragged = 0;
 			focusSteers = false; // mousedown focuses the card — not a Tab
-			gain = e.pointerType === 'mouse' ? DRAG_GAIN : TOUCH_GAIN;
-			if (e.pointerType === 'mouse') armTimer = setTimeout(arm, 150);
+			bothAxes = e.pointerType !== 'mouse';
+			gain = bothAxes ? TOUCH_GAIN : DRAG_GAIN;
+			if (!bothAxes) armTimer = setTimeout(arm, 150);
 		};
 		const move = (e: PointerEvent) => {
 			if (pointerId !== e.pointerId) return;
 			lastX = e.clientX;
-			// touch arms past a tap-sized slop, with no hold delay
-			if (!armed && e.pointerType !== 'mouse' && Math.abs(e.clientX - downX) > 6) arm();
+			lastY = e.clientY;
+			// touch arms past a tap-sized slop in any direction, no hold delay
+			if (
+				!armed &&
+				bothAxes &&
+				Math.max(Math.abs(e.clientX - downX), Math.abs(e.clientY - downY)) > 6
+			)
+				arm();
 			if (!armed) return;
-			const dx = e.clientX - startX;
-			dragged = Math.max(dragged, Math.abs(dx));
-			target = startTarget - dx * gain;
+			const d = e.clientX - startX + (bothAxes ? e.clientY - startY : 0);
+			dragged = Math.max(dragged, Math.abs(d));
+			target = startTarget - d * gain;
 		};
 		const up = () => {
 			clearTimeout(armTimer);
@@ -344,7 +362,6 @@
 		};
 	}
 
-	const copies = $derived(cloned ? [0, 1, 2] : [1]);
 	const pad = (v: number) => String(v).padStart(2, '0');
 </script>
 
@@ -358,12 +375,15 @@
 		</button>
 	</section>
 {:else}
-	<section class="deck" aria-label="Works">
+	<!-- svelte-ignore a11y_no_noninteractive_element_interactions -->
+	<!-- the whole section is the instrument: wheel and drag anywhere on the
+	     home page move the carousel; keyboard events bubble up from the
+	     focusable card links -->
+	<section class="deck" class:virtual aria-label="Works" use:wheel use:drag>
 		<div class="scene" class:scaled={dragScaled}>
-			<!-- svelte-ignore a11y_no_noninteractive_element_interactions -->
-			<!-- keyboard events bubble up from the focusable card links; the rail
-			     itself stays out of the tab order. data-deck is the Preloader
-			     contract: it finds [data-deck] img, decodes, then flips ready. -->
+			<!-- the rail itself stays out of the tab order. data-deck is the
+			     Preloader contract: it finds [data-deck] img, decodes, then
+			     flips ready. -->
 			<ul
 				bind:this={rail}
 				class="rail"
@@ -371,24 +391,20 @@
 				data-deck
 				onkeydown={onKeydown}
 				onfocusin={onFocusin}
-				use:wheel
-				use:drag
 			>
-				{#each copies as copy (copy)}
-					{#each strip as work, i (`${copy}-${i}`)}
-						{@const canonical = copy === 1 && i < n}
-						<li data-canonical={canonical ? '' : undefined} aria-hidden={canonical ? undefined : true}>
-							<Card
-								{work}
-								position={(i % n) + 1}
-								total={n}
-								eager={copy === 1 && i < 2}
-								priority={copy === 1 && i === 0}
-								focusable={canonical}
-								vtName={canonical ? `work-${work.slug}` : undefined}
-							/>
-						</li>
-					{/each}
+				{#each strip as work, i (i)}
+					{@const canonical = i < n}
+					<li data-canonical={canonical ? '' : undefined} aria-hidden={canonical ? undefined : true}>
+						<Card
+							{work}
+							position={(i % n) + 1}
+							total={n}
+							eager={i < 2}
+							priority={i === 0}
+							focusable={canonical}
+							vtName={canonical ? `work-${work.slug}` : undefined}
+						/>
+					</li>
 				{/each}
 			</ul>
 		</div>
@@ -414,6 +430,23 @@
 		   the rail's max-content and the rail could never scroll */
 		grid-template-columns: minmax(0, 100%);
 		align-content: center;
+		/* the diagonal rail runs corner to corner — clip it at the viewport */
+		overflow: hidden;
+	}
+
+	/* the whole section is the gesture surface once JS owns the rail */
+	.deck.virtual {
+		touch-action: none;
+	}
+
+	@media (pointer: fine) {
+		.deck.virtual {
+			cursor: grab;
+		}
+	}
+
+	:global(.deck.dragging) {
+		cursor: grabbing;
 	}
 
 	/* armed drag shrinks the whole scene; back to 1 on release (§6.2) */
@@ -458,20 +491,11 @@
 		display: none;
 	}
 
-	/* JS-owned rail: gestures feed the lerp, nothing scrolls natively */
+	/* JS-owned rail: gestures feed the lerp, nothing scrolls natively; the
+	   diagonal needs free vertical overflow — the section clips instead */
 	.rail.virtual {
-		overflow: hidden;
+		overflow: visible;
 		touch-action: none;
-	}
-
-	@media (pointer: fine) {
-		.rail {
-			cursor: grab;
-		}
-	}
-
-	:global(.rail.dragging) {
-		cursor: grabbing;
 	}
 
 	li {
