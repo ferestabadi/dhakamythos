@@ -3,7 +3,7 @@
 	import { appState } from '$lib/app-state.svelte';
 
 	const links = [
-		{ href: '/index', label: 'Work' },
+		{ href: '/works', label: 'Work' },
 		{ href: '/archive', label: 'Archive' },
 		{ href: '/collective', label: 'Collective' },
 		{ href: '/open-calls', label: 'Open calls' }

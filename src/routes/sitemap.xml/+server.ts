@@ -12,7 +12,7 @@ export async function GET() {
 
 	const paths = [
 		'/',
-		'/index/',
+		'/works',
 		'/archive',
 		'/collective',
 		'/open-calls',

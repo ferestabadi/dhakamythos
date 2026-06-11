@@ -20,9 +20,9 @@ export default defineConfig({
 			inlineStyleThreshold: 24576,
 
 			prerender: {
-				// /index/ — the crawler folds its href into the already-visited /;
-				// /404 — unlinked by design, emits the 404.html Vercel serves
-				entries: ['*', '/index/', '/404']
+				// /404 — unlinked by design, emits the 404.html Vercel serves.
+				// (The old /index vs / collision is gone: the Work list is /works.)
+				entries: ['*', '/404']
 			}
 		})
 	]
