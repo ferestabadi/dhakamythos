@@ -37,18 +37,18 @@
 		tileCenters = tiles.map((t) => t.offsetLeft + t.offsetWidth / 2);
 		railW = rail.clientWidth;
 		step = tiles.length > 1 ? tiles[1].offsetLeft - tiles[0].offsetLeft : railW;
-		lastLeft = -1; // force a transform pass with the new geometry
+		lastPos = -1; // force a transform pass with the new geometry
 	}
 
 	$effect(() => {
 		if (rail && looping) cloned = true;
 	});
 
-	// after the clones exist, jump to the canonical (middle) set pre-paint
+	// after the clones exist, start on the canonical (middle) set pre-paint
 	$effect(() => {
 		if (cloned && rail) {
 			measure();
-			rail.scrollLeft = setWidth();
+			pos = target = setWidth();
 		}
 	});
 
@@ -56,21 +56,51 @@
 		return ((v % m) + m) % m;
 	}
 
-	/* ---- the per-frame decoration (gap W3-01) ----
-	   One rAF owns every scroll-coupled write: scrollLeft is read once, then
-	   tiles get transform (and stacking order) only — never layout. Tiles
-	   more than a viewport from center are skipped; the CSS default transform
-	   covers them until they approach. */
-	let lastLeft = -1;
+	/* ---- the virtual rail (operator call, 2026-06-11: unveil-exact scroll
+	   feel on every pointer; grammar §6.2) ----
+	   The rail is not a scroll container once JS owns it: wheel, drag, touch
+	   and keyboard all feed `target`, and one rAF eases `pos` toward it —
+	   lerp .15 free, .1 under the hand — then writes per-tile transforms
+	   only, never layout. The clone wrap teleports pos and target together
+	   inside the same frame, so the loop is seamless mid-glide. Without JS
+	   the rail falls back to plain native overflow scroll. */
+	const LERP = 0.15;
+	const DRAG_LERP = 0.1;
+	const WHEEL_GAIN = 1; // px of rail per px of wheel delta
+	const TOUCH_GAIN = 1.75; // touch divisor is half the mouse one (§6.2)
+	let pos = 0; // virtual scroll position along the strip, px
+	let target = 0;
+	let virtual = $state(false); // flips once JS takes the rail over
+	let lastPos = -1;
 	let centered: HTMLLIElement | null = null;
 	let coarsePointer = false;
+	let reduceMotion = false;
 
 	function decorate() {
 		if (!rail || tiles.length === 0) return;
-		const left = rail.scrollLeft;
-		if (left === lastLeft) return;
-		lastLeft = left;
-		const mid = left + railW / 2;
+		// ease toward the hand or the wheel; snap the sub-pixel tail closed
+		const d = target - pos;
+		if (reduceMotion) pos = target;
+		else if (Math.abs(d) >= 0.5) pos += d * (dragScaled ? DRAG_LERP : LERP);
+		else pos = target;
+		// clone wrap: keep the window inside the middle set, mid-glide too
+		if (cloned) {
+			const set = setWidth();
+			if (set > 0) {
+				while (pos < set * 0.5) {
+					pos += set;
+					target += set;
+				}
+				while (pos >= set * 1.5) {
+					pos -= set;
+					target -= set;
+				}
+			}
+		}
+		if (pos === lastPos) return;
+		lastPos = pos;
+		const mid = pos + railW / 2;
+		const x = (-pos).toFixed(2);
 		let nearest = -1;
 		let nearestDist = Infinity;
 		for (let i = 0; i < tiles.length; i++) {
@@ -80,11 +110,13 @@
 				nearestDist = dist;
 				nearest = i;
 			}
-			if (dist > railW) continue;
+			// every tile rides the virtual position; depth only near the window
 			tiles[i].style.transform =
-				`perspective(var(--deck-perspective)) rotateY(var(--deck-rot)) translateZ(${(-off * DEPTH_PER_PX).toFixed(1)}px)`;
-			// nearer (left) tiles paint over receded ones when growth overlaps
-			tiles[i].style.zIndex = String(200 - Math.round(off / step));
+				`translate3d(${x}px, 0, 0) perspective(var(--deck-perspective)) rotateY(var(--deck-rot)) translateZ(${dist > railW ? 0 : (-off * DEPTH_PER_PX).toFixed(1)}px)`;
+			if (dist <= railW) {
+				// nearer (left) tiles paint over receded ones when growth overlaps
+				tiles[i].style.zIndex = String(200 - Math.round(off / step));
+			}
 		}
 		/* touch stand-in for hover: flip the auto-offset class only when the
 		   centered tile changes (Card.svelte styles it) */
@@ -93,19 +125,27 @@
 			centered = tiles[nearest];
 			centered.classList.add('is-center');
 		}
-		active = mod(Math.round(left / step), n);
+		active = mod(Math.round(pos / step), n);
 	}
 
 	$effect(() => {
 		if (!rail) return;
 		coarsePointer = !matchMedia('(pointer: fine)').matches;
+		const rmq = matchMedia('(prefers-reduced-motion: reduce)');
+		reduceMotion = rmq.matches;
+		const onRmq = () => (reduceMotion = rmq.matches);
+		rmq.addEventListener('change', onRmq);
+		virtual = true; // JS owns the rail from here; CSS drops the fallback scroll
 		let raf = 0;
 		const frame = () => {
 			raf = requestAnimationFrame(frame);
 			decorate();
 		};
 		raf = requestAnimationFrame(frame);
-		return () => cancelAnimationFrame(raf);
+		return () => {
+			cancelAnimationFrame(raf);
+			rmq.removeEventListener('change', onRmq);
+		};
 	});
 
 	/* ---- intro sweep (grammar §6.2) ----
@@ -130,54 +170,34 @@
 		el.style.transform = 'translate3d(0, 0, 0)';
 	});
 
-	/* silent re-centre at the clone boundaries, between snaps */
-	function recenter() {
-		if (!rail || !cloned) return;
-		const set = setWidth();
-		if (rail.scrollLeft < set * 0.5) rail.scrollLeft += set;
-		else if (rail.scrollLeft >= set * 1.5) rail.scrollLeft -= set;
-		lastLeft = -1;
-		decorate(); // re-decorate in the same frame so the jump stays invisible
-	}
-
-	function scrollEnd(el: HTMLElement) {
-		if ('onscrollend' in window) {
-			el.addEventListener('scrollend', recenter);
-			return { destroy: () => el.removeEventListener('scrollend', recenter) };
-		}
-		let t: ReturnType<typeof setTimeout>;
-		const debounced = () => {
-			clearTimeout(t);
-			t = setTimeout(recenter, 150);
-		};
-		el.addEventListener('scroll', debounced, { passive: true });
-		return { destroy: () => el.removeEventListener('scroll', debounced) };
-	}
-
 	/* ←/→ move one card, Enter opens the focused card (native link). */
 	function onKeydown(e: KeyboardEvent) {
 		if (e.key !== 'ArrowRight' && e.key !== 'ArrowLeft') return;
 		if (!rail) return;
 		e.preventDefault();
 		const dir = e.key === 'ArrowRight' ? 1 : -1;
-		// smoothing only on pointer:fine (golden rule 2); touch + reduced
-		// motion jump instantly
-		const smooth =
-			matchMedia('(pointer: fine)').matches &&
-			!matchMedia('(prefers-reduced-motion: reduce)').matches;
-		rail.scrollBy({ left: dir * step, behavior: smooth ? 'smooth' : 'auto' });
+		// land on a card boundary; the frame lerp animates the move
+		target = (Math.round(target / step) + dir) * step;
 		const links = rail.querySelectorAll<HTMLAnchorElement>('li[data-canonical] a');
 		links[mod(active + dir, n)]?.focus({ preventScroll: true });
 	}
 
-	/* Desktop only: vertical wheel drives the rail; drag scrolls it.
-	   Both set scrollLeft directly — native scroll keeps ownership. */
-	function wheelToHorizontal(el: HTMLElement) {
+	/* Tabbing to an off-screen card must bring it into the window — the rail
+	   no longer scrolls natively, so focus drives the target instead. */
+	function onFocusin(e: FocusEvent) {
+		const li = (e.target as HTMLElement).closest('li');
+		const i = li ? tiles.indexOf(li as HTMLLIElement) : -1;
+		if (i >= 0) target = tileCenters[i] - railW / 2;
+	}
+
+	/* Wheel feeds the target on both axes (§6.2 folds deltaX in — trackpad
+	   pans and mouse wheels land in the same lerp); the frame loop supplies
+	   the glide, and reduced motion collapses it to an instant step. */
+	function wheel(el: HTMLElement) {
 		const onWheel = (e: WheelEvent) => {
-			if (!matchMedia('(pointer: fine)').matches) return;
-			if (Math.abs(e.deltaY) <= Math.abs(e.deltaX)) return;
 			e.preventDefault();
-			el.scrollLeft += e.deltaY;
+			const lines = e.deltaMode === 1 ? 40 : 1; // Firefox reports lines
+			target += (e.deltaY + e.deltaX) * lines * WHEEL_GAIN;
 		};
 		el.addEventListener('wheel', onWheel, { passive: false });
 		return { destroy: () => el.removeEventListener('wheel', onWheel) };
@@ -187,18 +207,20 @@
 	function drag(el: HTMLElement) {
 		let startX = 0;
 		let lastX = 0;
-		let startLeft = 0;
+		let startTarget = 0;
+		let gain = 1;
 		let pointerId: number | null = null;
 		let armed = false;
 		let armTimer: ReturnType<typeof setTimeout> | undefined;
 
-		// drag arms only after a 150ms hold (grammar §6.2, §8); quicker
-		// presses stay clicks
+		// a mouse drag arms only after a 150ms hold (grammar §6.2, §8) so
+		// quick presses stay clicks; a touch arms on its first real movement
 		const arm = () => {
 			if (pointerId === null || !el.isConnected) return;
 			armed = true;
+			target = pos; // the hand takes the rail from any in-flight glide
 			startX = lastX;
-			startLeft = el.scrollLeft;
+			startTarget = target;
 			el.classList.add('dragging');
 			dragScaled = true;
 			try {
@@ -207,20 +229,24 @@
 				/* pointer already lifted */
 			}
 		};
+		let downX = 0;
 		const down = (e: PointerEvent) => {
-			if (e.pointerType !== 'mouse' || e.button !== 0) return;
+			if (e.pointerType === 'mouse' && e.button !== 0) return;
 			pointerId = e.pointerId;
-			lastX = e.clientX;
+			lastX = downX = e.clientX;
 			dragged = 0;
-			armTimer = setTimeout(arm, 150);
+			gain = e.pointerType === 'mouse' ? 1 : TOUCH_GAIN;
+			if (e.pointerType === 'mouse') armTimer = setTimeout(arm, 150);
 		};
 		const move = (e: PointerEvent) => {
-			if (pointerId === null) return;
+			if (pointerId !== e.pointerId) return;
 			lastX = e.clientX;
+			// touch arms past a tap-sized slop, with no hold delay
+			if (!armed && e.pointerType !== 'mouse' && Math.abs(e.clientX - downX) > 6) arm();
 			if (!armed) return;
 			const dx = e.clientX - startX;
 			dragged = Math.max(dragged, Math.abs(dx));
-			el.scrollLeft = startLeft - dx;
+			target = startTarget - dx * gain;
 		};
 		const up = () => {
 			clearTimeout(armTimer);
@@ -230,12 +256,7 @@
 			armed = false;
 			el.classList.remove('dragging');
 			dragScaled = false;
-			// drag is mouse-only, so smooth re-snap is within golden rule 2
-			const smooth = !matchMedia('(prefers-reduced-motion: reduce)').matches;
-			el.scrollTo({
-				left: Math.round(el.scrollLeft / step) * step,
-				behavior: smooth ? 'smooth' : 'auto'
-			});
+			// no end-snap: the lerp tail glides the rail to rest (§6.2)
 		};
 		const clickCapture = (e: MouseEvent) => {
 			// a drag is not a click — keep the card link from navigating
@@ -286,10 +307,11 @@
 			<ul
 				bind:this={rail}
 				class="rail"
+				class:virtual
 				data-deck
 				onkeydown={onKeydown}
-				use:scrollEnd
-				use:wheelToHorizontal
+				onfocusin={onFocusin}
+				use:wheel
 				use:drag
 			>
 				{#each copies as copy (copy)}
@@ -350,9 +372,10 @@
 		margin: 0;
 		padding: var(--rail-pad-y) var(--axis-x);
 		list-style: none;
+		/* native overflow scroll is only the no-JS fallback; .virtual hands
+		   the rail to the lerp loop (operator call, 2026-06-11 — §6.2 feel) */
 		overflow-x: auto;
 		overscroll-behavior-x: contain;
-		scroll-snap-type: x mandatory;
 		scrollbar-width: none;
 	}
 
@@ -366,6 +389,12 @@
 		display: none;
 	}
 
+	/* JS-owned rail: gestures feed the lerp, nothing scrolls natively */
+	.rail.virtual {
+		overflow: hidden;
+		touch-action: none;
+	}
+
 	@media (pointer: fine) {
 		.rail {
 			cursor: grab;
@@ -373,14 +402,12 @@
 	}
 
 	:global(.rail.dragging) {
-		scroll-snap-type: none;
 		cursor: grabbing;
 	}
 
 	li {
 		position: relative;
 		flex: none;
-		scroll-snap-align: center;
 		/* resting angle without JS; the rAF adds the signed translateZ.
 		   Per-tile perspective keeps every card at the same apparent angle —
 		   the telephoto flattening (§6.2) — where a shared vanishing point

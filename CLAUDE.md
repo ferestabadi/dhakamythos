@@ -29,12 +29,15 @@ duration isn't a token, add the token first.
 
 1. Animate **only** `transform` and `opacity`. Nothing animates `width`,
    `height`, `top`, layout, or filters on scroll paths.
-2. Inertia/smoothed scrolling (Lenis or similar) mounts **only** on
-   `(pointer: fine)` devices. Touch keeps native momentum. No exceptions.
+2. Page scrolling is never hijacked: route sheets scroll natively on every
+   pointer. The single exception is the Deck (rule 4, operator call).
 3. Card → case-page morph uses the **View Transitions API** with a crossfade
    fallback where unsupported. GSAP handles intra-page reveals only.
-4. The Deck scrolls on **native CSS scroll-snap**. GSAP may decorate
-   (parallax inside cards, reveals); it never owns scroll position.
+4. The Deck is a **virtual lerped rail** on every pointer (operator call
+   2026-06-11 — the unveil.fr §6.2 feel exactly): wheel/drag/touch feed a
+   target; one rAF eases position (lerp .15 free / .1 dragging) and writes
+   transforms only. No scroll-snap. No-JS falls back to native overflow
+   scroll. Nothing else on the site may own scroll position.
 5. `prefers-reduced-motion: reduce` → all non-essential motion off,
    transitions become opacity-only, loops become posters.
 6. Every image/video declares intrinsic dimensions. CLS budget is ~0.
