@@ -1,21 +1,26 @@
-/* Reveal on viewport entry (docs/DESIGN.md motion grammar): opacity +
- * translateY 24→0 at 20% visibility, once. The hiding class is added only
- * when JS runs, so prerendered pages stay fully visible without it; under
- * reduced motion the global override collapses this to a fast fade. */
-export function reveal(el: HTMLElement) {
-	el.classList.add('reveal-init');
-	const io = new IntersectionObserver(
-		([entry]) => {
-			if (entry.isIntersecting) {
-				el.classList.add('revealed');
-				io.disconnect();
-			}
-		},
-		/* the huge top margin counts anything already scrolled past as seen,
-		   so instant jumps (anchors, restored scroll) can't strand content
-		   invisible above the viewport */
-		{ threshold: 0.2, rootMargin: '10000px 0px 0px 0px' }
-	);
-	io.observe(el);
-	return { destroy: () => io.disconnect() };
+/* Mount-time staggered fade (grammar §2.4, gap W3-03). Entrances are
+ * opacity-only and fire once per route mount — nothing is scroll-triggered.
+ * The prerendered markup ships visible; JS drops opacity to 0, commits that
+ * frame, then fades back in over --dur-long --ease-quad-inout after `delay`.
+ * No-JS and reduced-motion render instantly. */
+export function reveal(el: HTMLElement, options: { delay?: number } = {}) {
+	if (matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+	el.style.transition = 'none';
+	el.style.opacity = '0';
+	void el.offsetWidth; // commit the hidden frame so the fade has a start state
+	el.style.transition = `opacity var(--dur-long) var(--ease-quad-inout) ${options.delay ?? 0}ms`;
+	el.style.opacity = '1';
+	// drop the inline styles once settled so they can't shadow later hovers
+	const settle = (event: TransitionEvent) => {
+		if (event.target !== el) return;
+		el.style.removeProperty('transition');
+		el.style.removeProperty('opacity');
+		el.removeEventListener('transitionend', settle);
+	};
+	el.addEventListener('transitionend', settle);
+	return {
+		destroy() {
+			el.removeEventListener('transitionend', settle);
+		}
+	};
 }

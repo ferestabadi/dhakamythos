@@ -1,21 +1,90 @@
-/* dhakamythos — design tokens (single source: docs/DESIGN.md)
-   Tokens, not values: components reference these custom properties or the
-   Tailwind names mapped from them below. Never hardcode a hex or ms value. */
+/* dhakamythos — design tokens.
+   Governing spec: docs/UNVEIL-GRAMMAR.md (the measured grammar). Tokens, not
+   values: components reference these custom properties or the Tailwind names
+   mapped from them below. Never hardcode a hex or ms value. */
 
 @import 'tailwindcss';
 
 :root {
-	/* color */
-	--ground: #fafaf7; /* page field */
-	--ink: #141414; /* text, lines on hover states */
-	--muted: #6e6e68; /* metadata, captions, counters */
-	--line: #e4e4df; /* hairline rules, index row dividers */
-	--overlay: rgba(20, 20, 20, 0.94); /* contact overlay scrim */
-	/* --accent reserved, unset — artwork is the accent at launch */
+	/* color — one canvas, one ink (grammar §2.1); hierarchy is currentColor
+	   at an opacity step, never a hue */
+	--ground: #fafafa;
+	--ink: #000;
+	--ink-inverse: #fff;
 
-	/* space */
-	--gutter: clamp(16px, 4vw, 48px); /* page side margins */
-	--space-1: 4px;
+	/* the opacity scale IS the palette */
+	--alpha-active: 1;
+	--alpha-fade: 0.75;
+	--alpha-rest: 0.3;
+	--alpha-hairline: 0.13;
+	--alpha-wash: 0.03;
+	--alpha-selection: 0.08; /* quiet ::selection wash (gap W4-06) */
+
+	/* frosted surfaces — blur is constant; only opacity ever animates */
+	--sheet: rgb(255 255 255 / 0.7);
+	--blur-sheet: 20px;
+	--blur-sheet-md: 40px;
+	--blur-button: 24px;
+	--blur-scrim: 8px;
+
+	/* motion (grammar §2.4) */
+	--dur-label: 500ms;
+	--dur-micro: 150ms;
+	--dur-beat: 750ms;
+	--dur-long: 1000ms;
+	--dur-sweep: 2000ms;
+	--ease-out-cubic: cubic-bezier(0.215, 0.61, 0.355, 1);
+	--ease-out-expo: cubic-bezier(0.19, 1, 0.22, 1);
+	--ease-quad-inout: cubic-bezier(0.455, 0.03, 0.515, 0.955);
+	--ease-micro: cubic-bezier(0.4, 0, 0.2, 1);
+	--stagger-route: 150ms;
+	--stagger-rows: 50ms;
+	--stagger-pills: 75ms;
+
+	/* shape — exactly two radii (grammar §2.3) */
+	--radius: 6px;
+	--radius-pill: 999px;
+
+	/* space — the axis system (grammar §2.3, §3.3) */
+	--axis-x: 14px;
+	--frame: 4px;
+	--drop-top: 144px;
+	--drop-top-sm: 260px;
+	--legal-bottom: 11px;
+	--gap-cell: 2px;
+	--grid-gap: 61px;
+	--grid-gap-x-lg: 99px;
+	--grid-gap-y-lg: 95px;
+	--grid-gap-x-2xl: 7vw;
+
+	/* z contract (grammar §2.5) */
+	--z-ground: 1;
+	--z-sheet: 2;
+	--z-accent: 3;
+	--z-scrim: 8;
+	--z-contact: 9;
+	--z-header: 10;
+	--z-preloader: 99;
+	--z-lightbox: 101;
+	--z-cursor: 102;
+
+	/* deck constants (grammar §6.2, DOM approximation per gap W3-01) */
+	--deck-perspective: 1600px;
+	--deck-rot: -30deg;
+	--deck-scale-drag: 0.825;
+
+	/* ---- legacy aliases — Integrate removes ---- */
+	--muted: rgb(0 0 0 / var(--alpha-rest)); /* legacy alias — Integrate removes */
+	--line: rgb(0 0 0 / var(--alpha-hairline)); /* legacy alias — Integrate removes */
+	--overlay: var(--sheet); /* legacy alias — Integrate removes */
+	--dur-fast: var(--dur-micro); /* legacy alias — Integrate removes */
+	--dur-base: var(--dur-label); /* legacy alias — Integrate removes */
+	--dur-slow: var(--dur-beat); /* legacy alias — Integrate removes */
+	--ease-out: var(--ease-out-expo); /* legacy alias — Integrate removes */
+	--ease-inout: var(--ease-quad-inout); /* legacy alias — Integrate removes */
+	--stagger: var(--stagger-route); /* legacy alias — Integrate removes */
+	--gutter: clamp(16px, 4vw, 48px); /* legacy alias — routes move to .axis-x; Integrate removes */
+	--space-1: 4px; /* legacy scale — Integrate removes */
 	--space-2: 8px;
 	--space-3: 12px;
 	--space-4: 16px;
@@ -25,23 +94,9 @@
 	--space-8: 64px;
 	--space-9: 96px;
 	--space-10: 128px;
-
-	/* shape */
-	--radius: 0; /* sharp everywhere */
-
-	/* motion */
-	--dur-fast: 240ms; /* hovers, fades */
-	--dur-base: 600ms; /* reveals, morph */
-	--dur-slow: 900ms; /* page transitions */
-	--ease-out: cubic-bezier(0.16, 1, 0.3, 1); /* default (expo-out) */
-	--ease-inout: cubic-bezier(0.83, 0, 0.17, 1); /* overlays, exits */
-	--stagger: 70ms; /* sequenced reveals */
-
-	/* z-scale */
-	--z-nav: 50;
-	--z-overlay: 60;
-	--z-transition: 70;
-	--z-cursor: 80;
+	--z-nav: var(--z-header); /* legacy alias — Integrate removes */
+	--z-overlay: var(--z-contact); /* legacy alias — Integrate removes */
+	--z-transition: var(--z-preloader); /* legacy alias — Integrate removes */
 }
 
 /* Tailwind reads the tokens — utilities like bg-ground, text-ink, border-line,
@@ -52,99 +107,251 @@
 	--color-muted: var(--muted);
 	--color-line: var(--line);
 	--radius-token: var(--radius);
-	--ease-out-token: var(--ease-out);
-	--ease-inout-token: var(--ease-inout);
-	--font-sans: 'Geist', 'Geist Fallback', system-ui, sans-serif;
+	--ease-out-token: var(--ease-out-expo);
+	--ease-inout-token: var(--ease-quad-inout);
+	--font-sans: 'NB International Pro', 'NB International Pro Fallback', system-ui, sans-serif;
 }
 
-/* Geist — one variable WOFF2, latin subset, self-hosted, preloaded in
-   app.html. Never blocks render. */
+/* NB International Pro — the original face, license purchased from Neubau.
+   One WOFF2, self-hosted, preloaded in app.html. Never blocks render.
+   Single 400 cut (grammar §9.1) — weight contrast must stay impossible. */
 @font-face {
-	font-family: 'Geist';
-	src: url('/fonts/geist-var-latin.woff2') format('woff2');
-	font-weight: 100 900;
+	font-family: 'NB International Pro';
+	src: url('/fonts/nb-international-pro-regular.woff2') format('woff2');
+	font-weight: 400;
 	font-style: normal;
 	font-display: swap;
 }
 
-/* Metric-matched Arial so the swap causes no CLS (values computed from the
-   shipped font files — see docs/PERFORMANCE.md fonts rule). */
+/* Metric-matched Arial so the swap causes no CLS (computed from the shipped
+   file: upm 1000, ascent 800, descent 200, line-gap 75, xAvgCharWidth 516). */
 @font-face {
-	font-family: 'Geist Fallback';
+	font-family: 'NB International Pro Fallback';
 	src: local('Arial');
-	size-adjust: 105.89%;
-	ascent-override: 94.91%;
-	descent-override: 27.86%;
-	line-gap-override: 0%;
+	size-adjust: 116.9%;
+	ascent-override: 80%;
+	descent-override: 20%;
+	line-gap-override: 7.5%;
 }
 
-/* ---- base ---- */
+/* ---- base shell (grammar §3.2): the document never scrolls — every route
+   is a fixed sheet scrolling internally over the persistent ground ---- */
 
 html {
+	height: 100%;
+	overflow: hidden;
+	overscroll-behavior: none;
 	background: var(--ground);
 	color: var(--ink);
-	font-family: 'Geist', 'Geist Fallback', system-ui, sans-serif;
+	font-family: 'NB International Pro', 'NB International Pro Fallback', system-ui, sans-serif;
+	font-weight: 400;
+	/* exact spec tracking — no calibration needed, this is the original face */
+	letter-spacing: 0.015em;
+	text-transform: uppercase;
+	-webkit-font-smoothing: antialiased;
+	text-rendering: optimizeLegibility;
 	-webkit-text-size-adjust: 100%;
+	-webkit-tap-highlight-color: transparent;
 }
 
 body {
 	margin: 0;
-	min-height: 100dvh;
+	height: 100%;
+	overflow: hidden;
+	overscroll-behavior: none;
+}
+
+/* bold does not exist (grammar §2.2) */
+b,
+strong {
+	font-weight: 400;
+}
+
+/* uppercase comes from inheritance; prose paragraphs opt back out */
+.prose-case {
+	text-transform: none;
+}
+
+/* scrollbars hidden everywhere; scrolling still works (grammar §8) */
+::-webkit-scrollbar {
+	display: none;
+}
+
+html,
+body,
+.route-sheet {
+	scrollbar-width: none;
+}
+
+/* quiet selection wash — text stays selectable in content (gap W4-06) */
+::selection {
+	background: rgb(0 0 0 / var(--alpha-selection));
 }
 
 /* Focus visible everywhere — accessibility floor */
 :focus-visible {
-	outline: 2px solid var(--ink);
+	outline: 2px solid currentColor;
 	outline-offset: 4px;
 }
 
-::selection {
-	background: var(--ink);
-	color: var(--ground);
+/* ---- shell classes (grammar §3.2, §3.3) ---- */
+
+/* Each route's outer wrapper. Stacks over the persistent ground div
+   (z-ground) and under the header (z-header); scrolls internally. */
+.route-sheet {
+	position: fixed;
+	inset: 0;
+	z-index: var(--z-sheet);
+	overflow-y: auto;
+	background: var(--ground);
+	overscroll-behavior: none;
+	padding-top: var(--drop-top);
 }
 
-/* ---- type roles (docs/DESIGN.md type system) ---- */
+@media (min-width: 640px) {
+	.route-sheet {
+		padding-top: var(--drop-top-sm);
+	}
+}
 
+/* the one left axis — x = 14px at every breakpoint */
+.axis-x {
+	padding-inline: var(--axis-x);
+}
+
+/* ---- type roles — one size carries the site (grammar §2.2, §4) ---- */
+
+.type-base {
+	font-size: 0.65625rem; /* 10.5px */
+	line-height: 0.8125rem; /* 13px */
+	letter-spacing: 0.015em;
+	font-weight: 400;
+}
+
+.type-button {
+	font-size: 0.65625rem;
+	line-height: 1.05;
+	letter-spacing: 0.015em;
+	font-weight: 400;
+}
+
+.type-list {
+	font-size: 0.65625rem;
+	line-height: 1.25;
+	letter-spacing: 0.015em;
+	font-weight: 400;
+}
+
+.type-viewer {
+	font-size: 0.6875rem; /* 11px */
+	line-height: 1;
+	letter-spacing: normal;
+	font-weight: 400;
+}
+
+.type-micro {
+	font-size: 0.5rem; /* 8px */
+	line-height: 0.5rem;
+	letter-spacing: 0.1em;
+	font-weight: 400;
+}
+
+/* runtime-feel display scale for case pages; uppercase blocks at 1.0909,
+   sentence-case paragraphs add .type-display-prose */
 .type-display {
-	font-size: clamp(2.6rem, 9vw, 7.5rem);
-	font-weight: 500;
-	letter-spacing: -0.02em;
-	line-height: 0.95;
+	font-size: clamp(2rem, 7vw, 5.5rem);
+	line-height: 1.0909;
+	letter-spacing: normal;
+	font-weight: 400;
 }
 
-.type-title {
-	font-size: clamp(1.4rem, 4vw, 2.2rem);
-	font-weight: 500;
-	letter-spacing: -0.01em;
-	line-height: 1.1;
+/* leading modifier — composes with .type-display or the base scale */
+.type-display-prose {
+	line-height: 1.0762;
+}
+
+/* legacy roles re-pointed at the new metrics so unedited routes still
+   build — Integrate removes */
+.type-title,
+.type-meta {
+	font-size: 0.65625rem;
+	line-height: 0.8125rem;
+	letter-spacing: 0.015em;
+	font-weight: 400;
 }
 
 .type-body {
-	font-size: 1rem;
+	font-size: 0.65625rem;
+	line-height: 0.8125rem;
+	letter-spacing: 0.015em;
 	font-weight: 400;
-	letter-spacing: 0;
-	line-height: 1.6;
-}
-
-.type-meta {
-	font-size: 0.75rem;
-	font-weight: 500;
-	letter-spacing: 0.08em;
-	text-transform: uppercase;
-	line-height: 1.2;
+	text-transform: none; /* prose reads sentence case */
 }
 
 .type-counter {
-	font-size: 0.75rem;
-	font-weight: 400;
-	letter-spacing: 0.04em;
+	font-size: 0.6875rem;
 	line-height: 1;
+	letter-spacing: normal;
+	font-weight: 400;
 	font-variant-numeric: tabular-nums;
 }
 
-/* Bare text control — buttons and links rendered as plain words (nav, video
-   chrome, overlay closers). Clears UA chrome and keeps the 44px hit floor;
-   pair it with a type role class for the metrics. */
+/* ---- the universal control (grammar §5.0, §2.1, gap W2-13) ----
+   Frosted chrome: hairline + wash are currentColor pseudos, so the inverse
+   theme rides along for free. Blur is constant — never animated. */
+
+.button {
+	position: relative;
+	border-radius: var(--radius);
+	-webkit-backdrop-filter: blur(var(--blur-button));
+	backdrop-filter: blur(var(--blur-button));
+	isolation: isolate;
+	-webkit-user-select: none;
+	user-select: none;
+}
+
+.button::before,
+.button::after {
+	content: '';
+	position: absolute;
+	inset: 0;
+	border-radius: inherit;
+	pointer-events: none;
+}
+
+.button::before {
+	border: 1px solid currentColor;
+	opacity: var(--alpha-hairline);
+}
+
+.button::after {
+	background: currentColor;
+	opacity: var(--alpha-wash);
+}
+
+/* the label idles at rest opacity; current item pins at 1 */
+.button span {
+	opacity: var(--alpha-rest);
+	transition: opacity var(--dur-label) var(--ease-out-cubic);
+}
+
+.button.active span,
+.button[aria-current='page'] span {
+	opacity: var(--alpha-active);
+}
+
+@media (hover: hover) {
+	.button:hover span {
+		opacity: var(--alpha-active);
+	}
+}
+
+.button--pill {
+	border-radius: var(--radius-pill);
+}
+
+/* Bare text control — legacy recipe superseded by .button; keeps the 44px
+   hit floor for not-yet-migrated consumers. Integrate removes. */
 .text-button {
 	display: inline-flex;
 	align-items: center;
@@ -159,7 +366,7 @@ body {
 }
 
 /* Screen-reader-only text — every page keeps exactly one h1 even when the
-   design carries no visible title (the Deck). */
+   design carries no visible title. */
 .visually-hidden {
 	position: absolute;
 	width: 1px;
@@ -171,32 +378,19 @@ body {
 	white-space: nowrap;
 }
 
-/* ---- reveals (docs/DESIGN.md motion grammar) ----
-   applied by the reveal action; without JS nothing is ever hidden */
-.reveal-init {
-	opacity: 0;
-	transform: translateY(24px);
-	transition:
-		opacity var(--dur-base) var(--ease-out),
-		transform var(--dur-base) var(--ease-out);
-}
-
-.reveal-init.revealed {
-	opacity: 1;
-	transform: none;
-}
-
 /* ---- view transitions: container transform timing ---- */
 ::view-transition-group(*) {
-	animation-duration: var(--dur-base);
+	animation-duration: var(--dur-label);
 }
 
 ::view-transition-old(root),
 ::view-transition-new(root) {
-	animation-duration: var(--dur-fast);
+	animation-duration: var(--dur-micro);
 }
 
-/* ---- reduced motion: non-essential motion off, fades only ---- */
+/* ---- reduced motion: non-essential motion off, fades only.
+   JS-driven entrances (reveal.ts, preloader, deck sweep) must each check
+   matchMedia themselves — this block only neutralizes CSS motion. ---- */
 
 @media (prefers-reduced-motion: reduce) {
 	*,
@@ -205,7 +399,7 @@ body {
 		animation-duration: 1ms !important;
 		animation-delay: 0ms !important;
 		animation-iteration-count: 1 !important;
-		transition-duration: var(--dur-fast) !important;
+		transition-duration: var(--dur-micro) !important;
 		transition-delay: 0ms !important;
 		transition-property: opacity !important;
 		scroll-behavior: auto !important;

@@ -18,7 +18,9 @@ free-tier.**
 
 ## Read before any feature work
 
-`docs/DESIGN.md` (tokens, vocabulary, components) · `docs/SITEMAP.md`
+`docs/UNVEIL-GRAMMAR.md` — **the governing visual spec**: every token, metric,
+and motion value comes from it; it wins over DESIGN.md wherever they differ.
+`docs/DESIGN.md` (vocabulary, components) · `docs/SITEMAP.md`
 (routes, page anatomies) · `docs/PERFORMANCE.md` (budgets, media rules).
 These documents win over your defaults. Tokens, not values — if a color or
 duration isn't a token, add the token first.
@@ -40,8 +42,8 @@ duration isn't a token, add the token first.
    imported on its own route only — its bundle never ships elsewhere.
 8. No new dependency without a one-line justification in the commit message.
 9. Autoplaying media is always muted; sound starts only on user action.
-10. Fonts never block render: one variable WOFF2, preloaded,
-    `font-display: swap`, metric-matched fallback.
+10. Fonts never block render: one WOFF2 (NB International Pro 400,
+    licensed), preloaded, `font-display: swap`, metric-matched fallback.
 
 ## Conventions
 

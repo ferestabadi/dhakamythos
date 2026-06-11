@@ -1,5 +1,10 @@
 # DESIGN.md — dhakamythos design system
 
+> **Governing note.** `docs/UNVEIL-GRAMMAR.md` supersedes the token, type,
+> and motion tables below wherever they differ — it carries the measured
+> values now implemented in `src/app.css`. This file remains authoritative
+> for project vocabulary, component anatomy, and content/edge-case rules.
+
 ## Direction
 
 Light, near-empty field where the works carry all color. One grotesque

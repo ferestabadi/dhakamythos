@@ -40,8 +40,12 @@
 	<link rel="icon" href={favicon} />
 </svelte:head>
 
-<a class="skip type-meta" href="#main">Skip to content</a>
+<a class="skip type-base" href="#main">Skip to content</a>
 <Nav />
+<!-- persistent shell layers (grammar §2.5/§5.0): solid ground, then the
+     corner-fade gradient floating over it; route sheets stack above both -->
+<div class="ground" aria-hidden="true"></div>
+<div class="corner-fade" aria-hidden="true"></div>
 {#if supportsViewTransitions}
 	<main id="main" class:deck={isDeck}>
 		{@render children()}
@@ -61,8 +65,39 @@
 <CursorLabel />
 
 <style>
-	main:not(.deck) {
-		padding-top: var(--space-10);
+	/* routes own their vertical rhythm now — each applies .route-sheet
+	   (fixed sheet, internal scroll, drop-top padding) on its own wrapper */
+
+	.ground {
+		position: fixed;
+		inset: 0;
+		z-index: var(--z-ground);
+		background: var(--ground);
+		pointer-events: none;
+	}
+
+	/* opaque corners melting to clear across the middle 50% (grammar §2.1) */
+	.corner-fade {
+		position: fixed;
+		inset: 0;
+		z-index: var(--z-ground);
+		background: linear-gradient(
+			45deg,
+			var(--ground) 0%,
+			var(--ground) 1%,
+			transparent 25%,
+			transparent 75%,
+			var(--ground) 100%
+		);
+		opacity: var(--alpha-fade);
+		pointer-events: none;
+		display: none;
+	}
+
+	@media (min-width: 768px) {
+		.corner-fade {
+			display: block;
+		}
 	}
 
 	.route-fade {
