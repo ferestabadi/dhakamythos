@@ -1,11 +1,13 @@
 <script lang="ts">
 	import ClosingBand from '$lib/components/ClosingBand.svelte';
 	import LqipImage from '$lib/components/LqipImage.svelte';
-	import { reveal } from '$lib/reveal';
+	import { preloadProps } from '$lib/sanity/image';
 	import type { Scrap } from '$lib/sanity/types';
 
 	let { data } = $props();
 	const scraps = $derived(data.scraps);
+	// the first tile is the page's LCP — preload exactly what it will request
+	const lcp = $derived(scraps[0] ? preloadProps(scraps[0].image, 'thumb') : null);
 
 	/* Native <dialog> supplies the lightbox floor for free: focus trap, Esc
 	   to close, inert background, focus restored to the tapped scrap. The
@@ -34,10 +36,24 @@
 <svelte:head>
 	<title>Archive — DHAKAMYTHOS</title>
 	<meta name="description" content="Scraps, sketches and process — the wall." />
+	{#if lcp}
+		<link
+			rel="preload"
+			as="image"
+			href={lcp.href}
+			imagesrcset={lcp.imagesrcset}
+			imagesizes={lcp.imagesizes}
+			type={lcp.type}
+			fetchpriority="high"
+		/>
+	{/if}
 </svelte:head>
 
-<!-- the research route fades in whole over the beat, not the long unit (§5.3) -->
-<section class="route-sheet" use:reveal={{ duration: 'var(--dur-beat)' }}>
+<!-- the research route fades in whole over the beat, not the long unit (§5.3).
+     CSS @starting-style, not the JS reveal: the fade starts at first paint
+     instead of after hydration, so the grid's LCP isn't deferred behind the
+     throttled-CPU hydration cost. Same 750ms figure either way. -->
+<section class="route-sheet entry">
 	<h1 class="visually-hidden">Archive</h1>
 
 	{#if scraps.length}
@@ -50,7 +66,7 @@
 					aria-label={scrap.note ?? scrap.image.alt}
 					onclick={() => openLightbox(scrap)}
 				>
-					<LqipImage img={scrap.image} role="thumb" fill eager={i < EAGER_TILES} />
+					<LqipImage img={scrap.image} role="thumb" fill eager={i < EAGER_TILES} priority={i === 0} />
 				</button>
 			{/each}
 		</div>
@@ -87,6 +103,24 @@
 </dialog>
 
 <style>
+	/* entry fade from element insertion (prerendered = first paint) */
+	.entry {
+		opacity: 1;
+		transition: opacity var(--dur-beat) var(--ease-quad-inout);
+	}
+
+	@starting-style {
+		.entry {
+			opacity: 0;
+		}
+	}
+
+	@media (prefers-reduced-motion: reduce) {
+		.entry {
+			transition: none;
+		}
+	}
+
 	/* ---- the index grid (grammar §3.4): edge-to-edge CSS grid, rows
 	   top-aligned so tile bottoms rag — masonry feel without masonry ---- */
 
