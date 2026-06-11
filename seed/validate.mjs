@@ -19,7 +19,8 @@ const failures = [];
 const check = (ok, msg) => ok || failures.push(msg);
 
 check(fixtures.works.length === 6, 'exactly 6 seed works');
-check(fixtures.scraps.length === 8, 'exactly 8 archive scraps');
+/* the wall's texture is volume (grammar §5.3: rows flowing past the fold) */
+check(fixtures.scraps.length >= 40, 'at least 40 archive scraps');
 check(fixtures.openCalls.length === 1, 'exactly 1 open call');
 
 const slugs = fixtures.works.map((w) => w.slug);
@@ -43,7 +44,14 @@ for (const w of fixtures.works) {
 for (const s of fixtures.scraps) check(!!s.image?.alt, `scrap alt text: ${s.note}`);
 check(!!fixtures.settings.email, 'settings email present');
 
-check(ndjson.length === 21, 'ndjson doc count');
+const expectedDocs =
+	fixtures.works.length +
+	fixtures.scraps.length +
+	fixtures.openCalls.length +
+	fixtures.members.length +
+	fixtures.legalPages.length +
+	1; // siteSettings
+check(ndjson.length === expectedDocs, 'ndjson doc count matches content');
 check(
 	ndjson.filter((d) => d._type === 'work').every((d) => d.cover?._sanityAsset),
 	'ndjson work covers reference assets'

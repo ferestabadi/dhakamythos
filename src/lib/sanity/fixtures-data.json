@@ -1859,6 +1859,2910 @@
 			},
 			"note": "Tin roof series, colour key",
 			"date": "2026-04-07"
+		},
+		{
+			"image": {
+				"url": "/seed/scrap-9.jpg",
+				"width": 800,
+				"height": 1000,
+				"alt": "Letterform tracing over a rickshaw hood",
+				"lqip": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wAARCAAUABADASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwDtppREuWIFZy2802o+YwZIz82e/StBLdVbcx3P6mpQPcmkO4tFFFMR/9k=",
+				"variants": [
+					{
+						"url": "/seed/scrap-9-51w.webp",
+						"width": 51
+					},
+					{
+						"url": "/seed/scrap-9-103w.webp",
+						"width": 103
+					},
+					{
+						"url": "/seed/scrap-9-144w.webp",
+						"width": 144
+					},
+					{
+						"url": "/seed/scrap-9-154w.webp",
+						"width": 154
+					},
+					{
+						"url": "/seed/scrap-9-200w.webp",
+						"width": 200
+					},
+					{
+						"url": "/seed/scrap-9-205w.webp",
+						"width": 205
+					},
+					{
+						"url": "/seed/scrap-9-288w.webp",
+						"width": 288
+					},
+					{
+						"url": "/seed/scrap-9-308w.webp",
+						"width": 308
+					},
+					{
+						"url": "/seed/scrap-9-400w.webp",
+						"width": 400
+					},
+					{
+						"url": "/seed/scrap-9-410w.webp",
+						"width": 410
+					},
+					{
+						"url": "/seed/scrap-9-432w.webp",
+						"width": 432
+					},
+					{
+						"url": "/seed/scrap-9-576w.webp",
+						"width": 576
+					},
+					{
+						"url": "/seed/scrap-9-600w.webp",
+						"width": 600
+					},
+					{
+						"url": "/seed/scrap-9-615w.webp",
+						"width": 615
+					},
+					{
+						"url": "/seed/scrap-9-800w.webp",
+						"width": 800
+					}
+				]
+			},
+			"note": "Rickshaw hood letterforms, sheet 9",
+			"date": "2024-01-03"
+		},
+		{
+			"image": {
+				"url": "/seed/scrap-10.jpg",
+				"width": 800,
+				"height": 1000,
+				"alt": "Pale study of river fog bands",
+				"lqip": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wAARCAAUABADASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwDuHljjUs7BQO5qt5s91xADFF/z0Ycn6CqmmwNK3mXTGRh0B6CtYZoEMjhSLOwYz15qSiigZ//Z",
+				"variants": [
+					{
+						"url": "/seed/scrap-10-51w.webp",
+						"width": 51
+					},
+					{
+						"url": "/seed/scrap-10-103w.webp",
+						"width": 103
+					},
+					{
+						"url": "/seed/scrap-10-144w.webp",
+						"width": 144
+					},
+					{
+						"url": "/seed/scrap-10-154w.webp",
+						"width": 154
+					},
+					{
+						"url": "/seed/scrap-10-200w.webp",
+						"width": 200
+					},
+					{
+						"url": "/seed/scrap-10-205w.webp",
+						"width": 205
+					},
+					{
+						"url": "/seed/scrap-10-288w.webp",
+						"width": 288
+					},
+					{
+						"url": "/seed/scrap-10-308w.webp",
+						"width": 308
+					},
+					{
+						"url": "/seed/scrap-10-400w.webp",
+						"width": 400
+					},
+					{
+						"url": "/seed/scrap-10-410w.webp",
+						"width": 410
+					},
+					{
+						"url": "/seed/scrap-10-432w.webp",
+						"width": 432
+					},
+					{
+						"url": "/seed/scrap-10-576w.webp",
+						"width": 576
+					},
+					{
+						"url": "/seed/scrap-10-600w.webp",
+						"width": 600
+					},
+					{
+						"url": "/seed/scrap-10-615w.webp",
+						"width": 615
+					},
+					{
+						"url": "/seed/scrap-10-800w.webp",
+						"width": 800
+					}
+				]
+			},
+			"note": "Sadarghat fog, contact strip 10",
+			"date": "2025-06-10"
+		},
+		{
+			"image": {
+				"url": "/seed/scrap-11.jpg",
+				"width": 800,
+				"height": 1000,
+				"alt": "Pigment swatch field on paper",
+				"lqip": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wAARCAAUABADASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwDus00yKDjNQXlz9n2k4wfxJrJZZrnUPmBiRm+6OppNjNSzhV0Wd8vI3ducfSrPlR79+wbvWiimI//Z",
+				"variants": [
+					{
+						"url": "/seed/scrap-11-51w.webp",
+						"width": 51
+					},
+					{
+						"url": "/seed/scrap-11-103w.webp",
+						"width": 103
+					},
+					{
+						"url": "/seed/scrap-11-144w.webp",
+						"width": 144
+					},
+					{
+						"url": "/seed/scrap-11-154w.webp",
+						"width": 154
+					},
+					{
+						"url": "/seed/scrap-11-200w.webp",
+						"width": 200
+					},
+					{
+						"url": "/seed/scrap-11-205w.webp",
+						"width": 205
+					},
+					{
+						"url": "/seed/scrap-11-288w.webp",
+						"width": 288
+					},
+					{
+						"url": "/seed/scrap-11-308w.webp",
+						"width": 308
+					},
+					{
+						"url": "/seed/scrap-11-400w.webp",
+						"width": 400
+					},
+					{
+						"url": "/seed/scrap-11-410w.webp",
+						"width": 410
+					},
+					{
+						"url": "/seed/scrap-11-432w.webp",
+						"width": 432
+					},
+					{
+						"url": "/seed/scrap-11-576w.webp",
+						"width": 576
+					},
+					{
+						"url": "/seed/scrap-11-600w.webp",
+						"width": 600
+					},
+					{
+						"url": "/seed/scrap-11-615w.webp",
+						"width": 615
+					},
+					{
+						"url": "/seed/scrap-11-800w.webp",
+						"width": 800
+					}
+				]
+			},
+			"note": "Pigment ledger, batch 11",
+			"date": "2026-11-17"
+		},
+		{
+			"image": {
+				"url": "/seed/scrap-12.jpg",
+				"width": 800,
+				"height": 1000,
+				"alt": "Tall study of monsoon water lines",
+				"lqip": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wAARCAAUABADASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwDpxA0rZjZkjH8RHJ+lMSxKzbVUnJ++a1qMCncBaKKKQH//2Q==",
+				"variants": [
+					{
+						"url": "/seed/scrap-12-51w.webp",
+						"width": 51
+					},
+					{
+						"url": "/seed/scrap-12-103w.webp",
+						"width": 103
+					},
+					{
+						"url": "/seed/scrap-12-144w.webp",
+						"width": 144
+					},
+					{
+						"url": "/seed/scrap-12-154w.webp",
+						"width": 154
+					},
+					{
+						"url": "/seed/scrap-12-200w.webp",
+						"width": 200
+					},
+					{
+						"url": "/seed/scrap-12-205w.webp",
+						"width": 205
+					},
+					{
+						"url": "/seed/scrap-12-288w.webp",
+						"width": 288
+					},
+					{
+						"url": "/seed/scrap-12-308w.webp",
+						"width": 308
+					},
+					{
+						"url": "/seed/scrap-12-400w.webp",
+						"width": 400
+					},
+					{
+						"url": "/seed/scrap-12-410w.webp",
+						"width": 410
+					},
+					{
+						"url": "/seed/scrap-12-432w.webp",
+						"width": 432
+					},
+					{
+						"url": "/seed/scrap-12-576w.webp",
+						"width": 576
+					},
+					{
+						"url": "/seed/scrap-12-600w.webp",
+						"width": 600
+					},
+					{
+						"url": "/seed/scrap-12-615w.webp",
+						"width": 615
+					},
+					{
+						"url": "/seed/scrap-12-800w.webp",
+						"width": 800
+					}
+				]
+			},
+			"note": "Monsoon water lines, entry 12",
+			"date": "2024-04-24"
+		},
+		{
+			"image": {
+				"url": "/seed/scrap-13.jpg",
+				"width": 800,
+				"height": 1000,
+				"alt": "Night exposure rehearsal marks",
+				"lqip": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wAARCAAUABADASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwDs7xS8J2sARzSWZbycM2cHGTQSC20jOe1SRxKo/pSAeqKvQUtFFMD/2Q==",
+				"variants": [
+					{
+						"url": "/seed/scrap-13-51w.webp",
+						"width": 51
+					},
+					{
+						"url": "/seed/scrap-13-103w.webp",
+						"width": 103
+					},
+					{
+						"url": "/seed/scrap-13-144w.webp",
+						"width": 144
+					},
+					{
+						"url": "/seed/scrap-13-154w.webp",
+						"width": 154
+					},
+					{
+						"url": "/seed/scrap-13-200w.webp",
+						"width": 200
+					},
+					{
+						"url": "/seed/scrap-13-205w.webp",
+						"width": 205
+					},
+					{
+						"url": "/seed/scrap-13-288w.webp",
+						"width": 288
+					},
+					{
+						"url": "/seed/scrap-13-308w.webp",
+						"width": 308
+					},
+					{
+						"url": "/seed/scrap-13-400w.webp",
+						"width": 400
+					},
+					{
+						"url": "/seed/scrap-13-410w.webp",
+						"width": 410
+					},
+					{
+						"url": "/seed/scrap-13-432w.webp",
+						"width": 432
+					},
+					{
+						"url": "/seed/scrap-13-576w.webp",
+						"width": 576
+					},
+					{
+						"url": "/seed/scrap-13-600w.webp",
+						"width": 600
+					},
+					{
+						"url": "/seed/scrap-13-615w.webp",
+						"width": 615
+					},
+					{
+						"url": "/seed/scrap-13-800w.webp",
+						"width": 800
+					}
+				]
+			},
+			"note": "Night crossing exposure, take 13",
+			"date": "2025-09-06"
+		},
+		{
+			"image": {
+				"url": "/seed/scrap-14.jpg",
+				"width": 800,
+				"height": 1000,
+				"alt": "Roofline planes in grey-green",
+				"lqip": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wAARCAAUABADASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwDqZbwidlVAR7mrqSM6rheo/KqdxauZN8adevPSr0QxGoPUAZoGx2B6UtFFAj//2Q==",
+				"variants": [
+					{
+						"url": "/seed/scrap-14-51w.webp",
+						"width": 51
+					},
+					{
+						"url": "/seed/scrap-14-103w.webp",
+						"width": 103
+					},
+					{
+						"url": "/seed/scrap-14-144w.webp",
+						"width": 144
+					},
+					{
+						"url": "/seed/scrap-14-154w.webp",
+						"width": 154
+					},
+					{
+						"url": "/seed/scrap-14-200w.webp",
+						"width": 200
+					},
+					{
+						"url": "/seed/scrap-14-205w.webp",
+						"width": 205
+					},
+					{
+						"url": "/seed/scrap-14-288w.webp",
+						"width": 288
+					},
+					{
+						"url": "/seed/scrap-14-308w.webp",
+						"width": 308
+					},
+					{
+						"url": "/seed/scrap-14-400w.webp",
+						"width": 400
+					},
+					{
+						"url": "/seed/scrap-14-410w.webp",
+						"width": 410
+					},
+					{
+						"url": "/seed/scrap-14-432w.webp",
+						"width": 432
+					},
+					{
+						"url": "/seed/scrap-14-576w.webp",
+						"width": 576
+					},
+					{
+						"url": "/seed/scrap-14-600w.webp",
+						"width": 600
+					},
+					{
+						"url": "/seed/scrap-14-615w.webp",
+						"width": 615
+					},
+					{
+						"url": "/seed/scrap-14-800w.webp",
+						"width": 800
+					}
+				]
+			},
+			"note": "Roofline sketch, azan log 14",
+			"date": "2026-02-13"
+		},
+		{
+			"image": {
+				"url": "/seed/scrap-15.jpg",
+				"width": 800,
+				"height": 1000,
+				"alt": "Street grid traced in thin ink",
+				"lqip": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wAARCAAUABADASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwDtXuYkj3s/y/zqmktxeTMmTDD/AOPGn2dkY28yb55PVu30q4AAxIUZPU0APooooA//2Q==",
+				"variants": [
+					{
+						"url": "/seed/scrap-15-51w.webp",
+						"width": 51
+					},
+					{
+						"url": "/seed/scrap-15-103w.webp",
+						"width": 103
+					},
+					{
+						"url": "/seed/scrap-15-144w.webp",
+						"width": 144
+					},
+					{
+						"url": "/seed/scrap-15-154w.webp",
+						"width": 154
+					},
+					{
+						"url": "/seed/scrap-15-200w.webp",
+						"width": 200
+					},
+					{
+						"url": "/seed/scrap-15-205w.webp",
+						"width": 205
+					},
+					{
+						"url": "/seed/scrap-15-288w.webp",
+						"width": 288
+					},
+					{
+						"url": "/seed/scrap-15-308w.webp",
+						"width": 308
+					},
+					{
+						"url": "/seed/scrap-15-400w.webp",
+						"width": 400
+					},
+					{
+						"url": "/seed/scrap-15-410w.webp",
+						"width": 410
+					},
+					{
+						"url": "/seed/scrap-15-432w.webp",
+						"width": 432
+					},
+					{
+						"url": "/seed/scrap-15-576w.webp",
+						"width": 576
+					},
+					{
+						"url": "/seed/scrap-15-600w.webp",
+						"width": 600
+					},
+					{
+						"url": "/seed/scrap-15-615w.webp",
+						"width": 615
+					},
+					{
+						"url": "/seed/scrap-15-800w.webp",
+						"width": 800
+					}
+				]
+			},
+			"note": "Memory map street grid, pass 15",
+			"date": "2024-07-20"
+		},
+		{
+			"image": {
+				"url": "/seed/scrap-16.jpg",
+				"width": 800,
+				"height": 1000,
+				"alt": "Vertical tin-sheet rhythm study",
+				"lqip": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wAARCAAUABADASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwDt3lVBknOegHeo/nlP7z5V/ujvVPT1xOc5JwetaIWkMbHBHG25FwfrUtFFMR//2Q==",
+				"variants": [
+					{
+						"url": "/seed/scrap-16-51w.webp",
+						"width": 51
+					},
+					{
+						"url": "/seed/scrap-16-103w.webp",
+						"width": 103
+					},
+					{
+						"url": "/seed/scrap-16-144w.webp",
+						"width": 144
+					},
+					{
+						"url": "/seed/scrap-16-154w.webp",
+						"width": 154
+					},
+					{
+						"url": "/seed/scrap-16-200w.webp",
+						"width": 200
+					},
+					{
+						"url": "/seed/scrap-16-205w.webp",
+						"width": 205
+					},
+					{
+						"url": "/seed/scrap-16-288w.webp",
+						"width": 288
+					},
+					{
+						"url": "/seed/scrap-16-308w.webp",
+						"width": 308
+					},
+					{
+						"url": "/seed/scrap-16-400w.webp",
+						"width": 400
+					},
+					{
+						"url": "/seed/scrap-16-410w.webp",
+						"width": 410
+					},
+					{
+						"url": "/seed/scrap-16-432w.webp",
+						"width": 432
+					},
+					{
+						"url": "/seed/scrap-16-576w.webp",
+						"width": 576
+					},
+					{
+						"url": "/seed/scrap-16-600w.webp",
+						"width": 600
+					},
+					{
+						"url": "/seed/scrap-16-615w.webp",
+						"width": 615
+					},
+					{
+						"url": "/seed/scrap-16-800w.webp",
+						"width": 800
+					}
+				]
+			},
+			"note": "Tin roof rhythm, key 16",
+			"date": "2025-12-27"
+		},
+		{
+			"image": {
+				"url": "/seed/scrap-17.jpg",
+				"width": 800,
+				"height": 1000,
+				"alt": "Ferry queue timing diagram",
+				"lqip": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wAARCAAUABADASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwDsFgkFyzH7vPPrU8a7c5NRSz+XJ8xGM9MUuJZ+uY4/TuaQyGCMMwlbLOT1NXqKKEDP/9k=",
+				"variants": [
+					{
+						"url": "/seed/scrap-17-51w.webp",
+						"width": 51
+					},
+					{
+						"url": "/seed/scrap-17-103w.webp",
+						"width": 103
+					},
+					{
+						"url": "/seed/scrap-17-144w.webp",
+						"width": 144
+					},
+					{
+						"url": "/seed/scrap-17-154w.webp",
+						"width": 154
+					},
+					{
+						"url": "/seed/scrap-17-200w.webp",
+						"width": 200
+					},
+					{
+						"url": "/seed/scrap-17-205w.webp",
+						"width": 205
+					},
+					{
+						"url": "/seed/scrap-17-288w.webp",
+						"width": 288
+					},
+					{
+						"url": "/seed/scrap-17-308w.webp",
+						"width": 308
+					},
+					{
+						"url": "/seed/scrap-17-400w.webp",
+						"width": 400
+					},
+					{
+						"url": "/seed/scrap-17-410w.webp",
+						"width": 410
+					},
+					{
+						"url": "/seed/scrap-17-432w.webp",
+						"width": 432
+					},
+					{
+						"url": "/seed/scrap-17-576w.webp",
+						"width": 576
+					},
+					{
+						"url": "/seed/scrap-17-600w.webp",
+						"width": 600
+					},
+					{
+						"url": "/seed/scrap-17-615w.webp",
+						"width": 615
+					},
+					{
+						"url": "/seed/scrap-17-800w.webp",
+						"width": 800
+					}
+				]
+			},
+			"note": "Ferry queue timings, dawn set 17",
+			"date": "2026-05-09"
+		},
+		{
+			"image": {
+				"url": "/seed/scrap-18.jpg",
+				"width": 800,
+				"height": 1000,
+				"alt": "Halftone test of a market awning",
+				"lqip": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wAARCAAUABADASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwDpYwHlwM7Rzk1pAF/vHA9BVS3t5Y3JZRjHrV78KBIWiiigZ//Z",
+				"variants": [
+					{
+						"url": "/seed/scrap-18-51w.webp",
+						"width": 51
+					},
+					{
+						"url": "/seed/scrap-18-103w.webp",
+						"width": 103
+					},
+					{
+						"url": "/seed/scrap-18-144w.webp",
+						"width": 144
+					},
+					{
+						"url": "/seed/scrap-18-154w.webp",
+						"width": 154
+					},
+					{
+						"url": "/seed/scrap-18-200w.webp",
+						"width": 200
+					},
+					{
+						"url": "/seed/scrap-18-205w.webp",
+						"width": 205
+					},
+					{
+						"url": "/seed/scrap-18-288w.webp",
+						"width": 288
+					},
+					{
+						"url": "/seed/scrap-18-308w.webp",
+						"width": 308
+					},
+					{
+						"url": "/seed/scrap-18-400w.webp",
+						"width": 400
+					},
+					{
+						"url": "/seed/scrap-18-410w.webp",
+						"width": 410
+					},
+					{
+						"url": "/seed/scrap-18-432w.webp",
+						"width": 432
+					},
+					{
+						"url": "/seed/scrap-18-576w.webp",
+						"width": 576
+					},
+					{
+						"url": "/seed/scrap-18-600w.webp",
+						"width": 600
+					},
+					{
+						"url": "/seed/scrap-18-615w.webp",
+						"width": 615
+					},
+					{
+						"url": "/seed/scrap-18-800w.webp",
+						"width": 800
+					}
+				]
+			},
+			"note": "Market awning halftone, proof 18",
+			"date": "2024-10-16"
+		},
+		{
+			"image": {
+				"url": "/seed/scrap-19.jpg",
+				"width": 800,
+				"height": 1000,
+				"alt": "Courtyard shadow at noon, blocked in",
+				"lqip": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wAARCAAUABADASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwDuIwViVSOQAKhaSbzsBeM+lTK4ZSTxiozI0hxD07selIZDb/vmbfyB27VcAAGBwKKKUdgZ/9k=",
+				"variants": [
+					{
+						"url": "/seed/scrap-19-51w.webp",
+						"width": 51
+					},
+					{
+						"url": "/seed/scrap-19-103w.webp",
+						"width": 103
+					},
+					{
+						"url": "/seed/scrap-19-144w.webp",
+						"width": 144
+					},
+					{
+						"url": "/seed/scrap-19-154w.webp",
+						"width": 154
+					},
+					{
+						"url": "/seed/scrap-19-200w.webp",
+						"width": 200
+					},
+					{
+						"url": "/seed/scrap-19-205w.webp",
+						"width": 205
+					},
+					{
+						"url": "/seed/scrap-19-288w.webp",
+						"width": 288
+					},
+					{
+						"url": "/seed/scrap-19-308w.webp",
+						"width": 308
+					},
+					{
+						"url": "/seed/scrap-19-400w.webp",
+						"width": 400
+					},
+					{
+						"url": "/seed/scrap-19-410w.webp",
+						"width": 410
+					},
+					{
+						"url": "/seed/scrap-19-432w.webp",
+						"width": 432
+					},
+					{
+						"url": "/seed/scrap-19-576w.webp",
+						"width": 576
+					},
+					{
+						"url": "/seed/scrap-19-600w.webp",
+						"width": 600
+					},
+					{
+						"url": "/seed/scrap-19-615w.webp",
+						"width": 615
+					},
+					{
+						"url": "/seed/scrap-19-800w.webp",
+						"width": 800
+					}
+				]
+			},
+			"note": "Courtyard shadow block-in 19",
+			"date": "2025-03-23"
+		},
+		{
+			"image": {
+				"url": "/seed/scrap-20.jpg",
+				"width": 800,
+				"height": 1000,
+				"alt": "Hand-cut paper crop of a film frame",
+				"lqip": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wAARCAAUABADASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwDsmuQgLSYC1Ebx7g7bNN3rI33R/jWYqzXl35dwQFycRjpx61uwoIoljUYCjHFMCKO2jS8eUA7iM+3NWaKKQH//2Q==",
+				"variants": [
+					{
+						"url": "/seed/scrap-20-51w.webp",
+						"width": 51
+					},
+					{
+						"url": "/seed/scrap-20-103w.webp",
+						"width": 103
+					},
+					{
+						"url": "/seed/scrap-20-144w.webp",
+						"width": 144
+					},
+					{
+						"url": "/seed/scrap-20-154w.webp",
+						"width": 154
+					},
+					{
+						"url": "/seed/scrap-20-200w.webp",
+						"width": 200
+					},
+					{
+						"url": "/seed/scrap-20-205w.webp",
+						"width": 205
+					},
+					{
+						"url": "/seed/scrap-20-288w.webp",
+						"width": 288
+					},
+					{
+						"url": "/seed/scrap-20-308w.webp",
+						"width": 308
+					},
+					{
+						"url": "/seed/scrap-20-400w.webp",
+						"width": 400
+					},
+					{
+						"url": "/seed/scrap-20-410w.webp",
+						"width": 410
+					},
+					{
+						"url": "/seed/scrap-20-432w.webp",
+						"width": 432
+					},
+					{
+						"url": "/seed/scrap-20-576w.webp",
+						"width": 576
+					},
+					{
+						"url": "/seed/scrap-20-600w.webp",
+						"width": 600
+					},
+					{
+						"url": "/seed/scrap-20-615w.webp",
+						"width": 615
+					},
+					{
+						"url": "/seed/scrap-20-800w.webp",
+						"width": 800
+					}
+				]
+			},
+			"note": "Film frame paper crop 20",
+			"date": "2026-08-05"
+		},
+		{
+			"image": {
+				"url": "/seed/scrap-21.jpg",
+				"width": 800,
+				"height": 1000,
+				"alt": "Azan timing chart, one mosque",
+				"lqip": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wAARCAAUABADASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwDtJ4DIoCkZzyTS28RiUqzAknPFRteqrEbDwfWpwNxDjoeaAM2T/WN9TWkgGxeOwoopID//2Q==",
+				"variants": [
+					{
+						"url": "/seed/scrap-21-51w.webp",
+						"width": 51
+					},
+					{
+						"url": "/seed/scrap-21-103w.webp",
+						"width": 103
+					},
+					{
+						"url": "/seed/scrap-21-144w.webp",
+						"width": 144
+					},
+					{
+						"url": "/seed/scrap-21-154w.webp",
+						"width": 154
+					},
+					{
+						"url": "/seed/scrap-21-200w.webp",
+						"width": 200
+					},
+					{
+						"url": "/seed/scrap-21-205w.webp",
+						"width": 205
+					},
+					{
+						"url": "/seed/scrap-21-288w.webp",
+						"width": 288
+					},
+					{
+						"url": "/seed/scrap-21-308w.webp",
+						"width": 308
+					},
+					{
+						"url": "/seed/scrap-21-400w.webp",
+						"width": 400
+					},
+					{
+						"url": "/seed/scrap-21-410w.webp",
+						"width": 410
+					},
+					{
+						"url": "/seed/scrap-21-432w.webp",
+						"width": 432
+					},
+					{
+						"url": "/seed/scrap-21-576w.webp",
+						"width": 576
+					},
+					{
+						"url": "/seed/scrap-21-600w.webp",
+						"width": 600
+					},
+					{
+						"url": "/seed/scrap-21-615w.webp",
+						"width": 615
+					},
+					{
+						"url": "/seed/scrap-21-800w.webp",
+						"width": 800
+					}
+				]
+			},
+			"note": "Azan chart, mosque 21",
+			"date": "2024-01-12"
+		},
+		{
+			"image": {
+				"url": "/seed/scrap-22.jpg",
+				"width": 800,
+				"height": 1000,
+				"alt": "Brick kiln smoke gradient study",
+				"lqip": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wAARCAAUABADASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwDqLK4KK3BIzxV151UgAFnPRRVIwzzklF2oT1J5NXoYkiXCrz3Pc0DZJS0UUCP/2Q==",
+				"variants": [
+					{
+						"url": "/seed/scrap-22-51w.webp",
+						"width": 51
+					},
+					{
+						"url": "/seed/scrap-22-103w.webp",
+						"width": 103
+					},
+					{
+						"url": "/seed/scrap-22-144w.webp",
+						"width": 144
+					},
+					{
+						"url": "/seed/scrap-22-154w.webp",
+						"width": 154
+					},
+					{
+						"url": "/seed/scrap-22-200w.webp",
+						"width": 200
+					},
+					{
+						"url": "/seed/scrap-22-205w.webp",
+						"width": 205
+					},
+					{
+						"url": "/seed/scrap-22-288w.webp",
+						"width": 288
+					},
+					{
+						"url": "/seed/scrap-22-308w.webp",
+						"width": 308
+					},
+					{
+						"url": "/seed/scrap-22-400w.webp",
+						"width": 400
+					},
+					{
+						"url": "/seed/scrap-22-410w.webp",
+						"width": 410
+					},
+					{
+						"url": "/seed/scrap-22-432w.webp",
+						"width": 432
+					},
+					{
+						"url": "/seed/scrap-22-576w.webp",
+						"width": 576
+					},
+					{
+						"url": "/seed/scrap-22-600w.webp",
+						"width": 600
+					},
+					{
+						"url": "/seed/scrap-22-615w.webp",
+						"width": 615
+					},
+					{
+						"url": "/seed/scrap-22-800w.webp",
+						"width": 800
+					}
+				]
+			},
+			"note": "Kiln smoke gradient, plate 22",
+			"date": "2025-06-19"
+		},
+		{
+			"image": {
+				"url": "/seed/scrap-23.jpg",
+				"width": 800,
+				"height": 1000,
+				"alt": "Rain gauge margins, ruled by hand",
+				"lqip": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wAARCAAUABADASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwDspp/s7BQmcjOc1Nt3c+tVr6F3G9SBtHelt5ndwrYxigC0QCMEZFIEVTkKAfYUUUAf/9k=",
+				"variants": [
+					{
+						"url": "/seed/scrap-23-51w.webp",
+						"width": 51
+					},
+					{
+						"url": "/seed/scrap-23-103w.webp",
+						"width": 103
+					},
+					{
+						"url": "/seed/scrap-23-144w.webp",
+						"width": 144
+					},
+					{
+						"url": "/seed/scrap-23-154w.webp",
+						"width": 154
+					},
+					{
+						"url": "/seed/scrap-23-200w.webp",
+						"width": 200
+					},
+					{
+						"url": "/seed/scrap-23-205w.webp",
+						"width": 205
+					},
+					{
+						"url": "/seed/scrap-23-288w.webp",
+						"width": 288
+					},
+					{
+						"url": "/seed/scrap-23-308w.webp",
+						"width": 308
+					},
+					{
+						"url": "/seed/scrap-23-400w.webp",
+						"width": 400
+					},
+					{
+						"url": "/seed/scrap-23-410w.webp",
+						"width": 410
+					},
+					{
+						"url": "/seed/scrap-23-432w.webp",
+						"width": 432
+					},
+					{
+						"url": "/seed/scrap-23-576w.webp",
+						"width": 576
+					},
+					{
+						"url": "/seed/scrap-23-600w.webp",
+						"width": 600
+					},
+					{
+						"url": "/seed/scrap-23-615w.webp",
+						"width": 615
+					},
+					{
+						"url": "/seed/scrap-23-800w.webp",
+						"width": 800
+					}
+				]
+			},
+			"note": "Rain gauge margins, week 23",
+			"date": "2026-11-26"
+		},
+		{
+			"image": {
+				"url": "/seed/scrap-24.jpg",
+				"width": 780,
+				"height": 1040,
+				"alt": "Power line score across white sky",
+				"lqip": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wAARCAAUAA8DASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwDt45Q+eMYpHmVTtUFm9BVeMOQTyievc1ZiVQvyfj60gCb7o+tJD0NFFMD/2Q==",
+				"variants": [
+					{
+						"url": "/seed/scrap-24-96w.webp",
+						"width": 96
+					},
+					{
+						"url": "/seed/scrap-24-135w.webp",
+						"width": 135
+					},
+					{
+						"url": "/seed/scrap-24-144w.webp",
+						"width": 144
+					},
+					{
+						"url": "/seed/scrap-24-192w.webp",
+						"width": 192
+					},
+					{
+						"url": "/seed/scrap-24-195w.webp",
+						"width": 195
+					},
+					{
+						"url": "/seed/scrap-24-270w.webp",
+						"width": 270
+					},
+					{
+						"url": "/seed/scrap-24-288w.webp",
+						"width": 288
+					},
+					{
+						"url": "/seed/scrap-24-384w.webp",
+						"width": 384
+					},
+					{
+						"url": "/seed/scrap-24-390w.webp",
+						"width": 390
+					},
+					{
+						"url": "/seed/scrap-24-405w.webp",
+						"width": 405
+					},
+					{
+						"url": "/seed/scrap-24-540w.webp",
+						"width": 540
+					},
+					{
+						"url": "/seed/scrap-24-576w.webp",
+						"width": 576
+					},
+					{
+						"url": "/seed/scrap-24-585w.webp",
+						"width": 585
+					},
+					{
+						"url": "/seed/scrap-24-768w.webp",
+						"width": 768
+					},
+					{
+						"url": "/seed/scrap-24-780w.webp",
+						"width": 780
+					}
+				]
+			},
+			"note": "Power line score, sheet 24",
+			"date": "2024-04-08"
+		},
+		{
+			"image": {
+				"url": "/seed/scrap-25.jpg",
+				"width": 780,
+				"height": 1040,
+				"alt": "Alphabet spacing trial in ink",
+				"lqip": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wAARCAAUAA8DASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwDoZhmeT/eNayqWUbumOgquyRg/NGrE85NWI33rnGMcUhsasav1zxUiIEGBRRQB/9k=",
+				"variants": [
+					{
+						"url": "/seed/scrap-25-96w.webp",
+						"width": 96
+					},
+					{
+						"url": "/seed/scrap-25-135w.webp",
+						"width": 135
+					},
+					{
+						"url": "/seed/scrap-25-144w.webp",
+						"width": 144
+					},
+					{
+						"url": "/seed/scrap-25-192w.webp",
+						"width": 192
+					},
+					{
+						"url": "/seed/scrap-25-195w.webp",
+						"width": 195
+					},
+					{
+						"url": "/seed/scrap-25-270w.webp",
+						"width": 270
+					},
+					{
+						"url": "/seed/scrap-25-288w.webp",
+						"width": 288
+					},
+					{
+						"url": "/seed/scrap-25-384w.webp",
+						"width": 384
+					},
+					{
+						"url": "/seed/scrap-25-390w.webp",
+						"width": 390
+					},
+					{
+						"url": "/seed/scrap-25-405w.webp",
+						"width": 405
+					},
+					{
+						"url": "/seed/scrap-25-540w.webp",
+						"width": 540
+					},
+					{
+						"url": "/seed/scrap-25-576w.webp",
+						"width": 576
+					},
+					{
+						"url": "/seed/scrap-25-585w.webp",
+						"width": 585
+					},
+					{
+						"url": "/seed/scrap-25-768w.webp",
+						"width": 768
+					},
+					{
+						"url": "/seed/scrap-25-780w.webp",
+						"width": 780
+					}
+				]
+			},
+			"note": "Alphabet spacing trial 25",
+			"date": "2025-09-15"
+		},
+		{
+			"image": {
+				"url": "/seed/scrap-26.jpg",
+				"width": 780,
+				"height": 1040,
+				"alt": "Bus ticket overprint experiment",
+				"lqip": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wAARCAAUAA8DASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwDsLSIrCd4IwehqfzPaooJjcK/y4x75pwRh2/SgCHTfuyfUVdoooA//2Q==",
+				"variants": [
+					{
+						"url": "/seed/scrap-26-96w.webp",
+						"width": 96
+					},
+					{
+						"url": "/seed/scrap-26-135w.webp",
+						"width": 135
+					},
+					{
+						"url": "/seed/scrap-26-144w.webp",
+						"width": 144
+					},
+					{
+						"url": "/seed/scrap-26-192w.webp",
+						"width": 192
+					},
+					{
+						"url": "/seed/scrap-26-195w.webp",
+						"width": 195
+					},
+					{
+						"url": "/seed/scrap-26-270w.webp",
+						"width": 270
+					},
+					{
+						"url": "/seed/scrap-26-288w.webp",
+						"width": 288
+					},
+					{
+						"url": "/seed/scrap-26-384w.webp",
+						"width": 384
+					},
+					{
+						"url": "/seed/scrap-26-390w.webp",
+						"width": 390
+					},
+					{
+						"url": "/seed/scrap-26-405w.webp",
+						"width": 405
+					},
+					{
+						"url": "/seed/scrap-26-540w.webp",
+						"width": 540
+					},
+					{
+						"url": "/seed/scrap-26-576w.webp",
+						"width": 576
+					},
+					{
+						"url": "/seed/scrap-26-585w.webp",
+						"width": 585
+					},
+					{
+						"url": "/seed/scrap-26-768w.webp",
+						"width": 768
+					},
+					{
+						"url": "/seed/scrap-26-780w.webp",
+						"width": 780
+					}
+				]
+			},
+			"note": "Ticket overprint, run 26",
+			"date": "2026-02-22"
+		},
+		{
+			"image": {
+				"url": "/seed/scrap-27.jpg",
+				"width": 780,
+				"height": 1040,
+				"alt": "River bank silt bands, graded",
+				"lqip": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wAARCAAUAA8DASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwDsls0TlSd3djyTU6LtUD0pkEhljD9Kk5oAhtP9R+JqeiigD//Z",
+				"variants": [
+					{
+						"url": "/seed/scrap-27-96w.webp",
+						"width": 96
+					},
+					{
+						"url": "/seed/scrap-27-135w.webp",
+						"width": 135
+					},
+					{
+						"url": "/seed/scrap-27-144w.webp",
+						"width": 144
+					},
+					{
+						"url": "/seed/scrap-27-192w.webp",
+						"width": 192
+					},
+					{
+						"url": "/seed/scrap-27-195w.webp",
+						"width": 195
+					},
+					{
+						"url": "/seed/scrap-27-270w.webp",
+						"width": 270
+					},
+					{
+						"url": "/seed/scrap-27-288w.webp",
+						"width": 288
+					},
+					{
+						"url": "/seed/scrap-27-384w.webp",
+						"width": 384
+					},
+					{
+						"url": "/seed/scrap-27-390w.webp",
+						"width": 390
+					},
+					{
+						"url": "/seed/scrap-27-405w.webp",
+						"width": 405
+					},
+					{
+						"url": "/seed/scrap-27-540w.webp",
+						"width": 540
+					},
+					{
+						"url": "/seed/scrap-27-576w.webp",
+						"width": 576
+					},
+					{
+						"url": "/seed/scrap-27-585w.webp",
+						"width": 585
+					},
+					{
+						"url": "/seed/scrap-27-768w.webp",
+						"width": 768
+					},
+					{
+						"url": "/seed/scrap-27-780w.webp",
+						"width": 780
+					}
+				]
+			},
+			"note": "Silt band grading, core 27",
+			"date": "2024-07-04"
+		},
+		{
+			"image": {
+				"url": "/seed/scrap-28.jpg",
+				"width": 780,
+				"height": 1040,
+				"alt": "Window grille rubbing on tissue",
+				"lqip": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wAARCAAUAA8DASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwDuvwrGvLO5a7dguQxyGzWsz84UEn2qlD5nnDfvI560AaAUKMAU3aKKKAP/2Q==",
+				"variants": [
+					{
+						"url": "/seed/scrap-28-96w.webp",
+						"width": 96
+					},
+					{
+						"url": "/seed/scrap-28-135w.webp",
+						"width": 135
+					},
+					{
+						"url": "/seed/scrap-28-144w.webp",
+						"width": 144
+					},
+					{
+						"url": "/seed/scrap-28-192w.webp",
+						"width": 192
+					},
+					{
+						"url": "/seed/scrap-28-195w.webp",
+						"width": 195
+					},
+					{
+						"url": "/seed/scrap-28-270w.webp",
+						"width": 270
+					},
+					{
+						"url": "/seed/scrap-28-288w.webp",
+						"width": 288
+					},
+					{
+						"url": "/seed/scrap-28-384w.webp",
+						"width": 384
+					},
+					{
+						"url": "/seed/scrap-28-390w.webp",
+						"width": 390
+					},
+					{
+						"url": "/seed/scrap-28-405w.webp",
+						"width": 405
+					},
+					{
+						"url": "/seed/scrap-28-540w.webp",
+						"width": 540
+					},
+					{
+						"url": "/seed/scrap-28-576w.webp",
+						"width": 576
+					},
+					{
+						"url": "/seed/scrap-28-585w.webp",
+						"width": 585
+					},
+					{
+						"url": "/seed/scrap-28-768w.webp",
+						"width": 768
+					},
+					{
+						"url": "/seed/scrap-28-780w.webp",
+						"width": 780
+					}
+				]
+			},
+			"note": "Grille rubbing, house 28",
+			"date": "2025-12-11"
+		},
+		{
+			"image": {
+				"url": "/seed/scrap-29.jpg",
+				"width": 780,
+				"height": 1040,
+				"alt": "Letterform tracing over a rickshaw hood",
+				"lqip": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wAARCAAUAA8DASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwDe89Y5UHLMSMKOprSFu9wd10eO0angfWlhsLeDBCZbux6mpI5d8hXaBSAlpqxqrbgOaKKYH//Z",
+				"variants": [
+					{
+						"url": "/seed/scrap-29-96w.webp",
+						"width": 96
+					},
+					{
+						"url": "/seed/scrap-29-135w.webp",
+						"width": 135
+					},
+					{
+						"url": "/seed/scrap-29-144w.webp",
+						"width": 144
+					},
+					{
+						"url": "/seed/scrap-29-192w.webp",
+						"width": 192
+					},
+					{
+						"url": "/seed/scrap-29-195w.webp",
+						"width": 195
+					},
+					{
+						"url": "/seed/scrap-29-270w.webp",
+						"width": 270
+					},
+					{
+						"url": "/seed/scrap-29-288w.webp",
+						"width": 288
+					},
+					{
+						"url": "/seed/scrap-29-384w.webp",
+						"width": 384
+					},
+					{
+						"url": "/seed/scrap-29-390w.webp",
+						"width": 390
+					},
+					{
+						"url": "/seed/scrap-29-405w.webp",
+						"width": 405
+					},
+					{
+						"url": "/seed/scrap-29-540w.webp",
+						"width": 540
+					},
+					{
+						"url": "/seed/scrap-29-576w.webp",
+						"width": 576
+					},
+					{
+						"url": "/seed/scrap-29-585w.webp",
+						"width": 585
+					},
+					{
+						"url": "/seed/scrap-29-768w.webp",
+						"width": 768
+					},
+					{
+						"url": "/seed/scrap-29-780w.webp",
+						"width": 780
+					}
+				]
+			},
+			"note": "Rickshaw hood letterforms, sheet 29",
+			"date": "2026-05-18"
+		},
+		{
+			"image": {
+				"url": "/seed/scrap-30.jpg",
+				"width": 800,
+				"height": 800,
+				"alt": "Pale study of river fog bands",
+				"lqip": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wAARCAAUABQDASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwDpv7Rn/wBj8qsxQLLEsjMQWGTWc0Eu7ai7m9FOavR20zRIszkADG1aCidZ4IVEfmZx+NFCxKowqAD6UUCJkRYxhFAHtTqKKBBRRRQB/9k=",
+				"variants": [
+					{
+						"url": "/seed/scrap-30-64w.webp",
+						"width": 64
+					},
+					{
+						"url": "/seed/scrap-30-128w.webp",
+						"width": 128
+					},
+					{
+						"url": "/seed/scrap-30-180w.webp",
+						"width": 180
+					},
+					{
+						"url": "/seed/scrap-30-192w.webp",
+						"width": 192
+					},
+					{
+						"url": "/seed/scrap-30-200w.webp",
+						"width": 200
+					},
+					{
+						"url": "/seed/scrap-30-256w.webp",
+						"width": 256
+					},
+					{
+						"url": "/seed/scrap-30-360w.webp",
+						"width": 360
+					},
+					{
+						"url": "/seed/scrap-30-384w.webp",
+						"width": 384
+					},
+					{
+						"url": "/seed/scrap-30-400w.webp",
+						"width": 400
+					},
+					{
+						"url": "/seed/scrap-30-512w.webp",
+						"width": 512
+					},
+					{
+						"url": "/seed/scrap-30-540w.webp",
+						"width": 540
+					},
+					{
+						"url": "/seed/scrap-30-600w.webp",
+						"width": 600
+					},
+					{
+						"url": "/seed/scrap-30-720w.webp",
+						"width": 720
+					},
+					{
+						"url": "/seed/scrap-30-768w.webp",
+						"width": 768
+					},
+					{
+						"url": "/seed/scrap-30-800w.webp",
+						"width": 800
+					}
+				]
+			},
+			"note": "Sadarghat fog, contact strip 30",
+			"date": "2024-10-25"
+		},
+		{
+			"image": {
+				"url": "/seed/scrap-31.jpg",
+				"width": 800,
+				"height": 800,
+				"alt": "Pigment swatch field on paper",
+				"lqip": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wAARCAAUABQDASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwDqLS1lguFeQAKM96nkkPmnDHGexqeVSSCKi8oE5JJY9hQBZopvzH+ID2ooAaPnbB6U8KB0AoooAWiiigD/2Q==",
+				"variants": [
+					{
+						"url": "/seed/scrap-31-64w.webp",
+						"width": 64
+					},
+					{
+						"url": "/seed/scrap-31-128w.webp",
+						"width": 128
+					},
+					{
+						"url": "/seed/scrap-31-180w.webp",
+						"width": 180
+					},
+					{
+						"url": "/seed/scrap-31-192w.webp",
+						"width": 192
+					},
+					{
+						"url": "/seed/scrap-31-200w.webp",
+						"width": 200
+					},
+					{
+						"url": "/seed/scrap-31-256w.webp",
+						"width": 256
+					},
+					{
+						"url": "/seed/scrap-31-360w.webp",
+						"width": 360
+					},
+					{
+						"url": "/seed/scrap-31-384w.webp",
+						"width": 384
+					},
+					{
+						"url": "/seed/scrap-31-400w.webp",
+						"width": 400
+					},
+					{
+						"url": "/seed/scrap-31-512w.webp",
+						"width": 512
+					},
+					{
+						"url": "/seed/scrap-31-540w.webp",
+						"width": 540
+					},
+					{
+						"url": "/seed/scrap-31-600w.webp",
+						"width": 600
+					},
+					{
+						"url": "/seed/scrap-31-720w.webp",
+						"width": 720
+					},
+					{
+						"url": "/seed/scrap-31-768w.webp",
+						"width": 768
+					},
+					{
+						"url": "/seed/scrap-31-800w.webp",
+						"width": 800
+					}
+				]
+			},
+			"note": "Pigment ledger, batch 31",
+			"date": "2025-03-07"
+		},
+		{
+			"image": {
+				"url": "/seed/scrap-32.jpg",
+				"width": 800,
+				"height": 800,
+				"alt": "Tall study of monsoon water lines",
+				"lqip": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wAARCAAUABQDASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwDpGubp3/c5C/3mq/HaqCHlYyP6npUhjTIOzJHSnZb0pAKOKKKKYC0UUUAFFFFAH//Z",
+				"variants": [
+					{
+						"url": "/seed/scrap-32-64w.webp",
+						"width": 64
+					},
+					{
+						"url": "/seed/scrap-32-128w.webp",
+						"width": 128
+					},
+					{
+						"url": "/seed/scrap-32-180w.webp",
+						"width": 180
+					},
+					{
+						"url": "/seed/scrap-32-192w.webp",
+						"width": 192
+					},
+					{
+						"url": "/seed/scrap-32-200w.webp",
+						"width": 200
+					},
+					{
+						"url": "/seed/scrap-32-256w.webp",
+						"width": 256
+					},
+					{
+						"url": "/seed/scrap-32-360w.webp",
+						"width": 360
+					},
+					{
+						"url": "/seed/scrap-32-384w.webp",
+						"width": 384
+					},
+					{
+						"url": "/seed/scrap-32-400w.webp",
+						"width": 400
+					},
+					{
+						"url": "/seed/scrap-32-512w.webp",
+						"width": 512
+					},
+					{
+						"url": "/seed/scrap-32-540w.webp",
+						"width": 540
+					},
+					{
+						"url": "/seed/scrap-32-600w.webp",
+						"width": 600
+					},
+					{
+						"url": "/seed/scrap-32-720w.webp",
+						"width": 720
+					},
+					{
+						"url": "/seed/scrap-32-768w.webp",
+						"width": 768
+					},
+					{
+						"url": "/seed/scrap-32-800w.webp",
+						"width": 800
+					}
+				]
+			},
+			"note": "Monsoon water lines, entry 32",
+			"date": "2026-08-14"
+		},
+		{
+			"image": {
+				"url": "/seed/scrap-33.jpg",
+				"width": 800,
+				"height": 800,
+				"alt": "Night exposure rehearsal marks",
+				"lqip": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wAARCAAUABQDASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwDujWXdLJLefKM9utaZwOScVHt3Sb0HPqaTGitBbyqhyuOfWirfl5+8xJooAEUMNzcn3p+B6UUUxBRRRQB//9k=",
+				"variants": [
+					{
+						"url": "/seed/scrap-33-64w.webp",
+						"width": 64
+					},
+					{
+						"url": "/seed/scrap-33-128w.webp",
+						"width": 128
+					},
+					{
+						"url": "/seed/scrap-33-180w.webp",
+						"width": 180
+					},
+					{
+						"url": "/seed/scrap-33-192w.webp",
+						"width": 192
+					},
+					{
+						"url": "/seed/scrap-33-200w.webp",
+						"width": 200
+					},
+					{
+						"url": "/seed/scrap-33-256w.webp",
+						"width": 256
+					},
+					{
+						"url": "/seed/scrap-33-360w.webp",
+						"width": 360
+					},
+					{
+						"url": "/seed/scrap-33-384w.webp",
+						"width": 384
+					},
+					{
+						"url": "/seed/scrap-33-400w.webp",
+						"width": 400
+					},
+					{
+						"url": "/seed/scrap-33-512w.webp",
+						"width": 512
+					},
+					{
+						"url": "/seed/scrap-33-540w.webp",
+						"width": 540
+					},
+					{
+						"url": "/seed/scrap-33-600w.webp",
+						"width": 600
+					},
+					{
+						"url": "/seed/scrap-33-720w.webp",
+						"width": 720
+					},
+					{
+						"url": "/seed/scrap-33-768w.webp",
+						"width": 768
+					},
+					{
+						"url": "/seed/scrap-33-800w.webp",
+						"width": 800
+					}
+				]
+			},
+			"note": "Night crossing exposure, take 33",
+			"date": "2024-01-21"
+		},
+		{
+			"image": {
+				"url": "/seed/scrap-34.jpg",
+				"width": 800,
+				"height": 800,
+				"alt": "Roofline planes in grey-green",
+				"lqip": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wAARCAAUABQDASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwDqblDueRnVR/tGqlhJdNKwhGFI5d+grRjsEDb5WMr+rdPyq0Fx0OPpQKxU/s9X+aaWR3PU5xRVwD3NFAxaKKKACiiigD//2Q==",
+				"variants": [
+					{
+						"url": "/seed/scrap-34-64w.webp",
+						"width": 64
+					},
+					{
+						"url": "/seed/scrap-34-128w.webp",
+						"width": 128
+					},
+					{
+						"url": "/seed/scrap-34-180w.webp",
+						"width": 180
+					},
+					{
+						"url": "/seed/scrap-34-192w.webp",
+						"width": 192
+					},
+					{
+						"url": "/seed/scrap-34-200w.webp",
+						"width": 200
+					},
+					{
+						"url": "/seed/scrap-34-256w.webp",
+						"width": 256
+					},
+					{
+						"url": "/seed/scrap-34-360w.webp",
+						"width": 360
+					},
+					{
+						"url": "/seed/scrap-34-384w.webp",
+						"width": 384
+					},
+					{
+						"url": "/seed/scrap-34-400w.webp",
+						"width": 400
+					},
+					{
+						"url": "/seed/scrap-34-512w.webp",
+						"width": 512
+					},
+					{
+						"url": "/seed/scrap-34-540w.webp",
+						"width": 540
+					},
+					{
+						"url": "/seed/scrap-34-600w.webp",
+						"width": 600
+					},
+					{
+						"url": "/seed/scrap-34-720w.webp",
+						"width": 720
+					},
+					{
+						"url": "/seed/scrap-34-768w.webp",
+						"width": 768
+					},
+					{
+						"url": "/seed/scrap-34-800w.webp",
+						"width": 800
+					}
+				]
+			},
+			"note": "Roofline sketch, azan log 34",
+			"date": "2025-06-03"
+		},
+		{
+			"image": {
+				"url": "/seed/scrap-35.jpg",
+				"width": 960,
+				"height": 640,
+				"alt": "Street grid traced in thin ink",
+				"lqip": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wAARCAANABQDASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwDsL2BpYwFcAg55pllG8G8Md27GMVcCKO2T6mmvFucNkikAvzn0FFPopgf/2Q==",
+				"variants": [
+					{
+						"url": "/seed/scrap-35-64w.webp",
+						"width": 64
+					},
+					{
+						"url": "/seed/scrap-35-128w.webp",
+						"width": 128
+					},
+					{
+						"url": "/seed/scrap-35-180w.webp",
+						"width": 180
+					},
+					{
+						"url": "/seed/scrap-35-192w.webp",
+						"width": 192
+					},
+					{
+						"url": "/seed/scrap-35-240w.webp",
+						"width": 240
+					},
+					{
+						"url": "/seed/scrap-35-256w.webp",
+						"width": 256
+					},
+					{
+						"url": "/seed/scrap-35-360w.webp",
+						"width": 360
+					},
+					{
+						"url": "/seed/scrap-35-384w.webp",
+						"width": 384
+					},
+					{
+						"url": "/seed/scrap-35-480w.webp",
+						"width": 480
+					},
+					{
+						"url": "/seed/scrap-35-512w.webp",
+						"width": 512
+					},
+					{
+						"url": "/seed/scrap-35-540w.webp",
+						"width": 540
+					},
+					{
+						"url": "/seed/scrap-35-720w.webp",
+						"width": 720
+					},
+					{
+						"url": "/seed/scrap-35-768w.webp",
+						"width": 768
+					},
+					{
+						"url": "/seed/scrap-35-960w.webp",
+						"width": 960
+					}
+				]
+			},
+			"note": "Memory map street grid, pass 35",
+			"date": "2026-11-10"
+		},
+		{
+			"image": {
+				"url": "/seed/scrap-36.jpg",
+				"width": 960,
+				"height": 640,
+				"alt": "Vertical tin-sheet rhythm study",
+				"lqip": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wAARCAANABQDASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwDsHiYjNzdHB/hX5R/jSDbBj7PGpBHUDP61LPaRXDBpM5HGQaWG2jgQqgODycmgCL7RL/cH5UVaCgdqKAP/2Q==",
+				"variants": [
+					{
+						"url": "/seed/scrap-36-64w.webp",
+						"width": 64
+					},
+					{
+						"url": "/seed/scrap-36-128w.webp",
+						"width": 128
+					},
+					{
+						"url": "/seed/scrap-36-180w.webp",
+						"width": 180
+					},
+					{
+						"url": "/seed/scrap-36-192w.webp",
+						"width": 192
+					},
+					{
+						"url": "/seed/scrap-36-240w.webp",
+						"width": 240
+					},
+					{
+						"url": "/seed/scrap-36-256w.webp",
+						"width": 256
+					},
+					{
+						"url": "/seed/scrap-36-360w.webp",
+						"width": 360
+					},
+					{
+						"url": "/seed/scrap-36-384w.webp",
+						"width": 384
+					},
+					{
+						"url": "/seed/scrap-36-480w.webp",
+						"width": 480
+					},
+					{
+						"url": "/seed/scrap-36-512w.webp",
+						"width": 512
+					},
+					{
+						"url": "/seed/scrap-36-540w.webp",
+						"width": 540
+					},
+					{
+						"url": "/seed/scrap-36-720w.webp",
+						"width": 720
+					},
+					{
+						"url": "/seed/scrap-36-768w.webp",
+						"width": 768
+					},
+					{
+						"url": "/seed/scrap-36-960w.webp",
+						"width": 960
+					}
+				]
+			},
+			"note": "Tin roof rhythm, key 36",
+			"date": "2024-04-17"
+		},
+		{
+			"image": {
+				"url": "/seed/scrap-37.jpg",
+				"width": 960,
+				"height": 640,
+				"alt": "Ferry queue timing diagram",
+				"lqip": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wAARCAANABQDASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwDs598kLKjbT6mqlpIYXYO+c/wjmrZtUYYkZnJ9Tx+VNS3UNtBwPYUgJN8p5EPHu1FSgYGKKYH/2Q==",
+				"variants": [
+					{
+						"url": "/seed/scrap-37-64w.webp",
+						"width": 64
+					},
+					{
+						"url": "/seed/scrap-37-128w.webp",
+						"width": 128
+					},
+					{
+						"url": "/seed/scrap-37-180w.webp",
+						"width": 180
+					},
+					{
+						"url": "/seed/scrap-37-192w.webp",
+						"width": 192
+					},
+					{
+						"url": "/seed/scrap-37-240w.webp",
+						"width": 240
+					},
+					{
+						"url": "/seed/scrap-37-256w.webp",
+						"width": 256
+					},
+					{
+						"url": "/seed/scrap-37-360w.webp",
+						"width": 360
+					},
+					{
+						"url": "/seed/scrap-37-384w.webp",
+						"width": 384
+					},
+					{
+						"url": "/seed/scrap-37-480w.webp",
+						"width": 480
+					},
+					{
+						"url": "/seed/scrap-37-512w.webp",
+						"width": 512
+					},
+					{
+						"url": "/seed/scrap-37-540w.webp",
+						"width": 540
+					},
+					{
+						"url": "/seed/scrap-37-720w.webp",
+						"width": 720
+					},
+					{
+						"url": "/seed/scrap-37-768w.webp",
+						"width": 768
+					},
+					{
+						"url": "/seed/scrap-37-960w.webp",
+						"width": 960
+					}
+				]
+			},
+			"note": "Ferry queue timings, dawn set 37",
+			"date": "2025-09-24"
+		},
+		{
+			"image": {
+				"url": "/seed/scrap-38.jpg",
+				"width": 960,
+				"height": 640,
+				"alt": "Halftone test of a market awning",
+				"lqip": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wAARCAANABQDASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwDo7yFhLuJVRjHJ5p9gtxG7FYCQRgFjgVoR28cfKKAfXGT+dSYP96gdyDZctyZlX2VM/wA6KnooEf/Z",
+				"variants": [
+					{
+						"url": "/seed/scrap-38-64w.webp",
+						"width": 64
+					},
+					{
+						"url": "/seed/scrap-38-128w.webp",
+						"width": 128
+					},
+					{
+						"url": "/seed/scrap-38-180w.webp",
+						"width": 180
+					},
+					{
+						"url": "/seed/scrap-38-192w.webp",
+						"width": 192
+					},
+					{
+						"url": "/seed/scrap-38-240w.webp",
+						"width": 240
+					},
+					{
+						"url": "/seed/scrap-38-256w.webp",
+						"width": 256
+					},
+					{
+						"url": "/seed/scrap-38-360w.webp",
+						"width": 360
+					},
+					{
+						"url": "/seed/scrap-38-384w.webp",
+						"width": 384
+					},
+					{
+						"url": "/seed/scrap-38-480w.webp",
+						"width": 480
+					},
+					{
+						"url": "/seed/scrap-38-512w.webp",
+						"width": 512
+					},
+					{
+						"url": "/seed/scrap-38-540w.webp",
+						"width": 540
+					},
+					{
+						"url": "/seed/scrap-38-720w.webp",
+						"width": 720
+					},
+					{
+						"url": "/seed/scrap-38-768w.webp",
+						"width": 768
+					},
+					{
+						"url": "/seed/scrap-38-960w.webp",
+						"width": 960
+					}
+				]
+			},
+			"note": "Market awning halftone, proof 38",
+			"date": "2026-02-06"
+		},
+		{
+			"image": {
+				"url": "/seed/scrap-39.jpg",
+				"width": 1000,
+				"height": 600,
+				"alt": "Courtyard shadow at noon, blocked in",
+				"lqip": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wAARCAAMABQDASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwDqjBJJ9xCB6ycfpVhYHIw85x/dQbR/jVijFAEQtYAP9Up9zzRUtFAH/9k=",
+				"variants": [
+					{
+						"url": "/seed/scrap-39-64w.webp",
+						"width": 64
+					},
+					{
+						"url": "/seed/scrap-39-128w.webp",
+						"width": 128
+					},
+					{
+						"url": "/seed/scrap-39-180w.webp",
+						"width": 180
+					},
+					{
+						"url": "/seed/scrap-39-192w.webp",
+						"width": 192
+					},
+					{
+						"url": "/seed/scrap-39-250w.webp",
+						"width": 250
+					},
+					{
+						"url": "/seed/scrap-39-256w.webp",
+						"width": 256
+					},
+					{
+						"url": "/seed/scrap-39-360w.webp",
+						"width": 360
+					},
+					{
+						"url": "/seed/scrap-39-384w.webp",
+						"width": 384
+					},
+					{
+						"url": "/seed/scrap-39-500w.webp",
+						"width": 500
+					},
+					{
+						"url": "/seed/scrap-39-512w.webp",
+						"width": 512
+					},
+					{
+						"url": "/seed/scrap-39-540w.webp",
+						"width": 540
+					},
+					{
+						"url": "/seed/scrap-39-720w.webp",
+						"width": 720
+					},
+					{
+						"url": "/seed/scrap-39-750w.webp",
+						"width": 750
+					},
+					{
+						"url": "/seed/scrap-39-768w.webp",
+						"width": 768
+					},
+					{
+						"url": "/seed/scrap-39-1000w.webp",
+						"width": 1000
+					}
+				]
+			},
+			"note": "Courtyard shadow block-in 39",
+			"date": "2024-07-13"
+		},
+		{
+			"image": {
+				"url": "/seed/scrap-40.jpg",
+				"width": 1000,
+				"height": 600,
+				"alt": "Hand-cut paper crop of a film frame",
+				"lqip": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wAARCAAMABQDASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwDtpWKISRu9hUVsEXLBGBPHNWaMCgAzRRiigD//2Q==",
+				"variants": [
+					{
+						"url": "/seed/scrap-40-64w.webp",
+						"width": 64
+					},
+					{
+						"url": "/seed/scrap-40-128w.webp",
+						"width": 128
+					},
+					{
+						"url": "/seed/scrap-40-180w.webp",
+						"width": 180
+					},
+					{
+						"url": "/seed/scrap-40-192w.webp",
+						"width": 192
+					},
+					{
+						"url": "/seed/scrap-40-250w.webp",
+						"width": 250
+					},
+					{
+						"url": "/seed/scrap-40-256w.webp",
+						"width": 256
+					},
+					{
+						"url": "/seed/scrap-40-360w.webp",
+						"width": 360
+					},
+					{
+						"url": "/seed/scrap-40-384w.webp",
+						"width": 384
+					},
+					{
+						"url": "/seed/scrap-40-500w.webp",
+						"width": 500
+					},
+					{
+						"url": "/seed/scrap-40-512w.webp",
+						"width": 512
+					},
+					{
+						"url": "/seed/scrap-40-540w.webp",
+						"width": 540
+					},
+					{
+						"url": "/seed/scrap-40-720w.webp",
+						"width": 720
+					},
+					{
+						"url": "/seed/scrap-40-750w.webp",
+						"width": 750
+					},
+					{
+						"url": "/seed/scrap-40-768w.webp",
+						"width": 768
+					},
+					{
+						"url": "/seed/scrap-40-1000w.webp",
+						"width": 1000
+					}
+				]
+			},
+			"note": "Film frame paper crop 40",
+			"date": "2025-12-20"
+		},
+		{
+			"image": {
+				"url": "/seed/scrap-41.jpg",
+				"width": 1000,
+				"height": 600,
+				"alt": "Azan timing chart, one mosque",
+				"lqip": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wAARCAAMABQDASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwDrZreRomUEZPaoobaZZkZlG0HnmtLFJSsO4AcfdFFOopiP/9k=",
+				"variants": [
+					{
+						"url": "/seed/scrap-41-64w.webp",
+						"width": 64
+					},
+					{
+						"url": "/seed/scrap-41-128w.webp",
+						"width": 128
+					},
+					{
+						"url": "/seed/scrap-41-180w.webp",
+						"width": 180
+					},
+					{
+						"url": "/seed/scrap-41-192w.webp",
+						"width": 192
+					},
+					{
+						"url": "/seed/scrap-41-250w.webp",
+						"width": 250
+					},
+					{
+						"url": "/seed/scrap-41-256w.webp",
+						"width": 256
+					},
+					{
+						"url": "/seed/scrap-41-360w.webp",
+						"width": 360
+					},
+					{
+						"url": "/seed/scrap-41-384w.webp",
+						"width": 384
+					},
+					{
+						"url": "/seed/scrap-41-500w.webp",
+						"width": 500
+					},
+					{
+						"url": "/seed/scrap-41-512w.webp",
+						"width": 512
+					},
+					{
+						"url": "/seed/scrap-41-540w.webp",
+						"width": 540
+					},
+					{
+						"url": "/seed/scrap-41-720w.webp",
+						"width": 720
+					},
+					{
+						"url": "/seed/scrap-41-750w.webp",
+						"width": 750
+					},
+					{
+						"url": "/seed/scrap-41-768w.webp",
+						"width": 768
+					},
+					{
+						"url": "/seed/scrap-41-1000w.webp",
+						"width": 1000
+					}
+				]
+			},
+			"note": "Azan chart, mosque 41",
+			"date": "2026-05-27"
+		},
+		{
+			"image": {
+				"url": "/seed/scrap-42.jpg",
+				"width": 960,
+				"height": 540,
+				"alt": "Brick kiln smoke gradient study",
+				"lqip": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wAARCAALABQDASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwDq47yQyKHZQD7YqWXy58YV3I/ujj86mjgiUBhGufU8mpKBEQM+OI0A9C1FTUUDP//Z",
+				"variants": [
+					{
+						"url": "/seed/scrap-42-64w.webp",
+						"width": 64
+					},
+					{
+						"url": "/seed/scrap-42-128w.webp",
+						"width": 128
+					},
+					{
+						"url": "/seed/scrap-42-180w.webp",
+						"width": 180
+					},
+					{
+						"url": "/seed/scrap-42-192w.webp",
+						"width": 192
+					},
+					{
+						"url": "/seed/scrap-42-240w.webp",
+						"width": 240
+					},
+					{
+						"url": "/seed/scrap-42-256w.webp",
+						"width": 256
+					},
+					{
+						"url": "/seed/scrap-42-360w.webp",
+						"width": 360
+					},
+					{
+						"url": "/seed/scrap-42-384w.webp",
+						"width": 384
+					},
+					{
+						"url": "/seed/scrap-42-480w.webp",
+						"width": 480
+					},
+					{
+						"url": "/seed/scrap-42-512w.webp",
+						"width": 512
+					},
+					{
+						"url": "/seed/scrap-42-540w.webp",
+						"width": 540
+					},
+					{
+						"url": "/seed/scrap-42-720w.webp",
+						"width": 720
+					},
+					{
+						"url": "/seed/scrap-42-768w.webp",
+						"width": 768
+					},
+					{
+						"url": "/seed/scrap-42-960w.webp",
+						"width": 960
+					}
+				]
+			},
+			"note": "Kiln smoke gradient, plate 42",
+			"date": "2024-10-09"
+		},
+		{
+			"image": {
+				"url": "/seed/scrap-43.jpg",
+				"width": 960,
+				"height": 540,
+				"alt": "Rain gauge margins, ruled by hand",
+				"lqip": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wAARCAALABQDASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwDpZnEEskccI/3sEmrcUG6NHLvkgHFW6KVgEopaKYH/2Q==",
+				"variants": [
+					{
+						"url": "/seed/scrap-43-64w.webp",
+						"width": 64
+					},
+					{
+						"url": "/seed/scrap-43-128w.webp",
+						"width": 128
+					},
+					{
+						"url": "/seed/scrap-43-180w.webp",
+						"width": 180
+					},
+					{
+						"url": "/seed/scrap-43-192w.webp",
+						"width": 192
+					},
+					{
+						"url": "/seed/scrap-43-240w.webp",
+						"width": 240
+					},
+					{
+						"url": "/seed/scrap-43-256w.webp",
+						"width": 256
+					},
+					{
+						"url": "/seed/scrap-43-360w.webp",
+						"width": 360
+					},
+					{
+						"url": "/seed/scrap-43-384w.webp",
+						"width": 384
+					},
+					{
+						"url": "/seed/scrap-43-480w.webp",
+						"width": 480
+					},
+					{
+						"url": "/seed/scrap-43-512w.webp",
+						"width": 512
+					},
+					{
+						"url": "/seed/scrap-43-540w.webp",
+						"width": 540
+					},
+					{
+						"url": "/seed/scrap-43-720w.webp",
+						"width": 720
+					},
+					{
+						"url": "/seed/scrap-43-768w.webp",
+						"width": 768
+					},
+					{
+						"url": "/seed/scrap-43-960w.webp",
+						"width": 960
+					}
+				]
+			},
+			"note": "Rain gauge margins, week 43",
+			"date": "2025-03-16"
+		},
+		{
+			"image": {
+				"url": "/seed/scrap-44.jpg",
+				"width": 960,
+				"height": 540,
+				"alt": "Power line score across white sky",
+				"lqip": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wAARCAALABQDASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwDsYhchMEKvuxyahupo4XCXEspJGcLwP0rQqpd20U0oaRMkDHU0AQJfWKrjaf8Aviij7Db/APPP/wAeNFMD/9k=",
+				"variants": [
+					{
+						"url": "/seed/scrap-44-64w.webp",
+						"width": 64
+					},
+					{
+						"url": "/seed/scrap-44-128w.webp",
+						"width": 128
+					},
+					{
+						"url": "/seed/scrap-44-180w.webp",
+						"width": 180
+					},
+					{
+						"url": "/seed/scrap-44-192w.webp",
+						"width": 192
+					},
+					{
+						"url": "/seed/scrap-44-240w.webp",
+						"width": 240
+					},
+					{
+						"url": "/seed/scrap-44-256w.webp",
+						"width": 256
+					},
+					{
+						"url": "/seed/scrap-44-360w.webp",
+						"width": 360
+					},
+					{
+						"url": "/seed/scrap-44-384w.webp",
+						"width": 384
+					},
+					{
+						"url": "/seed/scrap-44-480w.webp",
+						"width": 480
+					},
+					{
+						"url": "/seed/scrap-44-512w.webp",
+						"width": 512
+					},
+					{
+						"url": "/seed/scrap-44-540w.webp",
+						"width": 540
+					},
+					{
+						"url": "/seed/scrap-44-720w.webp",
+						"width": 720
+					},
+					{
+						"url": "/seed/scrap-44-768w.webp",
+						"width": 768
+					},
+					{
+						"url": "/seed/scrap-44-960w.webp",
+						"width": 960
+					}
+				]
+			},
+			"note": "Power line score, sheet 44",
+			"date": "2026-08-23"
+		},
+		{
+			"image": {
+				"url": "/seed/scrap-45.jpg",
+				"width": 660,
+				"height": 1100,
+				"alt": "Alphabet spacing trial in ink",
+				"lqip": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wAARCAAUAAwDASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwDr1hjRjBySRuZyeSaf9li9W/OntETN5nXjGKdtPpSAkooopgf/2Q==",
+				"variants": [
+					{
+						"url": "/seed/scrap-45-77w.webp",
+						"width": 77
+					},
+					{
+						"url": "/seed/scrap-45-108w.webp",
+						"width": 108
+					},
+					{
+						"url": "/seed/scrap-45-116w.webp",
+						"width": 116
+					},
+					{
+						"url": "/seed/scrap-45-154w.webp",
+						"width": 154
+					},
+					{
+						"url": "/seed/scrap-45-165w.webp",
+						"width": 165
+					},
+					{
+						"url": "/seed/scrap-45-216w.webp",
+						"width": 216
+					},
+					{
+						"url": "/seed/scrap-45-231w.webp",
+						"width": 231
+					},
+					{
+						"url": "/seed/scrap-45-308w.webp",
+						"width": 308
+					},
+					{
+						"url": "/seed/scrap-45-324w.webp",
+						"width": 324
+					},
+					{
+						"url": "/seed/scrap-45-330w.webp",
+						"width": 330
+					},
+					{
+						"url": "/seed/scrap-45-432w.webp",
+						"width": 432
+					},
+					{
+						"url": "/seed/scrap-45-462w.webp",
+						"width": 462
+					},
+					{
+						"url": "/seed/scrap-45-495w.webp",
+						"width": 495
+					},
+					{
+						"url": "/seed/scrap-45-616w.webp",
+						"width": 616
+					},
+					{
+						"url": "/seed/scrap-45-648w.webp",
+						"width": 648
+					},
+					{
+						"url": "/seed/scrap-45-660w.webp",
+						"width": 660
+					}
+				]
+			},
+			"note": "Alphabet spacing trial 45",
+			"date": "2024-01-05"
+		},
+		{
+			"image": {
+				"url": "/seed/scrap-46.jpg",
+				"width": 660,
+				"height": 1100,
+				"alt": "Bus ticket overprint experiment",
+				"lqip": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wAARCAAUAAwDASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwDs4LuO4j3ID6YxUmC3JYj6VXsITArKQPXirlA2RR/e/CpaKKBH/9k=",
+				"variants": [
+					{
+						"url": "/seed/scrap-46-77w.webp",
+						"width": 77
+					},
+					{
+						"url": "/seed/scrap-46-108w.webp",
+						"width": 108
+					},
+					{
+						"url": "/seed/scrap-46-116w.webp",
+						"width": 116
+					},
+					{
+						"url": "/seed/scrap-46-154w.webp",
+						"width": 154
+					},
+					{
+						"url": "/seed/scrap-46-165w.webp",
+						"width": 165
+					},
+					{
+						"url": "/seed/scrap-46-216w.webp",
+						"width": 216
+					},
+					{
+						"url": "/seed/scrap-46-231w.webp",
+						"width": 231
+					},
+					{
+						"url": "/seed/scrap-46-308w.webp",
+						"width": 308
+					},
+					{
+						"url": "/seed/scrap-46-324w.webp",
+						"width": 324
+					},
+					{
+						"url": "/seed/scrap-46-330w.webp",
+						"width": 330
+					},
+					{
+						"url": "/seed/scrap-46-432w.webp",
+						"width": 432
+					},
+					{
+						"url": "/seed/scrap-46-462w.webp",
+						"width": 462
+					},
+					{
+						"url": "/seed/scrap-46-495w.webp",
+						"width": 495
+					},
+					{
+						"url": "/seed/scrap-46-616w.webp",
+						"width": 616
+					},
+					{
+						"url": "/seed/scrap-46-648w.webp",
+						"width": 648
+					},
+					{
+						"url": "/seed/scrap-46-660w.webp",
+						"width": 660
+					}
+				]
+			},
+			"note": "Ticket overprint, run 46",
+			"date": "2025-06-12"
+		},
+		{
+			"image": {
+				"url": "/seed/scrap-47.jpg",
+				"width": 502,
+				"height": 1000,
+				"alt": "River bank silt bands, graded",
+				"lqip": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wAARCAAUAAoDASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwDpooJJrsTSDEBJKr3Pua1KZtDMCexqSgBMYpaKKAP/2Q==",
+				"variants": [
+					{
+						"url": "/seed/scrap-47-65w.webp",
+						"width": 65
+					},
+					{
+						"url": "/seed/scrap-47-90w.webp",
+						"width": 90
+					},
+					{
+						"url": "/seed/scrap-47-97w.webp",
+						"width": 97
+					},
+					{
+						"url": "/seed/scrap-47-126w.webp",
+						"width": 126
+					},
+					{
+						"url": "/seed/scrap-47-129w.webp",
+						"width": 129
+					},
+					{
+						"url": "/seed/scrap-47-181w.webp",
+						"width": 181
+					},
+					{
+						"url": "/seed/scrap-47-194w.webp",
+						"width": 194
+					},
+					{
+						"url": "/seed/scrap-47-251w.webp",
+						"width": 251
+					},
+					{
+						"url": "/seed/scrap-47-258w.webp",
+						"width": 258
+					},
+					{
+						"url": "/seed/scrap-47-271w.webp",
+						"width": 271
+					},
+					{
+						"url": "/seed/scrap-47-361w.webp",
+						"width": 361
+					},
+					{
+						"url": "/seed/scrap-47-377w.webp",
+						"width": 377
+					},
+					{
+						"url": "/seed/scrap-47-387w.webp",
+						"width": 387
+					},
+					{
+						"url": "/seed/scrap-47-502w.webp",
+						"width": 502
+					}
+				]
+			},
+			"note": "Silt band grading, core 47",
+			"date": "2026-11-19"
+		},
+		{
+			"image": {
+				"url": "/seed/scrap-48.jpg",
+				"width": 1280,
+				"height": 400,
+				"alt": "Window grille rubbing on tissue",
+				"lqip": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wAARCAAGABQDASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwDs1t2DZaZ2HpnFN+zPn/Wg/VAaKKAJo1dVwzhj7DFFFFAH/9k=",
+				"variants": [
+					{
+						"url": "/seed/scrap-48-64w.webp",
+						"width": 64
+					},
+					{
+						"url": "/seed/scrap-48-128w.webp",
+						"width": 128
+					},
+					{
+						"url": "/seed/scrap-48-180w.webp",
+						"width": 180
+					},
+					{
+						"url": "/seed/scrap-48-192w.webp",
+						"width": 192
+					},
+					{
+						"url": "/seed/scrap-48-256w.webp",
+						"width": 256
+					},
+					{
+						"url": "/seed/scrap-48-320w.webp",
+						"width": 320
+					},
+					{
+						"url": "/seed/scrap-48-360w.webp",
+						"width": 360
+					},
+					{
+						"url": "/seed/scrap-48-384w.webp",
+						"width": 384
+					},
+					{
+						"url": "/seed/scrap-48-512w.webp",
+						"width": 512
+					},
+					{
+						"url": "/seed/scrap-48-540w.webp",
+						"width": 540
+					},
+					{
+						"url": "/seed/scrap-48-640w.webp",
+						"width": 640
+					},
+					{
+						"url": "/seed/scrap-48-720w.webp",
+						"width": 720
+					},
+					{
+						"url": "/seed/scrap-48-768w.webp",
+						"width": 768
+					},
+					{
+						"url": "/seed/scrap-48-960w.webp",
+						"width": 960
+					},
+					{
+						"url": "/seed/scrap-48-1024w.webp",
+						"width": 1024
+					},
+					{
+						"url": "/seed/scrap-48-1080w.webp",
+						"width": 1080
+					},
+					{
+						"url": "/seed/scrap-48-1280w.webp",
+						"width": 1280
+					}
+				]
+			},
+			"note": "Grille rubbing, house 48",
+			"date": "2024-04-26"
 		}
 	],
 	"members": [

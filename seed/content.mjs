@@ -3,6 +3,11 @@
  * (b) src/lib/sanity/fixtures-data.json for the no-projectId fixture mode.
  * All of it is placeholder material for the collective to replace; all of
  * it is original. Image `file` names refer to seed/images/. */
+import { readFileSync } from 'node:fs';
+
+/* The archive wall's volume census — shared with generate-images.py so the
+ * editorial entries and the rendered files can never drift. */
+const wall = JSON.parse(readFileSync(new URL('./scraps-wall.json', import.meta.url), 'utf8'));
 
 export const works = [
 	{
@@ -172,7 +177,14 @@ export const scraps = [
 	{ _id: 'scrap-5', file: 'scrap-5.jpg', alt: 'Indigo study with one bright line', note: 'Night crossing, exposure rehearsal', date: '2025-10-04' },
 	{ _id: 'scrap-6', file: 'scrap-6.jpg', alt: 'Moss green stacked planes', note: 'Roofline sketch for the azan log', date: '2024-11-12' },
 	{ _id: 'scrap-7', file: 'scrap-7.jpg', alt: 'Marigold study with grid lines', note: 'Memory map, first street grid', date: '2026-01-20' },
-	{ _id: 'scrap-8', file: 'scrap-8.jpg', alt: 'Magenta study, vertical bands', note: 'Tin roof series, colour key', date: '2026-04-07' }
+	{ _id: 'scrap-8', file: 'scrap-8.jpg', alt: 'Magenta study, vertical bands', note: 'Tin roof series, colour key', date: '2026-04-07' },
+	...wall.map(({ file, alt, note, date }) => ({
+		_id: file.replace('.jpg', ''),
+		file,
+		alt,
+		note,
+		date
+	}))
 ];
 
 export const members = [

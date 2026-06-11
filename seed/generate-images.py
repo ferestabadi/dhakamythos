@@ -81,6 +81,11 @@ def lqip(img):
     return 'data:image/jpeg;base64,' + base64.b64encode(buf.getvalue()).decode()
 
 
+# The archive wall's volume lives in seed/scraps-wall.json — one census
+# (file, dims, palette, seed + editorial fields) shared with content.mjs so
+# the two can never drift.
+WALL = json.loads((ROOT / 'seed' / 'scraps-wall.json').read_text())
+
 SPECS = [
     # (filename, w, h, palette, seed)
     ('cover-rickshaw-alphabet.jpg', 1600, 2000, 'brick', 11),
@@ -103,7 +108,7 @@ SPECS = [
     ('scrap-6.jpg', 800, 900, 'moss', 106),
     ('scrap-7.jpg', 800, 760, 'marigold', 107),
     ('scrap-8.jpg', 800, 1000, 'magenta', 108),
-]
+] + [(s['file'], s['w'], s['h'], s['palette'], s['seed']) for s in WALL]
 
 # Variant widths mirror the CDN's DPR-ladder output (src/lib/sanity/image.ts,
 # grammar §7.2): per role box (grid 256 / card 720 / hero+lightbox 2048),

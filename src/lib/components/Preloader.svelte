@@ -12,6 +12,7 @@
 	const FLAG = 'dm-intro';
 	const EXIT_MS = 1250; // sheet fade ends: 750ms beat + 500ms fade (§6.1)
 	const STALL_MS = 8000; // a wedged decode must never strand the visitor
+	const TAIL_MS = 600; // lerp tail bound: a fast decode exits promptly
 
 	let running = $state(false);
 	let leaving = $state(false);
@@ -56,9 +57,16 @@
 			}, EXIT_MS);
 		};
 
-		const tick = () => {
-			// the readout lerps toward the decode-driven target (§6.1)
+		let fullAt = 0; // when the decode target first reached 100
+		const tick = (now: number) => {
+			// the readout lerps toward the decode-driven target (§6.1) — but
+			// once everything is decoded, the tail is bounded so an instant
+			// load isn't held hostage by the ease
 			shown += (target - shown) * 0.1;
+			if (target >= 100) {
+				if (!fullAt) fullAt = now;
+				else if (now - fullAt >= TAIL_MS) shown = 100;
+			}
 			if (Math.round(shown) >= 100) {
 				shown = 100;
 				finish();

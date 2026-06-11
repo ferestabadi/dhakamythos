@@ -1,0 +1,402 @@
+[
+	{
+		"file": "scrap-9.jpg",
+		"w": 800,
+		"h": 1000,
+		"palette": "brick",
+		"seed": 209,
+		"alt": "Letterform tracing over a rickshaw hood",
+		"note": "Rickshaw hood letterforms, sheet 9",
+		"date": "2024-01-03"
+	},
+	{
+		"file": "scrap-10.jpg",
+		"w": 800,
+		"h": 1000,
+		"palette": "teal",
+		"seed": 210,
+		"alt": "Pale study of river fog bands",
+		"note": "Sadarghat fog, contact strip 10",
+		"date": "2025-06-10"
+	},
+	{
+		"file": "scrap-11.jpg",
+		"w": 800,
+		"h": 1000,
+		"palette": "marigold",
+		"seed": 211,
+		"alt": "Pigment swatch field on paper",
+		"note": "Pigment ledger, batch 11",
+		"date": "2026-11-17"
+	},
+	{
+		"file": "scrap-12.jpg",
+		"w": 800,
+		"h": 1000,
+		"palette": "indigo",
+		"seed": 212,
+		"alt": "Tall study of monsoon water lines",
+		"note": "Monsoon water lines, entry 12",
+		"date": "2024-04-24"
+	},
+	{
+		"file": "scrap-13.jpg",
+		"w": 800,
+		"h": 1000,
+		"palette": "moss",
+		"seed": 213,
+		"alt": "Night exposure rehearsal marks",
+		"note": "Night crossing exposure, take 13",
+		"date": "2025-09-06"
+	},
+	{
+		"file": "scrap-14.jpg",
+		"w": 800,
+		"h": 1000,
+		"palette": "magenta",
+		"seed": 214,
+		"alt": "Roofline planes in grey-green",
+		"note": "Roofline sketch, azan log 14",
+		"date": "2026-02-13"
+	},
+	{
+		"file": "scrap-15.jpg",
+		"w": 800,
+		"h": 1000,
+		"palette": "slate",
+		"seed": 215,
+		"alt": "Street grid traced in thin ink",
+		"note": "Memory map street grid, pass 15",
+		"date": "2024-07-20"
+	},
+	{
+		"file": "scrap-16.jpg",
+		"w": 800,
+		"h": 1000,
+		"palette": "ochre",
+		"seed": 216,
+		"alt": "Vertical tin-sheet rhythm study",
+		"note": "Tin roof rhythm, key 16",
+		"date": "2025-12-27"
+	},
+	{
+		"file": "scrap-17.jpg",
+		"w": 800,
+		"h": 1000,
+		"palette": "brick",
+		"seed": 217,
+		"alt": "Ferry queue timing diagram",
+		"note": "Ferry queue timings, dawn set 17",
+		"date": "2026-05-09"
+	},
+	{
+		"file": "scrap-18.jpg",
+		"w": 800,
+		"h": 1000,
+		"palette": "teal",
+		"seed": 218,
+		"alt": "Halftone test of a market awning",
+		"note": "Market awning halftone, proof 18",
+		"date": "2024-10-16"
+	},
+	{
+		"file": "scrap-19.jpg",
+		"w": 800,
+		"h": 1000,
+		"palette": "marigold",
+		"seed": 219,
+		"alt": "Courtyard shadow at noon, blocked in",
+		"note": "Courtyard shadow block-in 19",
+		"date": "2025-03-23"
+	},
+	{
+		"file": "scrap-20.jpg",
+		"w": 800,
+		"h": 1000,
+		"palette": "indigo",
+		"seed": 220,
+		"alt": "Hand-cut paper crop of a film frame",
+		"note": "Film frame paper crop 20",
+		"date": "2026-08-05"
+	},
+	{
+		"file": "scrap-21.jpg",
+		"w": 800,
+		"h": 1000,
+		"palette": "moss",
+		"seed": 221,
+		"alt": "Azan timing chart, one mosque",
+		"note": "Azan chart, mosque 21",
+		"date": "2024-01-12"
+	},
+	{
+		"file": "scrap-22.jpg",
+		"w": 800,
+		"h": 1000,
+		"palette": "magenta",
+		"seed": 222,
+		"alt": "Brick kiln smoke gradient study",
+		"note": "Kiln smoke gradient, plate 22",
+		"date": "2025-06-19"
+	},
+	{
+		"file": "scrap-23.jpg",
+		"w": 800,
+		"h": 1000,
+		"palette": "slate",
+		"seed": 223,
+		"alt": "Rain gauge margins, ruled by hand",
+		"note": "Rain gauge margins, week 23",
+		"date": "2026-11-26"
+	},
+	{
+		"file": "scrap-24.jpg",
+		"w": 780,
+		"h": 1040,
+		"palette": "ochre",
+		"seed": 224,
+		"alt": "Power line score across white sky",
+		"note": "Power line score, sheet 24",
+		"date": "2024-04-08"
+	},
+	{
+		"file": "scrap-25.jpg",
+		"w": 780,
+		"h": 1040,
+		"palette": "brick",
+		"seed": 225,
+		"alt": "Alphabet spacing trial in ink",
+		"note": "Alphabet spacing trial 25",
+		"date": "2025-09-15"
+	},
+	{
+		"file": "scrap-26.jpg",
+		"w": 780,
+		"h": 1040,
+		"palette": "teal",
+		"seed": 226,
+		"alt": "Bus ticket overprint experiment",
+		"note": "Ticket overprint, run 26",
+		"date": "2026-02-22"
+	},
+	{
+		"file": "scrap-27.jpg",
+		"w": 780,
+		"h": 1040,
+		"palette": "marigold",
+		"seed": 227,
+		"alt": "River bank silt bands, graded",
+		"note": "Silt band grading, core 27",
+		"date": "2024-07-04"
+	},
+	{
+		"file": "scrap-28.jpg",
+		"w": 780,
+		"h": 1040,
+		"palette": "indigo",
+		"seed": 228,
+		"alt": "Window grille rubbing on tissue",
+		"note": "Grille rubbing, house 28",
+		"date": "2025-12-11"
+	},
+	{
+		"file": "scrap-29.jpg",
+		"w": 780,
+		"h": 1040,
+		"palette": "moss",
+		"seed": 229,
+		"alt": "Letterform tracing over a rickshaw hood",
+		"note": "Rickshaw hood letterforms, sheet 29",
+		"date": "2026-05-18"
+	},
+	{
+		"file": "scrap-30.jpg",
+		"w": 800,
+		"h": 800,
+		"palette": "magenta",
+		"seed": 230,
+		"alt": "Pale study of river fog bands",
+		"note": "Sadarghat fog, contact strip 30",
+		"date": "2024-10-25"
+	},
+	{
+		"file": "scrap-31.jpg",
+		"w": 800,
+		"h": 800,
+		"palette": "slate",
+		"seed": 231,
+		"alt": "Pigment swatch field on paper",
+		"note": "Pigment ledger, batch 31",
+		"date": "2025-03-07"
+	},
+	{
+		"file": "scrap-32.jpg",
+		"w": 800,
+		"h": 800,
+		"palette": "ochre",
+		"seed": 232,
+		"alt": "Tall study of monsoon water lines",
+		"note": "Monsoon water lines, entry 32",
+		"date": "2026-08-14"
+	},
+	{
+		"file": "scrap-33.jpg",
+		"w": 800,
+		"h": 800,
+		"palette": "brick",
+		"seed": 233,
+		"alt": "Night exposure rehearsal marks",
+		"note": "Night crossing exposure, take 33",
+		"date": "2024-01-21"
+	},
+	{
+		"file": "scrap-34.jpg",
+		"w": 800,
+		"h": 800,
+		"palette": "teal",
+		"seed": 234,
+		"alt": "Roofline planes in grey-green",
+		"note": "Roofline sketch, azan log 34",
+		"date": "2025-06-03"
+	},
+	{
+		"file": "scrap-35.jpg",
+		"w": 960,
+		"h": 640,
+		"palette": "marigold",
+		"seed": 235,
+		"alt": "Street grid traced in thin ink",
+		"note": "Memory map street grid, pass 35",
+		"date": "2026-11-10"
+	},
+	{
+		"file": "scrap-36.jpg",
+		"w": 960,
+		"h": 640,
+		"palette": "indigo",
+		"seed": 236,
+		"alt": "Vertical tin-sheet rhythm study",
+		"note": "Tin roof rhythm, key 36",
+		"date": "2024-04-17"
+	},
+	{
+		"file": "scrap-37.jpg",
+		"w": 960,
+		"h": 640,
+		"palette": "moss",
+		"seed": 237,
+		"alt": "Ferry queue timing diagram",
+		"note": "Ferry queue timings, dawn set 37",
+		"date": "2025-09-24"
+	},
+	{
+		"file": "scrap-38.jpg",
+		"w": 960,
+		"h": 640,
+		"palette": "magenta",
+		"seed": 238,
+		"alt": "Halftone test of a market awning",
+		"note": "Market awning halftone, proof 38",
+		"date": "2026-02-06"
+	},
+	{
+		"file": "scrap-39.jpg",
+		"w": 1000,
+		"h": 600,
+		"palette": "slate",
+		"seed": 239,
+		"alt": "Courtyard shadow at noon, blocked in",
+		"note": "Courtyard shadow block-in 39",
+		"date": "2024-07-13"
+	},
+	{
+		"file": "scrap-40.jpg",
+		"w": 1000,
+		"h": 600,
+		"palette": "ochre",
+		"seed": 240,
+		"alt": "Hand-cut paper crop of a film frame",
+		"note": "Film frame paper crop 40",
+		"date": "2025-12-20"
+	},
+	{
+		"file": "scrap-41.jpg",
+		"w": 1000,
+		"h": 600,
+		"palette": "brick",
+		"seed": 241,
+		"alt": "Azan timing chart, one mosque",
+		"note": "Azan chart, mosque 41",
+		"date": "2026-05-27"
+	},
+	{
+		"file": "scrap-42.jpg",
+		"w": 960,
+		"h": 540,
+		"palette": "teal",
+		"seed": 242,
+		"alt": "Brick kiln smoke gradient study",
+		"note": "Kiln smoke gradient, plate 42",
+		"date": "2024-10-09"
+	},
+	{
+		"file": "scrap-43.jpg",
+		"w": 960,
+		"h": 540,
+		"palette": "marigold",
+		"seed": 243,
+		"alt": "Rain gauge margins, ruled by hand",
+		"note": "Rain gauge margins, week 43",
+		"date": "2025-03-16"
+	},
+	{
+		"file": "scrap-44.jpg",
+		"w": 960,
+		"h": 540,
+		"palette": "indigo",
+		"seed": 244,
+		"alt": "Power line score across white sky",
+		"note": "Power line score, sheet 44",
+		"date": "2026-08-23"
+	},
+	{
+		"file": "scrap-45.jpg",
+		"w": 660,
+		"h": 1100,
+		"palette": "moss",
+		"seed": 245,
+		"alt": "Alphabet spacing trial in ink",
+		"note": "Alphabet spacing trial 45",
+		"date": "2024-01-05"
+	},
+	{
+		"file": "scrap-46.jpg",
+		"w": 660,
+		"h": 1100,
+		"palette": "magenta",
+		"seed": 246,
+		"alt": "Bus ticket overprint experiment",
+		"note": "Ticket overprint, run 46",
+		"date": "2025-06-12"
+	},
+	{
+		"file": "scrap-47.jpg",
+		"w": 502,
+		"h": 1000,
+		"palette": "slate",
+		"seed": 247,
+		"alt": "River bank silt bands, graded",
+		"note": "Silt band grading, core 47",
+		"date": "2026-11-19"
+	},
+	{
+		"file": "scrap-48.jpg",
+		"w": 1280,
+		"h": 400,
+		"palette": "ochre",
+		"seed": 248,
+		"alt": "Window grille rubbing on tissue",
+		"note": "Grille rubbing, house 48",
+		"date": "2024-04-26"
+	}
+]
