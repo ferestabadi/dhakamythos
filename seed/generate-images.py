@@ -34,16 +34,19 @@ PALETTES = {
 
 
 def compose(w, h, palette, seed):
+    """Graded to the house grammar (UNVEIL-GRAMMAR §9, ledger item 2): the
+    paper field dominates, marks are B/W-leaning with only a whisper of the
+    work's hue family — never a saturated poster."""
     rng = random.Random(seed)
     img = Image.new('RGB', (w, h), GROUND)
     d = ImageDraw.Draw(img, 'RGBA')
-    # large translucent fields
+    # restrained translucent fields off one edge — most of the paper stays bare
     for i, col in enumerate(palette):
-        alpha = rng.randint(150, 220)
-        x0 = rng.randint(-w // 3, w // 2)
-        y0 = rng.randint(-h // 3, h // 2)
-        x1 = x0 + rng.randint(w // 2, w)
-        y1 = y0 + rng.randint(h // 2, h)
+        alpha = rng.randint(50, 110)
+        x0 = rng.randint(-w // 4, int(w * 0.65))
+        y0 = rng.randint(-h // 4, int(h * 0.65))
+        x1 = x0 + rng.randint(w // 4, int(w * 0.55))
+        y1 = y0 + rng.randint(h // 4, int(h * 0.55))
         if rng.random() < 0.4:
             d.ellipse([x0, y0, x1, y1], fill=col + (alpha,))
         else:
@@ -53,17 +56,20 @@ def compose(w, h, palette, seed):
     off = rng.randint(-h // 2, h // 2)
     d.polygon(
         [(0, h // 2 + off), (w, off), (w, off + h // 8), (0, h // 2 + off + h // 8)],
-        fill=band + (200,),
+        fill=band + (110,),
     )
     # thin ink strokes
     for _ in range(rng.randint(2, 4)):
         y = rng.randint(h // 8, h - h // 8)
         d.line([(rng.randint(0, w // 4), y), (w - rng.randint(0, w // 4), y + rng.randint(-h // 6, h // 6))],
                fill=INK + (rng.randint(170, 255),), width=max(3, w // 400))
-    # soft grain via downscale/upscale blur
     img = img.filter(ImageFilter.GaussianBlur(radius=w / 800))
+    # B/W-leaning grade: collapse most of the hue, keep a breath of it
+    img = Image.blend(img, img.convert('L').convert('RGB'), 0.72)
+    # paper-preserving grain — gentle multiply that never drags the bare
+    # field out of the ground tone (the old ink composite muddied it)
     noise = Image.effect_noise((w // 4, h // 4), 18).resize((w, h)).convert('L')
-    img = Image.composite(img, Image.new('RGB', (w, h), INK), noise.point(lambda v: 255 - (255 - v) // 6))
+    img = Image.composite(img, Image.new('RGB', (w, h), INK), noise.point(lambda v: 255 - (255 - v) // 24))
     return img
 
 

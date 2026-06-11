@@ -13,28 +13,37 @@
 	   canonical set (no duplicate content, works without JS), then the list
 	   is tripled and silently re-centred for the loop. */
 	let cloned = $state(false);
+	/* §5.1: the list is duplicated once when under 20 tiles, so the dense
+	   overlapped rail can wrap a wide window without showing its own seam */
+	const strip = $derived(cloned && n < 20 ? [...works, ...works] : works);
 	let active = $state(0);
 	/* armed drag scales the whole scene down (grammar §6.2) */
 	let dragScaled = $state(false);
 
 	/* Telephoto depth slope. The source renders the rail through a 5° fov
-	   camera with z = −x·aspect·1.5, which projects to ≈6% scale loss per
-	   card step; under --deck-perspective the same loss needs ≈0.38px of
-	   translateZ per px of offset from the viewport center. Signed: left
-	   neighbors come forward, right neighbors recede — a diagonal rail. */
-	const DEPTH_PER_PX = 0.38;
+	   camera with z = −x·aspect·1.5: each card step recedes ≈2.3% in scale,
+	   which under --deck-perspective (1600px) is ≈38px of translateZ per
+	   stride. Signed: left neighbors come forward, right neighbors recede —
+	   a diagonal rail. */
+	const DEPTH_PER_STEP = 38;
 	const SWEEP_STEPS = 20;
 
-	let step = 1; // card stride in px, remeasured lazily
+	let step = 1; // card stride in px (one li), remeasured lazily
 	let railW = 0;
 	let tiles: HTMLLIElement[] = [];
 	let tileCenters: number[] = [];
-	const setWidth = () => (rail ? rail.scrollWidth / (cloned ? 3 : 1) : 0);
+	/* every li is exactly one stride wide, so a copy is step × tiles-per-copy
+	   — exact, where scrollWidth would fold in padding and card overflow and
+	   make each clone wrap drift by the error */
+	const setWidth = () => (cloned && tiles.length ? step * (tiles.length / 3) : 0);
 
 	function measure() {
 		if (!rail) return;
 		tiles = Array.from(rail.querySelectorAll('li'));
-		tileCenters = tiles.map((t) => t.offsetLeft + t.offsetWidth / 2);
+		// center of the card itself — it overflows its stride-wide li
+		tileCenters = tiles.map(
+			(t) => t.offsetLeft + ((t.firstElementChild as HTMLElement)?.offsetWidth || t.offsetWidth) / 2
+		);
 		railW = rail.clientWidth;
 		step = tiles.length > 1 ? tiles[1].offsetLeft - tiles[0].offsetLeft : railW;
 		lastPos = -1; // force a transform pass with the new geometry
@@ -66,8 +75,12 @@
 	   the rail falls back to plain native overflow scroll. */
 	const LERP = 0.15;
 	const DRAG_LERP = 0.1;
-	const WHEEL_GAIN = 1; // px of rail per px of wheel delta
-	const TOUCH_GAIN = 1.75; // touch divisor is half the mouse one (§6.2)
+	/* gains, tuned to the dense stride (~1/4 of a full card width): a wheel
+	   notch still moves about a third of a card, and touch runs at twice the
+	   mouse rate — §6.2's touch divisor is half the mouse one */
+	const WHEEL_GAIN = 0.3; // px of rail per px of wheel delta
+	const DRAG_GAIN = 0.5; // px of rail per px of mouse-drag
+	const TOUCH_GAIN = 1;
 	let pos = 0; // virtual scroll position along the strip, px
 	let target = 0;
 	let virtual = $state(false); // flips once JS takes the rail over
@@ -75,6 +88,13 @@
 	let centered: HTMLLIElement | null = null;
 	let coarsePointer = false;
 	let reduceMotion = false;
+	/* intro sweep state — a 20-stride offset folded into the drawn position
+	   and eased out by the frame loop, so per-tile depth and stacking track
+	   the motion frame by frame (a rail-level transform froze them) */
+	let introOffset = 0;
+	let sweepFrom = 0;
+	let sweepT0 = 0;
+	let sweepMs = 2000; // overwritten from --dur-sweep at release
 
 	function decorate() {
 		if (!rail || tiles.length === 0) return;
@@ -84,23 +104,41 @@
 		else if (Math.abs(d) >= 0.5) pos += d * (dragScaled ? DRAG_LERP : LERP);
 		else pos = target;
 		// clone wrap: keep the window inside the middle set, mid-glide too
-		if (cloned) {
-			const set = setWidth();
-			if (set > 0) {
-				while (pos < set * 0.5) {
-					pos += set;
-					target += set;
-				}
-				while (pos >= set * 1.5) {
-					pos -= set;
-					target -= set;
+		const set = cloned ? setWidth() : 0;
+		if (set > 0) {
+			while (pos < set * 0.5) {
+				pos += set;
+				target += set;
+			}
+			while (pos >= set * 1.5) {
+				pos -= set;
+				target -= set;
+			}
+		}
+		// the sweep's expo-out tail; reduced motion collapses it mid-flight
+		if (sweepT0) {
+			if (reduceMotion) {
+				introOffset = 0;
+				sweepT0 = 0;
+			} else {
+				const t = (performance.now() - sweepT0) / sweepMs;
+				if (t >= 1) {
+					introOffset = 0;
+					sweepT0 = 0;
+				} else {
+					introOffset = sweepFrom * Math.pow(2, -10 * t);
 				}
 			}
 		}
-		if (pos === lastPos) return;
-		lastPos = pos;
-		const mid = pos + railW / 2;
-		const x = (-pos).toFixed(2);
+		/* drawn position = eased position + sweep offset, wrapped back into
+		   the middle set so the strip stays populated through the glide */
+		let drawn = pos + introOffset;
+		if (set > 0) drawn = set * 0.5 + mod(drawn - set * 0.5, set);
+		if (drawn === lastPos) return;
+		lastPos = drawn;
+		const mid = drawn + railW / 2;
+		const x = (-drawn).toFixed(2);
+		const depthPerPx = step > 1 ? DEPTH_PER_STEP / step : 0;
 		let nearest = -1;
 		let nearestDist = Infinity;
 		for (let i = 0; i < tiles.length; i++) {
@@ -110,11 +148,14 @@
 				nearestDist = dist;
 				nearest = i;
 			}
-			// every tile rides the virtual position; depth only near the window
+			/* depth from the half-frame-clamped offset: past the frame edge a
+			   tile is off-screen, and an unclamped translateZ would run toward
+			   the perspective distance and blow the projection up */
+			const zoff = Math.max(-railW / 2, Math.min(railW / 2, off));
 			tiles[i].style.transform =
-				`translate3d(${x}px, 0, 0) perspective(var(--deck-perspective)) rotateY(var(--deck-rot)) translateZ(${dist > railW ? 0 : (-off * DEPTH_PER_PX).toFixed(1)}px)`;
+				`translate3d(${x}px, 0, 0) perspective(var(--deck-perspective)) rotateY(var(--deck-rot)) translateZ(${(-zoff * depthPerPx).toFixed(1)}px)`;
 			if (dist <= railW) {
-				// nearer (left) tiles paint over receded ones when growth overlaps
+				// nearer (left) tiles paint over receded ones where they overlap
 				tiles[i].style.zIndex = String(200 - Math.round(off / step));
 			}
 		}
@@ -125,7 +166,7 @@
 			centered = tiles[nearest];
 			centered.classList.add('is-center');
 		}
-		active = mod(Math.round(pos / step), n);
+		active = mod(Math.round(drawn / step), n);
 	}
 
 	$effect(() => {
@@ -149,26 +190,36 @@
 	});
 
 	/* ---- intro sweep (grammar §6.2) ----
-	   Holds the rail ~20 card-steps left until the preloader flips
-	   appState.ready, then releases over --dur-sweep. Reduced motion skips
-	   the whole figure; no-JS never sees the held state (transform is set
-	   only from here). Replays on every return to home, like the source. */
+	   Holds the rail 20 strides off its rest until the covering layer starts
+	   lifting — the preloader on first visits (appState.ready), the arrival
+	   flash on client-side returns (appState.covered, §6.3) — then glides
+	   home over --dur-sweep through the frame loop, so the diagonal
+	   recession holds mid-sweep. Reduced motion skips the whole figure;
+	   no-JS never sees the held state (only decorate() draws it). Replays on
+	   every return to home, like the source. */
 	let swept = false;
 	$effect(() => {
 		if (!rail || swept) return;
-		const el = rail;
 		if (matchMedia('(prefers-reduced-motion: reduce)').matches) {
 			swept = true;
 			return;
 		}
 		if (step <= 1) measure();
-		el.style.transform = `translate3d(${-SWEEP_STEPS * step}px, 0, 0)`;
-		if (!appState.ready) return; // hold the pre-sweep state
+		introOffset = SWEEP_STEPS * step;
+		lastPos = -1; // redraw the held position
+		if (!appState.ready || appState.covered) return; // hold under the cover
 		swept = true;
-		void el.offsetWidth; // commit the start position before transitioning
-		el.classList.add('sweep');
-		el.style.transform = 'translate3d(0, 0, 0)';
+		sweepFrom = introOffset;
+		// the computed token may serialize as "2s" or "2000ms"
+		const dur = getComputedStyle(rail).getPropertyValue('--dur-sweep').trim();
+		sweepMs = (parseFloat(dur) || 2) * (dur.endsWith('ms') ? 1 : 1000);
+		sweepT0 = performance.now();
 	});
+
+	/* Tabbing to an off-screen card must bring it into the window — but a
+	   pointer press and the arrow handler move the rail themselves, so the
+	   focus they cause must not re-aim it. */
+	let focusSteers = true;
 
 	/* ←/→ move one card, Enter opens the focused card (native link). */
 	function onKeydown(e: KeyboardEvent) {
@@ -179,12 +230,13 @@
 		// land on a card boundary; the frame lerp animates the move
 		target = (Math.round(target / step) + dir) * step;
 		const links = rail.querySelectorAll<HTMLAnchorElement>('li[data-canonical] a');
+		focusSteers = false;
 		links[mod(active + dir, n)]?.focus({ preventScroll: true });
+		focusSteers = true;
 	}
 
-	/* Tabbing to an off-screen card must bring it into the window — the rail
-	   no longer scrolls natively, so focus drives the target instead. */
 	function onFocusin(e: FocusEvent) {
+		if (!focusSteers) return;
 		const li = (e.target as HTMLElement).closest('li');
 		const i = li ? tiles.indexOf(li as HTMLLIElement) : -1;
 		if (i >= 0) target = tileCenters[i] - railW / 2;
@@ -235,7 +287,8 @@
 			pointerId = e.pointerId;
 			lastX = downX = e.clientX;
 			dragged = 0;
-			gain = e.pointerType === 'mouse' ? 1 : TOUCH_GAIN;
+			focusSteers = false; // mousedown focuses the card — not a Tab
+			gain = e.pointerType === 'mouse' ? DRAG_GAIN : TOUCH_GAIN;
 			if (e.pointerType === 'mouse') armTimer = setTimeout(arm, 150);
 		};
 		const move = (e: PointerEvent) => {
@@ -250,6 +303,7 @@
 		};
 		const up = () => {
 			clearTimeout(armTimer);
+			focusSteers = true;
 			if (pointerId === null) return;
 			pointerId = null;
 			if (!armed) return;
@@ -265,6 +319,10 @@
 				e.stopPropagation();
 			}
 		};
+		// native anchor/image drag-and-drop would hijack the pointer mid-drag
+		// (ghost image, pointercancel) — belt and braces with the cards'
+		// draggable="false"
+		const nativeDrag = (e: Event) => e.preventDefault();
 		el.addEventListener('pointerdown', down);
 		el.addEventListener('pointermove', move);
 		// up/cancel on window: an un-armed release outside the rail must
@@ -272,6 +330,7 @@
 		window.addEventListener('pointerup', up);
 		window.addEventListener('pointercancel', up);
 		el.addEventListener('click', clickCapture, true);
+		el.addEventListener('dragstart', nativeDrag);
 		return {
 			destroy() {
 				clearTimeout(armTimer);
@@ -280,6 +339,7 @@
 				window.removeEventListener('pointerup', up);
 				window.removeEventListener('pointercancel', up);
 				el.removeEventListener('click', clickCapture, true);
+				el.removeEventListener('dragstart', nativeDrag);
 			}
 		};
 	}
@@ -315,16 +375,17 @@
 				use:drag
 			>
 				{#each copies as copy (copy)}
-					{#each works as work, i (`${copy}-${work.slug}`)}
-						<li data-canonical={copy === 1 ? '' : undefined} aria-hidden={copy === 1 ? undefined : true}>
+					{#each strip as work, i (`${copy}-${i}`)}
+						{@const canonical = copy === 1 && i < n}
+						<li data-canonical={canonical ? '' : undefined} aria-hidden={canonical ? undefined : true}>
 							<Card
 								{work}
-								position={i + 1}
+								position={(i % n) + 1}
 								total={n}
 								eager={copy === 1 && i < 2}
 								priority={copy === 1 && i === 0}
-								focusable={copy === 1}
-								vtName={copy === 1 ? `work-${work.slug}` : undefined}
+								focusable={canonical}
+								vtName={canonical ? `work-${work.slug}` : undefined}
 							/>
 						</li>
 					{/each}
@@ -332,8 +393,9 @@
 			</ul>
 		</div>
 
-		<!-- the counter wears the bottom-right switcher idiom (grammar §5.4) -->
-		<p class="switcher button button--pill type-button" aria-hidden="true">
+		<!-- the counter wears the bottom-right switcher idiom (grammar §5.4:
+		     40px tall, 16px pads, 6px radius — a rectangle, not a capsule) -->
+		<p class="switcher button type-button" aria-hidden="true">
 			<span class="nudge">{pad(active + 1)} / {pad(n)}</span>
 		</p>
 	</section>
@@ -342,8 +404,6 @@
 <style>
 	.deck {
 		/* local sizes the token sheet doesn't carry */
-		--rail-pad-y: 64px; /* headroom: forward tiles scale up to ~1.25 plus the
-		   hover lift — without it the rail's auto overflow clips them */
 		--switcher-h: 40px;
 		--switcher-pad-x: 16px;
 		position: relative;
@@ -366,11 +426,20 @@
 	}
 
 	.rail {
+		/* rail geometry (§5.1/§6.2): tiles ≈44% of the viewport height as
+		   the measured camera projects them (fov 5 at z 35); neighbors
+		   overlap ~3/4 of a tile width — world stride 0.375 against a tile
+		   ~1.31 wide ⇒ each li is one stride, 23% of the tile height (≈29%
+		   of a 4:5 tile's width), and the cards overflow it. Portrait keeps
+		   the camera's retreat to z 55 (smaller apparent tiles). */
+		--tile-h: clamp(200px, 28svh, 320px);
+		--deck-stride: calc(var(--tile-h) * 0.23);
 		display: flex;
 		align-items: center;
-		gap: var(--gap-cell);
 		margin: 0;
-		padding: var(--rail-pad-y) var(--axis-x);
+		/* headroom: forward tiles scale up ~1.2 plus the hover lift —
+		   without it the rail clips them */
+		padding: calc(var(--tile-h) * 0.2) var(--axis-x);
 		list-style: none;
 		/* native overflow scroll is only the no-JS fallback; .virtual hands
 		   the rail to the lerp loop (operator call, 2026-06-11 — §6.2 feel) */
@@ -379,10 +448,10 @@
 		scrollbar-width: none;
 	}
 
-	/* the intro sweep transitions only once .sweep is set — the held
-	   pre-sweep transform applies instantly */
-	:global(.rail.sweep) {
-		transition: transform var(--dur-sweep) var(--ease-out-expo);
+	@media (orientation: landscape) {
+		.rail {
+			--tile-h: clamp(260px, 44svh, 520px);
+		}
 	}
 
 	.rail::-webkit-scrollbar {
@@ -408,6 +477,10 @@
 	li {
 		position: relative;
 		flex: none;
+		/* one stride per li — the card overflows rightward across its
+		   neighbors; the rAF's z-index stacking paints left-near tiles on
+		   top, the original's draw order */
+		width: var(--deck-stride);
 		/* resting angle without JS; the rAF adds the signed translateZ.
 		   Per-tile perspective keeps every card at the same apparent angle —
 		   the telephoto flattening (§6.2) — where a shared vanishing point

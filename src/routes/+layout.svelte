@@ -7,6 +7,7 @@
 	import ContactOverlay from '$lib/components/ContactOverlay.svelte';
 	import CursorLabel from '$lib/components/CursorLabel.svelte';
 	import Preloader from '$lib/components/Preloader.svelte';
+	import { appState } from '$lib/app-state.svelte';
 
 	let { children, data } = $props();
 
@@ -17,7 +18,8 @@
 	/* Container transform (golden rule 3): the View Transitions API morphs
 	   the shared view-transition-name pair (card cover → case hero). No JS
 	   polyfill — unsupported browsers get the CSS crossfade below; reduced
-	   motion gets the browser's plain crossfade, opacity only. */
+	   motion skips the view transition entirely, so the route swap is an
+	   instant opacity-safe cut. */
 	let supportsViewTransitions = $state(true);
 
 	$effect(() => {
@@ -25,6 +27,15 @@
 	});
 
 	onNavigate((navigation) => {
+		/* arm the home-arrival cover before the new page mounts, so the Deck
+		   can never race the flash and sweep underneath it (gap MO-01) */
+		if (
+			navigation.from &&
+			navigation.to?.url.pathname === '/' &&
+			!matchMedia('(prefers-reduced-motion: reduce)').matches
+		) {
+			appState.covered = true;
+		}
 		if (!document.startViewTransition) return;
 		if (matchMedia('(prefers-reduced-motion: reduce)').matches) return;
 		return new Promise((resolve) => {
@@ -37,7 +48,8 @@
 
 	/* Ground flash on client-side arrivals at home (grammar §6.3, gap W3-04):
 	   rises over the deck, holds while the rail rebuilds, then reveals the
-	   sweep. First loads are covered by the preloader instead. */
+	   sweep — the deck holds its sweep on appState.covered until the flash
+	   starts fading out. First loads are covered by the preloader instead. */
 	let flashOn = $state(false);
 	let flashOff: ReturnType<typeof setTimeout> | undefined;
 
@@ -46,7 +58,10 @@
 		if (matchMedia('(prefers-reduced-motion: reduce)').matches) return;
 		clearTimeout(flashOff);
 		flashOn = true;
-		flashOff = setTimeout(() => (flashOn = false), 1500); // fade-out starts 1.5s in (§6.3)
+		flashOff = setTimeout(() => {
+			flashOn = false; // fade-out starts 1.5s in (§6.3) …
+			appState.covered = false; // … and releases the held sweep with it
+		}, 1500);
 	});
 </script>
 

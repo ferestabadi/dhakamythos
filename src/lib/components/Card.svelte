@@ -77,6 +77,7 @@
 	data-cursor={work.title}
 	aria-label="{work.title} — work {position} of {total}"
 	style:aspect-ratio="{work.cover.width} / {work.cover.height}"
+	draggable="false"
 >
 	<span class="cover" style:view-transition-name={vtName}>
 		<LqipImage img={work.cover} role="card" {eager} {priority} fill />
@@ -100,13 +101,12 @@
 
 <style>
 	.card {
-		/* tile height — the rail occupies roughly the middle third of the
-		   viewport (§5.1 proportions); width derives from each asset's exact
-		   ratio via the inline aspect-ratio (§7.1) */
-		--tile-h: clamp(220px, 33svh, 360px);
+		/* tile height is owned by the Deck's rail geometry (--tile-h on
+		   .rail); width derives from each asset's exact ratio via the inline
+		   aspect-ratio (§7.1). The fallback keeps a lone card sane. */
 		display: block;
 		position: relative;
-		height: var(--tile-h);
+		height: var(--tile-h, clamp(220px, 33svh, 360px));
 		color: var(--ink);
 		-webkit-tap-highlight-color: transparent;
 	}
@@ -128,10 +128,15 @@
 		object-fit: cover;
 	}
 
-	/* hover = offset shift, never media zoom (grammar §6.2, §6.5) */
+	/* hover = offset shift, never media zoom (grammar §6.2, §6.5): the
+	   tile pulls (2/3, −0.1) world units out of the dense fan — ~0.4 of the
+	   tile height sideways, scaled with the rail geometry */
 	@media (hover: hover) and (pointer: fine) {
 		.card:hover .cover {
-			transform: translate(24px, -4px);
+			transform: translate(
+				calc(var(--tile-h, 300px) * 0.4),
+				calc(var(--tile-h, 300px) * -0.06)
+			);
 		}
 	}
 
@@ -141,14 +146,17 @@
 	}
 
 	/* touch stand-in for hover: the centered tile (class set by the Deck's
-	   rAF) offsets forward, every other tile takes the inverse (§6.2) */
+	   rAF) offsets forward ±0.325 world, every other tile the inverse (§6.2) */
 	@media (hover: none) {
 		.cover {
-			transform: translate(-12px, 0);
+			transform: translate(calc(var(--tile-h, 300px) * -0.2), 0);
 		}
 
 		:global(li.is-center) .cover {
-			transform: translate(12px, -4px);
+			transform: translate(
+				calc(var(--tile-h, 300px) * 0.2),
+				calc(var(--tile-h, 300px) * -0.06)
+			);
 		}
 	}
 </style>
