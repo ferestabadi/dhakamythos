@@ -59,7 +59,8 @@
 	<meta name="description" content="All works, year by year." />
 </svelte:head>
 
-<div class="sheet route-sheet">
+<!-- the index backdrop itself fades over the label beat (§2.4) -->
+<div class="sheet route-sheet" use:reveal={{ duration: 'var(--dur-label)' }}>
 	<div class="axis-x">
 		<h1 class="visually-hidden">Index</h1>
 
@@ -128,7 +129,8 @@
 	.sheet {
 		--stack-gap: 1.25rem; /* 20px rhythm between page units */
 		--rows-top: 2.5rem; /* chips → first row */
-		--row-pad: 0.3125rem; /* line padding keeps comfortable hit areas without dividers */
+		--row-pad: 0.375rem; /* ≥24px row boxes (WCAG 2.5.8) without dividers… */
+		--row-pull: -0.0625rem; /* …while the negative pull keeps the line pitch */
 		--pill-pad-x: 1rem; /* 16px pill label inset (grammar §2.3) */
 		--preview-top: 3.5rem; /* preview clears the header band */
 		padding-bottom: 12.5vh;
@@ -186,6 +188,7 @@
 		row-gap: var(--gap-cell);
 		align-items: baseline;
 		padding: var(--row-pad) 0;
+		margin-block: var(--row-pull);
 		color: inherit;
 		text-decoration: none;
 		transition: opacity var(--dur-label) var(--ease-out-cubic);

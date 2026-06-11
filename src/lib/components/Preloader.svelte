@@ -97,7 +97,8 @@
 
 {#if running}
 	<div class="sheet" class:leaving aria-hidden="true">
-		<span class="count type-base">{Math.round(shown)}%</span>
+		<!-- the readout speaks viewer chrome: 11px/1 (§2.2, §4) -->
+		<span class="count type-viewer">{Math.round(shown)}%</span>
 	</div>
 {/if}
 

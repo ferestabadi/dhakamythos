@@ -1,5 +1,4 @@
 <script lang="ts">
-	import ClosingBand from '$lib/components/ClosingBand.svelte';
 	import LqipImage from '$lib/components/LqipImage.svelte';
 	import Prose from '$lib/components/Prose.svelte';
 	import { reveal } from '$lib/reveal';
@@ -20,9 +19,11 @@
 
 	<!-- studio anatomy (grammar §5.2): square artwork pinned top-right at
 	     exactly 50vh, desktop only; it never scrolls with the column -->
+	<!-- artwork shares the figure-mobile stagger slot — the two are mutually
+	     exclusive by breakpoint, and a shared slot closes the desktop hole -->
 	{#if data.artwork}
-		<figure class="artwork" use:reveal={{ delay: STEP * 5 }}>
-			<LqipImage img={data.artwork} role="card" fill />
+		<figure class="artwork" use:reveal={{ delay: STEP * 4 }}>
+			<LqipImage img={data.artwork} role="card" fill eager />
 		</figure>
 	{/if}
 
@@ -74,14 +75,14 @@
 		{/if}
 	</div>
 
-	<!-- below 640 the page ends in the same artwork, full-bleed and flush -->
+	<!-- below 640 the page ends in the same artwork, full-bleed and flush —
+	     no closing band on this route: the studio anatomy ends in the figure
+	     (grammar §5.2) and desktop must not scroll at 1440x900 -->
 	{#if data.artwork}
 		<figure class="figure-mobile" use:reveal={{ delay: STEP * 4 }}>
 			<LqipImage img={data.artwork} role="card" />
 		</figure>
 	{/if}
-
-	<ClosingBand />
 </div>
 
 <style>
@@ -89,9 +90,8 @@
 		/* grammar §5.2 measures, local to this anatomy */
 		--stack-gap: 1.25rem; /* 20px studio stack rhythm */
 		--measure: 27rem; /* 432px text column */
-		--label-gutter: 7.75rem; /* clears the longest collapsed label so all value columns share one x */
 		--figure-gap: 3.5rem; /* 56px mobile figure offset */
-		--hit-pad: 0.3125rem; /* widens link targets without disturbing the 1.25 rhythm */
+		--hit-pad: 0.375rem; /* ≥24px link boxes (WCAG 2.5.8) without disturbing the 1.25 rhythm */
 	}
 
 	@media (min-width: 640px) {
@@ -121,18 +121,21 @@
 		max-width: none;
 	}
 
-	/* label-collapsed list (grammar §4): the label sits in a 2px column so
-	   every value column starts at the same x regardless of label length */
+	/* label-collapsed list (grammar §4, reference studio capture): the label
+	   sits in a genuinely collapsed 2px column — its text overflows under
+	   the block's first value line as a 30% ghost — so every value column
+	   shares one x at the axis regardless of label length */
 	.block {
 		display: flex;
-		gap: var(--label-gutter);
 	}
 
 	.label {
 		flex: 0 0 var(--gap-cell);
+		min-width: 0; /* without this, flex floors the column at the label's width */
 		white-space: nowrap;
 		opacity: var(--alpha-rest);
 		margin: 0;
+		pointer-events: none; /* the ghost must not shadow the first value's link */
 	}
 
 	.values {

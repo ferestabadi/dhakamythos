@@ -11,13 +11,13 @@
 
 	const path = $derived(page.url.pathname.replace(/\/$/, ''));
 
-	/* The brand cell carries the current section word ≥768px (grammar §5.0).
-	   Root-level dynamic routes are case pages, so unmatched paths read Work. */
+	/* The brand cell carries the current section word ≥768px (grammar §5.0);
+	   home reads Work — the deck is the work section, as the original's home
+	   reads its own catalogue word. Root-level dynamic routes are case
+	   pages, so unmatched paths also read Work. */
 	const sectionWord = $derived(
-		path === ''
-			? ''
-			: (links.find((l) => path === l.href || path.startsWith(l.href + '/'))?.label ??
-				(path.startsWith('/legal') ? 'Legal' : 'Work'))
+		links.find((l) => path === l.href || path.startsWith(l.href + '/'))?.label ??
+			(path.startsWith('/legal') ? 'Legal' : 'Work')
 	);
 
 	/* Prerendered markup ships visible so the nav survives no-JS; after
@@ -133,8 +133,10 @@
 			flex-wrap: wrap;
 		}
 
+		/* zero basis — link cells divide the row evenly (the original's even
+		   cell rhythm) instead of hugging their label widths */
 		li {
-			flex: 1 1 auto;
+			flex: 1 1 0;
 			min-width: 0;
 		}
 
@@ -170,8 +172,10 @@
 		white-space: nowrap;
 	}
 
+	/* wordmark ® and section word read as one adjacent bottom-left cluster
+	   (§5.0 "UNVEIL ® PROJECTS"), never pushed to opposite cell edges */
 	.brand .cell {
-		justify-content: space-between;
+		gap: 0.35em;
 	}
 
 	/* ® at preflight 80%, optically lifted (grammar §2.2) */

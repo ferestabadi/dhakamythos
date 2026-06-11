@@ -10,6 +10,8 @@
 
 	onMount(() => {
 		if (!matchMedia('(pointer: fine)').matches) return;
+		// reduced motion collapses the trail: the label snaps to the pointer
+		const rmq = matchMedia('(prefers-reduced-motion: reduce)');
 		let x = 0;
 		let y = 0;
 		let targetX = 0;
@@ -17,8 +19,9 @@
 		let raf = 0;
 		const frame = () => {
 			raf = requestAnimationFrame(frame);
-			x += (targetX - x) * 0.1;
-			y += (targetY - y) * 0.1;
+			const ease = rmq.matches ? 1 : 0.1;
+			x += (targetX - x) * ease;
+			y += (targetY - y) * ease;
 			if (el) el.style.transform = `translate3d(${x.toFixed(1)}px, ${y.toFixed(1)}px, 0)`;
 		};
 		const move = (e: PointerEvent) => {

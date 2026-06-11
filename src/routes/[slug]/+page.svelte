@@ -2,6 +2,7 @@
 	import LqipImage from '$lib/components/LqipImage.svelte';
 	import Prose from '$lib/components/Prose.svelte';
 	import VideoChrome from '$lib/components/VideoChrome.svelte';
+	import { appState } from '$lib/app-state.svelte';
 	import { loadPiece, warmUpPiece } from '$lib/pieces/load';
 	import { ogImageUrl } from '$lib/sanity/image';
 	import { absUrl } from '$lib/site';
@@ -42,6 +43,26 @@
 			}
 		};
 	}
+
+	/* Theme flip (grammar §2.1, gap W3-10): while the dark film hero sits
+	   under the header band, the header inks inverse — the Nav carries the
+	   500ms color tween. The observation zone is the top ~8% of the
+	   viewport (the 66px header at 844-900px tall screens). */
+	function inverseUnderHeader(el: HTMLElement) {
+		const io = new IntersectionObserver(
+			([entry]) => {
+				appState.theme = entry.isIntersecting ? 'inverse' : 'ink';
+			},
+			{ rootMargin: '0px 0px -92% 0px', threshold: 0 }
+		);
+		io.observe(el);
+		return {
+			destroy() {
+				io.disconnect();
+				appState.theme = 'ink';
+			}
+		};
+	}
 </script>
 
 <svelte:head>
@@ -74,7 +95,9 @@
 					>{#if i < words.length - 1}{' '}{/if}{/each}
 			{/key}
 		</h1>
-		<p class="standfirst type-base type-display-prose prose-case">{work.standfirst}</p>
+		<!-- the standfirst is running prose: 10.5px on the 13px line (§2.2 —
+		     the 1.0762 leading belongs to display-scaled paragraphs only) -->
+		<p class="standfirst type-base prose-case">{work.standfirst}</p>
 	</header>
 
 	{#if pieceKey}
@@ -96,7 +119,9 @@
 	{:else}
 		<div class="hero">
 			{#if work.hero.kind === 'embed'}
-				<VideoChrome embedUrl={work.hero.embedUrl} poster={work.hero.poster} title={work.title} />
+				<div use:inverseUnderHeader>
+					<VideoChrome embedUrl={work.hero.embedUrl} poster={work.hero.poster} title={work.title} />
+				</div>
 			{:else}
 				<LqipImage img={work.cover} role="hero" eager priority outset vtName="work-{work.slug}" />
 			{/if}

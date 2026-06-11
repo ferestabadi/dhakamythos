@@ -171,7 +171,13 @@
 		</div>
 	</div>
 {:else if frameSrc}
-	<div class="chrome" bind:this={frame}>
+	<!-- the facade frame keeps the poster's own ratio (§7.1); 16/9 is only
+	     the no-poster fallback -->
+	<div
+		class="chrome"
+		bind:this={frame}
+		style:aspect-ratio={poster ? `${poster.width} / ${poster.height}` : undefined}
+	>
 		{#if playing}
 			<iframe
 				src={frameSrc}
@@ -261,6 +267,7 @@
 		color: inherit;
 		font: inherit;
 		letter-spacing: inherit;
+		text-transform: inherit; /* chrome words are uppercase (§7.4) — the UA button reset isn't */
 		text-align: left;
 		cursor: pointer;
 	}
@@ -295,6 +302,7 @@
 		color: inherit;
 		font: inherit;
 		letter-spacing: inherit;
+		text-transform: inherit; /* see .facade — bar words stay uppercase */
 		text-align: left;
 		cursor: pointer;
 		opacity: var(--alpha-rest);

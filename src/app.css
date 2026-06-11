@@ -155,9 +155,10 @@ body,
 	scrollbar-width: none;
 }
 
-/* quiet selection wash — text stays selectable in content (gap W4-06) */
+/* quiet selection wash — text stays selectable in content (gap W4-06);
+   composed from the ink token so a theme change can never desynchronize */
 ::selection {
-	background: rgb(0 0 0 / var(--alpha-selection));
+	background: color-mix(in srgb, var(--ink) calc(var(--alpha-selection) * 100%), transparent);
 }
 
 /* Focus visible everywhere — accessibility floor */
@@ -184,6 +185,13 @@ body,
 	.route-sheet {
 		padding-top: var(--drop-top-sm);
 	}
+}
+
+/* the layout focuses each sheet after navigation so keyboard scrolling
+   works without tabbing in — the sheet is a scroll surface, not a control,
+   so it never wears the ring */
+.route-sheet:focus {
+	outline: none;
 }
 
 /* the one left axis — x = 14px at every breakpoint */
@@ -221,6 +229,8 @@ body,
 	font-weight: 400;
 }
 
+/* reserved: the grammar's smallest annotation tier (§2.2) — no current
+   surface earns it, but the scale ships complete for content that does */
 .type-micro {
 	font-size: 0.5rem; /* 8px */
 	line-height: 0.5rem;

@@ -102,12 +102,15 @@
 		background: transparent;
 	}
 
-	/* frosted sheet: blur is constant, only opacity ever animates */
+	/* frosted sheet: blur is constant, only opacity ever animates — the
+	   spec's scrim carries a constant filter blur on top of the backdrop
+	   blur (§6.4) */
 	.scrim {
 		position: absolute;
 		inset: 0;
 		z-index: var(--z-scrim);
 		background: var(--sheet);
+		filter: blur(var(--blur-scrim));
 		-webkit-backdrop-filter: blur(var(--blur-sheet));
 		backdrop-filter: blur(var(--blur-sheet));
 		opacity: 0;

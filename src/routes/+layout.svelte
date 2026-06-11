@@ -63,6 +63,18 @@
 			appState.covered = false; // … and releases the held sweep with it
 		}, 1500);
 	});
+
+	/* The document never scrolls (§3.2), so keyboard scrolling depends on
+	   focus sitting inside a route's sheet. After each navigation — unless
+	   the navigation kept focus, e.g. the index filter chips — move focus to
+	   the sheet itself; its ring is suppressed since it isn't a control. */
+	afterNavigate(() => {
+		if (document.activeElement !== document.body) return;
+		const sheet = document.querySelector<HTMLElement>('.route-sheet');
+		if (!sheet) return; // the deck route handles its own keys
+		sheet.tabIndex = -1;
+		sheet.focus({ preventScroll: true });
+	});
 </script>
 
 <svelte:head>
