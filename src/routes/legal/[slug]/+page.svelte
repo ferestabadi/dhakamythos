@@ -1,5 +1,7 @@
 <script lang="ts">
 	import Prose from '$lib/components/Prose.svelte';
+	import ClosingBand from '$lib/components/ClosingBand.svelte';
+	import { reveal } from '$lib/reveal';
 
 	let { data } = $props();
 	const page = $derived(data.page);
@@ -18,23 +20,34 @@
 	<meta name="description" content={description} />
 </svelte:head>
 
-<div class="page">
-	<h1 class="type-display">{page.title}</h1>
-	<div class="body">
-		<Prose blocks={page.body} />
-	</div>
+<!-- legal grammar (§5.4): small-scale text from the axis, one 1s fade -->
+<div class="sheet route-sheet" use:reveal>
+	<article class="column axis-x">
+		<h1 class="visually-hidden">{page.title}</h1>
+		<div class="body prose-case type-base">
+			<Prose blocks={page.body} />
+		</div>
+	</article>
+
+	<ClosingBand />
 </div>
 
 <style>
-	.page {
-		padding: 0 var(--gutter) var(--space-9);
+	.sheet {
+		--measure: 27rem; /* 432px text column */
+		padding-bottom: 12.5vh;
+		padding-bottom: 12.5svh;
 	}
 
-	h1 {
-		margin: 0;
+	.column {
+		max-width: var(--measure);
 	}
 
-	.body {
-		margin-top: var(--space-7);
+	/* the column owns the measure and the type role; Prose only provides
+	   markup here (its own metrics are superseded from outside) */
+	.body :global(.prose) {
+		font-size: inherit;
+		line-height: inherit;
+		max-width: none;
 	}
 </style>

@@ -40,20 +40,21 @@
 			!matchMedia('(prefers-reduced-motion: reduce)').matches;
 	});
 
-	/* Play only while the card is mostly in view, pause off-view. The browser
-	   pauses video-only media in hidden tabs, so re-check on tab return. */
+	/* Play while any pixel is in view, pause fully off-screen (grammar §7.3:
+	   threshold 0). The browser pauses video-only media in hidden tabs, so
+	   re-check on tab return. */
 	function loopWhenVisible(el: HTMLVideoElement) {
-		let mostlyInView = false;
+		let inView = false;
 		const playOrPause = () => {
-			if (mostlyInView && !document.hidden) el.play().catch(() => {});
+			if (inView && !document.hidden) el.play().catch(() => {});
 			else el.pause();
 		};
 		const io = new IntersectionObserver(
 			([entry]) => {
-				mostlyInView = entry.intersectionRatio >= 0.6;
+				inView = entry.isIntersecting;
 				playOrPause();
 			},
-			{ threshold: [0, 0.6] }
+			{ threshold: 0 }
 		);
 		io.observe(el);
 		document.addEventListener('visibilitychange', playOrPause);
@@ -66,11 +67,16 @@
 	}
 </script>
 
+<!-- Bare image tile (grammar §5.1): no caption, no title text. The title
+     surfaces through the cursor label on fine pointers (data-cursor) and the
+     aria-label always. -->
 <a
 	class="card"
 	href="/{work.slug}"
 	tabindex={focusable ? undefined : -1}
-	data-cursor="View"
+	data-cursor={work.title}
+	aria-label="{work.title} — work {position} of {total}"
+	style:aspect-ratio="{work.cover.width} / {work.cover.height}"
 >
 	<span class="cover" style:view-transition-name={vtName}>
 		<LqipImage img={work.cover} role="card" {eager} {priority} fill />
@@ -90,34 +96,28 @@
 			></video>
 		{/if}
 	</span>
-	<span class="eyebrow type-meta">{work.year} · {work.tags.join(' / ')}</span>
-	<span class="title type-title">{work.title}</span>
-	<span class="visually-hidden">Work {position} of {total}</span>
 </a>
 
 <style>
 	.card {
+		/* tile height — the rail occupies roughly the middle third of the
+		   viewport (§5.1 proportions); width derives from each asset's exact
+		   ratio via the inline aspect-ratio (§7.1) */
+		--tile-h: clamp(220px, 33svh, 360px);
 		display: block;
-		width: 85vw;
+		position: relative;
+		height: var(--tile-h);
 		color: var(--ink);
-		text-decoration: none;
 		-webkit-tap-highlight-color: transparent;
 	}
 
 	.cover {
-		display: block;
-		position: relative;
+		position: absolute;
+		inset: 0;
 		overflow: hidden;
-		aspect-ratio: 4 / 5;
-		/* missing cover → ink block; the title below stays the label */
+		/* missing cover → ink block; the aria-label stays the name */
 		background: var(--ink);
-		transition: transform var(--dur-fast) var(--ease-out);
-	}
-
-	/* media moves, frame stays — transform + opacity only */
-	.cover :global(img),
-	.loop {
-		transition: transform var(--dur-base) var(--ease-out);
+		transition: transform var(--dur-label) var(--ease-out-expo);
 	}
 
 	.loop {
@@ -128,10 +128,10 @@
 		object-fit: cover;
 	}
 
+	/* hover = offset shift, never media zoom (grammar §6.2, §6.5) */
 	@media (hover: hover) and (pointer: fine) {
-		.card:hover .cover :global(img),
-		.card:hover .loop {
-			transform: scale(1.04);
+		.card:hover .cover {
+			transform: translate(24px, -4px);
 		}
 	}
 
@@ -140,31 +140,15 @@
 		transform: scale(0.98);
 	}
 
-	.eyebrow {
-		display: block;
-		margin-top: var(--space-4);
-		color: var(--muted);
-	}
-
-	.title {
-		display: -webkit-box;
-		-webkit-box-orient: vertical;
-		-webkit-line-clamp: 2;
-		line-clamp: 2;
-		overflow: hidden;
-		margin-top: var(--space-2);
-	}
-
-	@media (min-width: 1024px) {
-		.card {
-			width: 38vw;
+	/* touch stand-in for hover: the centered tile (class set by the Deck's
+	   rAF) offsets forward, every other tile takes the inverse (§6.2) */
+	@media (hover: none) {
+		.cover {
+			transform: translate(-12px, 0);
 		}
 
-		.cover {
-			/* keep tall covers inside the viewport; ratio stays within the
-			   3:4–16:10 window the spec allows on desktop */
-			aspect-ratio: auto;
-			height: min(47.5vw, 62vh);
+		:global(li.is-center) .cover {
+			transform: translate(12px, -4px);
 		}
 	}
 </style>

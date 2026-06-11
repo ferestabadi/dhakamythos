@@ -1,5 +1,6 @@
 <script lang="ts">
 	import Prose from '$lib/components/Prose.svelte';
+	import ClosingBand from '$lib/components/ClosingBand.svelte';
 	import { reveal } from '$lib/reveal';
 
 	let { data } = $props();
@@ -51,133 +52,160 @@
 	<meta name="description" content={call.summary} />
 </svelte:head>
 
-<article class="page">
-	<header>
-		<p class="eyebrow type-meta">{eyebrow}</p>
-		<h1 class="type-display">{call.title}</h1>
-	</header>
+<!-- single fade on mount, like a legal page (grammar §5.4) -->
+<article class="sheet route-sheet" use:reveal>
+	<div class="column axis-x">
+		<header class="head">
+			<p class="eyebrow type-base">{eyebrow}</p>
+			<h1 class="type-list">{call.title}</h1>
+		</header>
 
-	{#if call.brief.length}
-		<div class="brief" use:reveal>
-			<Prose blocks={call.brief} />
-		</div>
-	{/if}
+		{#if call.brief.length}
+			<div class="brief prose-case type-base">
+				<Prose blocks={call.brief} />
+			</div>
+		{/if}
 
-	{#if call.status === 'open' && call.submissionUrl}
-		<div class="submit">
-			{#if embedSrc}
-				<div class="form" use:mountNear>
-					{#if formMounted}
-						<iframe
-							src={embedSrc}
-							title="Submission form — {call.title}"
-							width="100%"
-							height="600"
-							loading="lazy"
-						></iframe>
-					{/if}
-				</div>
-				<a
-					class="form-link text-button type-meta"
-					href={call.submissionUrl}
-					target="_blank"
-					rel="noopener"
-				>
-					Open the form in a new tab
-				</a>
-			{:else}
-				<a
-					class="form-link text-button type-meta"
-					href={call.submissionUrl}
-					target="_blank"
-					rel="noopener"
-				>
-					Submit to this call
-				</a>
-			{/if}
-		</div>
-	{:else if call.status === 'closed'}
-		<div class="results-block" use:reveal>
-			<p class="closed-note type-meta">{call.results.length ? 'Closed — results' : 'Closed'}</p>
-			{#if call.results.length}
-				<ul class="results">
+		{#if call.status === 'open' && call.submissionUrl}
+			<div class="submit">
+				{#if embedSrc}
+					<div class="form button" use:mountNear>
+						{#if formMounted}
+							<iframe
+								src={embedSrc}
+								title="Submission form — {call.title}"
+								width="100%"
+								height="600"
+								loading="lazy"
+							></iframe>
+						{/if}
+					</div>
+					<a class="form-link type-base" href={call.submissionUrl} target="_blank" rel="noopener">
+						Open the form in a new tab
+					</a>
+				{:else}
+					<a class="form-link type-base" href={call.submissionUrl} target="_blank" rel="noopener">
+						Submit to this call
+					</a>
+				{/if}
+			</div>
+		{:else if call.status === 'closed' && call.results.length}
+			<section class="results block type-list">
+				<h2 class="label">Results</h2>
+				<ul class="values">
 					{#each call.results as result (result.slug)}
-						<li>
-							<a class="result text-button type-title" href="/{result.slug}">{result.title}</a>
-						</li>
+						<li><a class="result" href="/{result.slug}">{result.title}</a></li>
 					{/each}
 				</ul>
-			{/if}
-		</div>
-	{/if}
+			</section>
+		{/if}
+	</div>
+
+	<ClosingBand />
 </article>
 
 <style>
-	.page {
-		padding: 0 var(--gutter) var(--space-9);
+	.sheet {
+		--stack-gap: 1.25rem; /* 20px stack rhythm */
+		--measure: 27rem; /* 432px text column */
+		--label-gutter: 7.75rem; /* collapsed-label column — value x shared with /collective */
+		--hit-pad: 0.3125rem; /* widens link targets without disturbing the line rhythm */
+		padding-bottom: 12.5vh;
+		padding-bottom: 12.5svh;
+	}
+
+	.column {
+		display: flex;
+		flex-direction: column;
+		gap: var(--stack-gap);
+		max-width: var(--measure);
+	}
+
+	.head {
+		display: flex;
+		flex-direction: column;
+		gap: var(--gap-cell);
 	}
 
 	.eyebrow {
-		color: var(--muted);
-		margin: 0 0 var(--space-4);
+		margin: 0;
+		opacity: var(--alpha-rest);
 	}
 
 	h1 {
 		margin: 0;
 	}
 
+	/* +20px on top of the stack gap → 40px from the head to the brief */
 	.brief {
-		margin-top: var(--space-7);
+		margin-top: var(--stack-gap);
+	}
+
+	.brief :global(.prose) {
+		font-size: inherit;
+		line-height: inherit;
+		max-width: none;
 	}
 
 	.submit {
-		margin-top: var(--space-8);
-		max-width: 68ch;
+		margin-top: var(--stack-gap);
 	}
 
-	/* placeholder reserves the iframe's exact box ahead of mount (CLS rule) */
+	/* placeholder reserves the iframe's exact box ahead of mount (CLS rule);
+	   the .button recipe draws its frosted frame — no hard border */
 	.form {
 		min-height: 600px;
-		border: 1px solid var(--line);
 	}
 
 	iframe {
 		display: block;
 		border: 0;
+		border-radius: inherit;
 	}
 
 	.form-link {
-		margin-top: var(--space-4);
-		color: var(--muted);
+		display: inline-flex;
+		align-items: center;
+		min-height: 44px;
+		margin-top: var(--gap-cell);
+		color: inherit;
+		text-decoration: none;
+		opacity: var(--alpha-rest);
+		transition: opacity var(--dur-label) var(--ease-out-cubic);
 	}
 
-	.results-block {
-		margin-top: var(--space-8);
+	@media (hover: hover) {
+		.form-link:hover {
+			opacity: var(--alpha-active);
+		}
 	}
 
-	.closed-note {
-		color: var(--muted);
+	/* result link rows: no borders — label .3, values 1 (gap W3-11) */
+	.block {
+		display: flex;
+		gap: var(--label-gutter);
+		margin-top: var(--stack-gap);
 	}
 
-	.results {
+	.label {
+		flex: 0 0 var(--gap-cell);
+		white-space: nowrap;
+		opacity: var(--alpha-rest);
+		margin: 0;
+	}
+
+	.values {
 		list-style: none;
-		margin: var(--space-4) 0 0;
+		margin: 0;
 		padding: 0;
-		border-top: 1px solid var(--line);
-	}
-
-	.results li {
-		border-bottom: 1px solid var(--line);
+		min-width: 0;
 	}
 
 	.result {
-		width: 100%;
-		padding: var(--space-4) 0;
-		color: var(--ink);
-		transition: transform var(--dur-fast) var(--ease-out);
-	}
-
-	.result:hover {
-		transform: translateX(8px);
+		display: inline-block;
+		color: inherit;
+		text-decoration: none;
+		padding-block: var(--hit-pad);
+		margin-block: calc(-1 * var(--hit-pad));
 	}
 </style>

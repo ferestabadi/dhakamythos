@@ -3,7 +3,6 @@
 	import Prose from '$lib/components/Prose.svelte';
 	import VideoChrome from '$lib/components/VideoChrome.svelte';
 	import { loadPiece, warmUpPiece } from '$lib/pieces/load';
-	import { reveal } from '$lib/reveal';
 	import { ogImageUrl } from '$lib/sanity/image';
 	import { absUrl } from '$lib/site';
 
@@ -18,26 +17,30 @@
 		if (pieceKey) warmUpPiece(pieceKey);
 	});
 
-	/* The grammar staggers per LINE; lines only exist after layout. Words
-	   carry a half-step fallback for the no-JS/hard-load render, and this
-	   re-groups them by measured line when the title mounts fresh (the
-	   container-transform arrival). A title already animating keeps the
-	   word approximation rather than re-timing mid-flight. */
-	function staggerByLine(h1: HTMLElement) {
-		const animating = h1
-			.getAnimations({ subtree: true })
-			.some((a) => typeof a.currentTime === 'number' && a.currentTime > 50);
-		if (animating) return;
-		let line = -1;
-		let lastTop = -Infinity;
-		for (const w of h1.querySelectorAll<HTMLElement>('.wi')) {
-			const top = (w.parentElement as HTMLElement).offsetTop;
-			if (top > lastTop) {
-				line++;
-				lastTop = top;
+	/* Arrival (grammar §5.4): backdrop + content fade in together, 500ms
+	   quad-inout. Prerender ships visible; JS commits the hidden frame first,
+	   so no-JS and reduced-motion render instantly. The hero is exempt by
+	   construction — its view-transition-name lifts it out of ancestor
+	   opacity while the card→case morph runs. */
+	function sheetFade(el: HTMLElement) {
+		if (matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+		el.style.transition = 'none';
+		el.style.opacity = '0';
+		void el.offsetWidth;
+		el.style.transition = 'opacity var(--dur-label) var(--ease-quad-inout)';
+		el.style.opacity = '1';
+		const settle = (event: TransitionEvent) => {
+			if (event.target !== el) return;
+			el.style.removeProperty('transition');
+			el.style.removeProperty('opacity');
+			el.removeEventListener('transitionend', settle);
+		};
+		el.addEventListener('transitionend', settle);
+		return {
+			destroy() {
+				el.removeEventListener('transitionend', settle);
 			}
-			w.style.setProperty('--line', String(line));
-		}
+		};
 	}
 </script>
 
@@ -52,15 +55,26 @@
 	<meta name="twitter:card" content="summary_large_image" />
 </svelte:head>
 
-<article class="case">
-	<header class="head">
-		<p class="eyebrow type-meta">{work.year} · {work.tags.join(' / ')}</p>
-		<h1 class="type-display" use:staggerByLine>
-			{#each words as word, i (i)}<span class="w"
-					><span class="wi" style="--d: {i}">{word}</span></span
-				>{#if i < words.length - 1}{' '}{/if}{/each}
+<article class="case route-sheet" use:sheetFade>
+	<header class="head axis-x">
+		<dl class="kv meta type-base">
+			<dt>Year</dt>
+			<dd>{work.year}</dd>
+			<dt>Medium</dt>
+			<dd>{work.medium}</dd>
+			{#if work.descriptors.length}
+				<dt>Tags</dt>
+				<dd>{work.descriptors.join(' / ')}</dd>
+			{/if}
+		</dl>
+		<h1 class="type-display">
+			<!-- keyed so sibling-project arrivals (component reuse) replay the span fades -->
+			{#key work.slug}
+				{#each words as word, i (i)}<span class="word" style="--i: {i}">{word}</span
+					>{#if i < words.length - 1}{' '}{/if}{/each}
+			{/key}
 		</h1>
-		<p class="standfirst type-body">{work.standfirst}</p>
+		<p class="standfirst type-base type-display-prose prose-case">{work.standfirst}</p>
 	</header>
 
 	{#if pieceKey}
@@ -69,13 +83,13 @@
 		<div class="hero piece">
 			{#await loadPiece(pieceKey)}
 				<span class="cover-fallback" style:view-transition-name="work-{work.slug}">
-					<LqipImage img={work.cover} role="hero" eager priority />
+					<LqipImage img={work.cover} role="hero" eager priority outset />
 				</span>
 			{:then Piece}
 				{#if Piece}
 					<Piece />
 				{:else}
-					<LqipImage img={work.cover} role="hero" eager priority vtName="work-{work.slug}" />
+					<LqipImage img={work.cover} role="hero" eager priority outset vtName="work-{work.slug}" />
 				{/if}
 			{/await}
 		</div>
@@ -84,7 +98,7 @@
 			{#if work.hero.kind === 'embed'}
 				<VideoChrome embedUrl={work.hero.embedUrl} poster={work.hero.poster} title={work.title} />
 			{:else}
-				<LqipImage img={work.cover} role="hero" eager priority vtName="work-{work.slug}" />
+				<LqipImage img={work.cover} role="hero" eager priority outset vtName="work-{work.slug}" />
 			{/if}
 		</div>
 	{/if}
@@ -92,10 +106,10 @@
 	{#if work.gallery.length}
 		<div class="gallery">
 			{#each work.gallery as image, i (i)}
-				<figure use:reveal>
-					<LqipImage img={image} role="hero" />
+				<figure>
+					<LqipImage img={image} role="hero" outset />
 					{#if image.caption}
-						<figcaption class="type-meta">{image.caption}</figcaption>
+						<figcaption class="type-base">{image.caption}</figcaption>
 					{/if}
 				</figure>
 			{/each}
@@ -103,82 +117,87 @@
 	{/if}
 
 	{#if work.body.length}
-		<div class="body" use:reveal>
+		<div class="body axis-x">
 			<Prose blocks={work.body} />
 		</div>
 	{/if}
 
 	{#if work.credits.length}
-		<dl class="credits" use:reveal>
+		<dl class="kv credits type-list axis-x">
 			{#each work.credits as credit (credit.role)}
-				<div class="credit type-meta">
-					<dt>{credit.role}</dt>
-					<dd>{credit.names.join(', ')}</dd>
-				</div>
+				<dt>{credit.role}</dt>
+				<dd>{credit.names.join(', ')}</dd>
 			{/each}
 		</dl>
 	{/if}
 
-	<a class="next" href="/{next.slug}" data-cursor="Next">
-		<span class="type-meta next-eyebrow">Next work</span>
-		<span class="type-title next-title">{next.title}</span>
+	<!-- closing half-viewport module (§3.5) doubling as the next-work link -->
+	<a class="next axis-x" href="/{next.slug}">
+		<span class="type-base next-label">Next work</span>
+		<span class="type-base next-title">{next.title}</span>
 	</a>
 </article>
 
 <style>
 	.case {
-		padding: 0 var(--gutter);
+		/* grammar §2.3 rhythm steps without global tokens yet — local by rule */
+		--gap-stack: 20px;
+		--gap-block: 40px;
+		--gap-section: 124px;
+		--gap-kv: 12px;
+		--measure-standfirst: 283px; /* closing/standfirst measure (§3.3) */
 	}
 
-	.head {
-		max-width: 68ch;
+	/* label/value rows (meta + credits): label rests, value carries (§4) */
+	.kv {
+		display: grid;
+		grid-template-columns: max-content 1fr;
+		column-gap: var(--gap-kv);
+		margin: 0;
 	}
 
-	.eyebrow {
-		color: var(--muted);
-		margin: 0 0 var(--space-4);
+	.kv dt {
+		opacity: var(--alpha-rest);
+	}
+
+	.kv dd {
+		margin: 0;
+	}
+
+	.meta {
+		margin-bottom: var(--gap-stack);
 	}
 
 	h1 {
 		margin: 0;
 	}
 
-	/* arrival: per-word rise inside clipped lines (CSS-only, runs without JS;
-	   reduced motion collapses it via the global override) */
-	.w {
-		display: inline-block;
-		overflow: hidden;
-		vertical-align: bottom;
+	/* arrival: per-span fade, no transform (§4, gap W3-04) — fill backwards
+	   keeps spans hidden through their delay yet visible when animation is off */
+	.word {
+		animation: span-fade var(--dur-label) var(--ease-out-cubic) backwards;
+		animation-delay: calc(var(--i) * var(--stagger-rows)); /* small per-span step */
 	}
 
-	.wi {
-		display: inline-block;
-		transform: translateY(110%);
-		animation: rise var(--dur-base) var(--ease-out) forwards;
-		/* one --stagger per measured line; the word-index half-step is the
-		   pre-measurement fallback */
-		animation-delay: calc(var(--line, calc(var(--d) / 2)) * var(--stagger));
-	}
-
-	@keyframes rise {
-		to {
-			transform: translateY(0);
+	@keyframes span-fade {
+		from {
+			opacity: 0;
 		}
 	}
 
 	.standfirst {
-		margin: var(--space-5) 0 0;
-		max-width: 68ch;
+		margin: var(--gap-block) 0 0;
+		max-width: var(--measure-standfirst);
 	}
 
 	.hero {
-		margin: var(--space-7) calc(-1 * var(--gutter)) 0;
+		margin: var(--gap-section) 0 0;
 	}
 
 	.gallery {
 		display: grid;
-		gap: var(--space-6);
-		margin: var(--space-8) calc(-1 * var(--gutter)) 0;
+		gap: var(--grid-gap);
+		margin: var(--gap-section) 0 0;
 	}
 
 	.gallery figure {
@@ -186,22 +205,13 @@
 	}
 
 	.gallery figcaption {
-		color: var(--muted);
-		margin: var(--space-2) var(--gutter) 0;
+		opacity: var(--alpha-rest);
+		margin-top: var(--gap-kv);
+		padding-inline: var(--axis-x);
 	}
 
+	/* alternating widths against the page edge */
 	@media (min-width: 1024px) {
-		.gallery {
-			margin-left: 0;
-			margin-right: 0;
-		}
-
-		.gallery figcaption {
-			margin-left: 0;
-			margin-right: 0;
-		}
-
-		/* alternating widths against the page edge */
 		.gallery figure:nth-child(odd) {
 			width: 58%;
 			margin-right: auto;
@@ -214,52 +224,41 @@
 	}
 
 	.body {
-		margin-top: var(--space-8);
+		margin-top: var(--gap-section);
 	}
 
 	.credits {
-		margin: var(--space-9) 0 0;
-		max-width: 48ch;
-	}
-
-	.credit {
-		display: flex;
-		justify-content: space-between;
-		gap: var(--space-5);
-		padding: var(--space-3) 0;
-		border-bottom: 1px solid var(--line);
-	}
-
-	.credit dt {
-		color: var(--muted);
-	}
-
-	.credit dd {
-		margin: 0;
-		text-align: right;
+		margin-top: var(--gap-section);
 	}
 
 	.next {
-		display: block;
-		margin: var(--space-9) calc(-1 * var(--gutter)) 0;
-		padding: var(--space-6) var(--gutter);
-		border-top: 1px solid var(--line);
-		color: var(--ink);
+		margin-top: var(--gap-section);
+		min-height: 320px;
+		height: 50vh;
+		height: 50svh;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		color: inherit;
 		text-decoration: none;
 	}
 
-	.next-eyebrow {
-		display: block;
-		color: var(--muted);
+	.next-label,
+	.next-title {
+		opacity: var(--alpha-rest);
 	}
 
 	.next-title {
-		display: inline-block;
-		margin-top: var(--space-2);
-		transition: transform var(--dur-fast) var(--ease-out);
+		transition: opacity var(--dur-label) var(--ease-out-cubic);
 	}
 
-	.next:hover .next-title {
-		transform: translateX(8px);
+	.next:focus-visible .next-title {
+		opacity: var(--alpha-active);
+	}
+
+	@media (hover: hover) {
+		.next:hover .next-title {
+			opacity: var(--alpha-active);
+		}
 	}
 </style>

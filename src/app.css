@@ -72,43 +72,15 @@
 	--deck-perspective: 1600px;
 	--deck-rot: -30deg;
 	--deck-scale-drag: 0.825;
-
-	/* ---- legacy aliases — Integrate removes ---- */
-	--muted: rgb(0 0 0 / var(--alpha-rest)); /* legacy alias — Integrate removes */
-	--line: rgb(0 0 0 / var(--alpha-hairline)); /* legacy alias — Integrate removes */
-	--overlay: var(--sheet); /* legacy alias — Integrate removes */
-	--dur-fast: var(--dur-micro); /* legacy alias — Integrate removes */
-	--dur-base: var(--dur-label); /* legacy alias — Integrate removes */
-	--dur-slow: var(--dur-beat); /* legacy alias — Integrate removes */
-	--ease-out: var(--ease-out-expo); /* legacy alias — Integrate removes */
-	--ease-inout: var(--ease-quad-inout); /* legacy alias — Integrate removes */
-	--stagger: var(--stagger-route); /* legacy alias — Integrate removes */
-	--gutter: clamp(16px, 4vw, 48px); /* legacy alias — routes move to .axis-x; Integrate removes */
-	--space-1: 4px; /* legacy scale — Integrate removes */
-	--space-2: 8px;
-	--space-3: 12px;
-	--space-4: 16px;
-	--space-5: 24px;
-	--space-6: 32px;
-	--space-7: 48px;
-	--space-8: 64px;
-	--space-9: 96px;
-	--space-10: 128px;
-	--z-nav: var(--z-header); /* legacy alias — Integrate removes */
-	--z-overlay: var(--z-contact); /* legacy alias — Integrate removes */
-	--z-transition: var(--z-preloader); /* legacy alias — Integrate removes */
 }
 
-/* Tailwind reads the tokens — utilities like bg-ground, text-ink, border-line,
-   duration-base, ease-out-token resolve to the custom properties above. */
+/* Tailwind reads the tokens — utilities like bg-ground, text-ink,
+   ease-out-token resolve to the custom properties above. */
 @theme inline {
 	--color-ground: var(--ground);
 	--color-ink: var(--ink);
-	--color-muted: var(--muted);
-	--color-line: var(--line);
 	--radius-token: var(--radius);
 	--ease-out-token: var(--ease-out-expo);
-	--ease-inout-token: var(--ease-quad-inout);
 	--font-sans: 'NB International Pro', 'NB International Pro Fallback', system-ui, sans-serif;
 }
 
@@ -270,32 +242,6 @@ body,
 	line-height: 1.0762;
 }
 
-/* legacy roles re-pointed at the new metrics so unedited routes still
-   build — Integrate removes */
-.type-title,
-.type-meta {
-	font-size: 0.65625rem;
-	line-height: 0.8125rem;
-	letter-spacing: 0.015em;
-	font-weight: 400;
-}
-
-.type-body {
-	font-size: 0.65625rem;
-	line-height: 0.8125rem;
-	letter-spacing: 0.015em;
-	font-weight: 400;
-	text-transform: none; /* prose reads sentence case */
-}
-
-.type-counter {
-	font-size: 0.6875rem;
-	line-height: 1;
-	letter-spacing: normal;
-	font-weight: 400;
-	font-variant-numeric: tabular-nums;
-}
-
 /* ---- the universal control (grammar §5.0, §2.1, gap W2-13) ----
    Frosted chrome: hairline + wash are currentColor pseudos, so the inverse
    theme rides along for free. Blur is constant — never animated. */
@@ -348,21 +294,6 @@ body,
 
 .button--pill {
 	border-radius: var(--radius-pill);
-}
-
-/* Bare text control — legacy recipe superseded by .button; keeps the 44px
-   hit floor for not-yet-migrated consumers. Integrate removes. */
-.text-button {
-	display: inline-flex;
-	align-items: center;
-	min-height: 44px;
-	border: 0;
-	background: none;
-	padding: 0;
-	color: inherit;
-	font-family: inherit;
-	text-decoration: none;
-	cursor: pointer;
 }
 
 /* Screen-reader-only text — every page keeps exactly one h1 even when the

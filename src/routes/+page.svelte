@@ -1,13 +1,15 @@
 <script lang="ts">
 	import Deck from '$lib/components/Deck.svelte';
-	import { imgProps, ogImageUrl } from '$lib/sanity/image';
+	import { ogImageUrl, preloadProps } from '$lib/sanity/image';
 	import { absUrl } from '$lib/site';
 
 	let { data } = $props();
 
 	// the first card's cover is the LCP — preloading from <head> starts the
-	// fetch ahead of the font and module preloads on slow connections
-	const lcp = $derived(data.works[0] ? imgProps(data.works[0].cover, 'card') : null);
+	// fetch ahead of the font and module preloads on slow connections; the
+	// preload mirrors the <picture>'s winning (webp) source so it never
+	// double-fetches against the fallback ladder
+	const lcp = $derived(data.works[0] ? preloadProps(data.works[0].cover, 'card') : null);
 </script>
 
 <svelte:head>
@@ -28,9 +30,10 @@
 		<link
 			rel="preload"
 			as="image"
-			href={lcp.src}
-			imagesrcset={lcp.srcset}
-			imagesizes={lcp.sizes}
+			href={lcp.href}
+			imagesrcset={lcp.imagesrcset}
+			imagesizes={lcp.imagesizes}
+			type={lcp.type}
 			fetchpriority="high"
 		/>
 	{/if}

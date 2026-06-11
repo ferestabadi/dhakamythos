@@ -3,33 +3,34 @@
 	import type { Block } from '$lib/sanity/types';
 
 	/* Renders normalized portable text (articles, manifesto, call briefs)
-	   in the body type role at reading measure. */
+	   at the base scale and running-prose measure (grammar §2.2, §3.3).
+	   Paragraphs and quotes opt out of uppercase; headings stay inherited. */
 	let { blocks }: { blocks: Block[] } = $props();
 </script>
 
-<div class="prose type-body">
+<div class="prose type-base">
 	{#each blocks as block, i (i)}
 		{#if block.kind === 'image'}
 			<figure>
 				<LqipImage img={block.image} role="body" />
 				{#if block.image.caption}
-					<figcaption class="type-meta">{block.image.caption}</figcaption>
+					<figcaption>{block.image.caption}</figcaption>
 				{/if}
 			</figure>
 		{:else if block.style === 'h2'}
-			<h2 class="type-title">
+			<h2>
 				{#each block.spans as span, j (j)}{span.text}{/each}
 			</h2>
 		{:else if block.style === 'h3'}
-			<h3 class="type-title">
+			<h3>
 				{#each block.spans as span, j (j)}{span.text}{/each}
 			</h3>
 		{:else if block.style === 'blockquote'}
-			<blockquote>
+			<blockquote class="prose-case">
 				{#each block.spans as span, j (j)}{span.text}{/each}
 			</blockquote>
 		{:else}
-			<p>
+			<p class="prose-case">
 				{#each block.spans as span, j (j)}
 					{#if span.href}<a href={span.href}>{span.text}</a
 						>{:else if span.strong}<strong>{span.text}</strong
@@ -43,38 +44,60 @@
 
 <style>
 	.prose {
-		max-width: 68ch;
-		font-size: 1.0625rem;
+		/* grammar §2.3 rhythm steps without global tokens yet — local by rule */
+		--gap-stack: 20px;
+		--gap-block: 40px;
+		--gap-caption: 12px;
+		--measure-prose: 432px; /* running-prose measure (§3.3) */
+		max-width: var(--measure-prose);
 	}
 
 	.prose p {
-		margin: 0 0 var(--space-4);
+		margin: 0 0 var(--gap-stack);
 	}
 
+	/* headings read as resting labels — same size, hierarchy by opacity (§4) */
 	.prose h2,
 	.prose h3 {
-		margin: var(--space-7) 0 var(--space-4);
+		opacity: var(--alpha-rest);
+		margin: var(--gap-block) 0 var(--gap-stack);
 	}
 
 	.prose blockquote {
-		margin: var(--space-5) 0;
-		padding-left: var(--space-4);
-		border-left: 1px solid var(--line);
-		color: var(--muted);
+		margin: var(--gap-stack) 0;
+		opacity: var(--alpha-rest);
 	}
 
-	/* inline links in running text are exempt from the 44px floor (WCAG
-	   2.5.8 inline exception) — forcing it would break the text flow */
+	/* inline links speak the resting-label language; they are exempt from the
+	   44px floor (WCAG 2.5.8 inline exception) — forcing it would break flow */
 	.prose a {
-		color: var(--ink);
+		color: inherit;
+		text-decoration: none;
+		opacity: var(--alpha-rest);
+		transition: opacity var(--dur-label) var(--ease-out-cubic);
+	}
+
+	.prose a:focus-visible {
+		opacity: var(--alpha-active);
+	}
+
+	@media (hover: hover) {
+		.prose a:hover {
+			opacity: var(--alpha-active);
+		}
+	}
+
+	/* the face has no italic cut (§2.2); semantics stay for assistive tech */
+	.prose em {
+		font-style: normal;
 	}
 
 	.prose figure {
-		margin: var(--space-6) 0;
+		margin: var(--gap-block) 0;
 	}
 
 	.prose figcaption {
-		margin-top: var(--space-2);
-		color: var(--muted);
+		margin-top: var(--gap-caption);
+		opacity: var(--alpha-rest);
 	}
 </style>

@@ -22,24 +22,76 @@
 				"lqip": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wAARCAAUABADASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwDemLyB0Lna3XgVSmjEeMEnPrViW4iSVlZ8MCQRTPLa7GbcbwvBx2oOuLsUb3/j9n/66H+davh8fuZv94fyoooJn8B//9k=",
 				"variants": [
 					{
-						"url": "/seed/cover-tin-roof-frequencies-256w.webp",
-						"width": 256
+						"url": "/seed/cover-tin-roof-frequencies-51w.webp",
+						"width": 51
 					},
 					{
-						"url": "/seed/cover-tin-roof-frequencies-480w.webp",
-						"width": 480
+						"url": "/seed/cover-tin-roof-frequencies-103w.webp",
+						"width": 103
 					},
 					{
-						"url": "/seed/cover-tin-roof-frequencies-512w.webp",
-						"width": 512
+						"url": "/seed/cover-tin-roof-frequencies-144w.webp",
+						"width": 144
 					},
 					{
-						"url": "/seed/cover-tin-roof-frequencies-768w.webp",
-						"width": 768
+						"url": "/seed/cover-tin-roof-frequencies-154w.webp",
+						"width": 154
 					},
 					{
-						"url": "/seed/cover-tin-roof-frequencies-1080w.webp",
-						"width": 1080
+						"url": "/seed/cover-tin-roof-frequencies-205w.webp",
+						"width": 205
+					},
+					{
+						"url": "/seed/cover-tin-roof-frequencies-288w.webp",
+						"width": 288
+					},
+					{
+						"url": "/seed/cover-tin-roof-frequencies-308w.webp",
+						"width": 308
+					},
+					{
+						"url": "/seed/cover-tin-roof-frequencies-400w.webp",
+						"width": 400
+					},
+					{
+						"url": "/seed/cover-tin-roof-frequencies-410w.webp",
+						"width": 410
+					},
+					{
+						"url": "/seed/cover-tin-roof-frequencies-432w.webp",
+						"width": 432
+					},
+					{
+						"url": "/seed/cover-tin-roof-frequencies-576w.webp",
+						"width": 576
+					},
+					{
+						"url": "/seed/cover-tin-roof-frequencies-615w.webp",
+						"width": 615
+					},
+					{
+						"url": "/seed/cover-tin-roof-frequencies-800w.webp",
+						"width": 800
+					},
+					{
+						"url": "/seed/cover-tin-roof-frequencies-820w.webp",
+						"width": 820
+					},
+					{
+						"url": "/seed/cover-tin-roof-frequencies-864w.webp",
+						"width": 864
+					},
+					{
+						"url": "/seed/cover-tin-roof-frequencies-1152w.webp",
+						"width": 1152
+					},
+					{
+						"url": "/seed/cover-tin-roof-frequencies-1200w.webp",
+						"width": 1200
+					},
+					{
+						"url": "/seed/cover-tin-roof-frequencies-1600w.webp",
+						"width": 1600
 					}
 				]
 			},
@@ -59,24 +111,76 @@
 					"lqip": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wAARCAAPABQDASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwDdF6kylkzn3qN9ReI4j2k98jpWRkjocVc0+xlukdkKjacHJoOzlildmpa38s0ZZgmQccCii1sJYYyrFMk54NFBjLlvof/Z",
 					"variants": [
 						{
+							"url": "/seed/gallery-tinroof-1-64w.webp",
+							"width": 64
+						},
+						{
+							"url": "/seed/gallery-tinroof-1-128w.webp",
+							"width": 128
+						},
+						{
+							"url": "/seed/gallery-tinroof-1-180w.webp",
+							"width": 180
+						},
+						{
+							"url": "/seed/gallery-tinroof-1-192w.webp",
+							"width": 192
+						},
+						{
 							"url": "/seed/gallery-tinroof-1-256w.webp",
 							"width": 256
 						},
 						{
-							"url": "/seed/gallery-tinroof-1-480w.webp",
-							"width": 480
+							"url": "/seed/gallery-tinroof-1-360w.webp",
+							"width": 360
+						},
+						{
+							"url": "/seed/gallery-tinroof-1-384w.webp",
+							"width": 384
+						},
+						{
+							"url": "/seed/gallery-tinroof-1-400w.webp",
+							"width": 400
 						},
 						{
 							"url": "/seed/gallery-tinroof-1-512w.webp",
 							"width": 512
 						},
 						{
+							"url": "/seed/gallery-tinroof-1-540w.webp",
+							"width": 540
+						},
+						{
+							"url": "/seed/gallery-tinroof-1-720w.webp",
+							"width": 720
+						},
+						{
 							"url": "/seed/gallery-tinroof-1-768w.webp",
 							"width": 768
 						},
 						{
+							"url": "/seed/gallery-tinroof-1-800w.webp",
+							"width": 800
+						},
+						{
+							"url": "/seed/gallery-tinroof-1-1024w.webp",
+							"width": 1024
+						},
+						{
 							"url": "/seed/gallery-tinroof-1-1080w.webp",
 							"width": 1080
+						},
+						{
+							"url": "/seed/gallery-tinroof-1-1200w.webp",
+							"width": 1200
+						},
+						{
+							"url": "/seed/gallery-tinroof-1-1440w.webp",
+							"width": 1440
+						},
+						{
+							"url": "/seed/gallery-tinroof-1-1600w.webp",
+							"width": 1600
 						}
 					]
 				},
@@ -89,24 +193,76 @@
 					"lqip": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wAARCAAPABQDASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwDal1NJCdyFBjGc5qJbqF/uMWPoFNVyYkJwDIffgVFIzuNobYvovAoO5QXQddu7zZDQIAMYkbmirmnaTaXVv5kyszbiM7sUUyHUjF2P/9k=",
 					"variants": [
 						{
+							"url": "/seed/gallery-tinroof-2-64w.webp",
+							"width": 64
+						},
+						{
+							"url": "/seed/gallery-tinroof-2-128w.webp",
+							"width": 128
+						},
+						{
+							"url": "/seed/gallery-tinroof-2-180w.webp",
+							"width": 180
+						},
+						{
+							"url": "/seed/gallery-tinroof-2-192w.webp",
+							"width": 192
+						},
+						{
 							"url": "/seed/gallery-tinroof-2-256w.webp",
 							"width": 256
 						},
 						{
-							"url": "/seed/gallery-tinroof-2-480w.webp",
-							"width": 480
+							"url": "/seed/gallery-tinroof-2-360w.webp",
+							"width": 360
+						},
+						{
+							"url": "/seed/gallery-tinroof-2-384w.webp",
+							"width": 384
+						},
+						{
+							"url": "/seed/gallery-tinroof-2-400w.webp",
+							"width": 400
 						},
 						{
 							"url": "/seed/gallery-tinroof-2-512w.webp",
 							"width": 512
 						},
 						{
+							"url": "/seed/gallery-tinroof-2-540w.webp",
+							"width": 540
+						},
+						{
+							"url": "/seed/gallery-tinroof-2-720w.webp",
+							"width": 720
+						},
+						{
 							"url": "/seed/gallery-tinroof-2-768w.webp",
 							"width": 768
 						},
 						{
+							"url": "/seed/gallery-tinroof-2-800w.webp",
+							"width": 800
+						},
+						{
+							"url": "/seed/gallery-tinroof-2-1024w.webp",
+							"width": 1024
+						},
+						{
 							"url": "/seed/gallery-tinroof-2-1080w.webp",
 							"width": 1080
+						},
+						{
+							"url": "/seed/gallery-tinroof-2-1200w.webp",
+							"width": 1200
+						},
+						{
+							"url": "/seed/gallery-tinroof-2-1440w.webp",
+							"width": 1440
+						},
+						{
+							"url": "/seed/gallery-tinroof-2-1600w.webp",
+							"width": 1600
 						}
 					]
 				}
@@ -150,24 +306,76 @@
 				"lqip": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wAARCAAUABADASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwABIbNaWkXQimkbYxUrjdSy6XHEpk3M6ZxyMZqJUZWJL/LjAUDAFec6jhojpUVLc37xA1pID2GRWHRRVYr4kKjsf//Z",
 				"variants": [
 					{
-						"url": "/seed/cover-city-memory-map-256w.webp",
-						"width": 256
+						"url": "/seed/cover-city-memory-map-51w.webp",
+						"width": 51
 					},
 					{
-						"url": "/seed/cover-city-memory-map-480w.webp",
-						"width": 480
+						"url": "/seed/cover-city-memory-map-103w.webp",
+						"width": 103
 					},
 					{
-						"url": "/seed/cover-city-memory-map-512w.webp",
-						"width": 512
+						"url": "/seed/cover-city-memory-map-144w.webp",
+						"width": 144
 					},
 					{
-						"url": "/seed/cover-city-memory-map-768w.webp",
-						"width": 768
+						"url": "/seed/cover-city-memory-map-154w.webp",
+						"width": 154
 					},
 					{
-						"url": "/seed/cover-city-memory-map-1080w.webp",
-						"width": 1080
+						"url": "/seed/cover-city-memory-map-205w.webp",
+						"width": 205
+					},
+					{
+						"url": "/seed/cover-city-memory-map-288w.webp",
+						"width": 288
+					},
+					{
+						"url": "/seed/cover-city-memory-map-308w.webp",
+						"width": 308
+					},
+					{
+						"url": "/seed/cover-city-memory-map-400w.webp",
+						"width": 400
+					},
+					{
+						"url": "/seed/cover-city-memory-map-410w.webp",
+						"width": 410
+					},
+					{
+						"url": "/seed/cover-city-memory-map-432w.webp",
+						"width": 432
+					},
+					{
+						"url": "/seed/cover-city-memory-map-576w.webp",
+						"width": 576
+					},
+					{
+						"url": "/seed/cover-city-memory-map-615w.webp",
+						"width": 615
+					},
+					{
+						"url": "/seed/cover-city-memory-map-800w.webp",
+						"width": 800
+					},
+					{
+						"url": "/seed/cover-city-memory-map-820w.webp",
+						"width": 820
+					},
+					{
+						"url": "/seed/cover-city-memory-map-864w.webp",
+						"width": 864
+					},
+					{
+						"url": "/seed/cover-city-memory-map-1152w.webp",
+						"width": 1152
+					},
+					{
+						"url": "/seed/cover-city-memory-map-1200w.webp",
+						"width": 1200
+					},
+					{
+						"url": "/seed/cover-city-memory-map-1600w.webp",
+						"width": 1600
 					}
 				]
 			},
@@ -216,24 +424,76 @@
 				"lqip": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wAARCAAUABADASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwDode+bTWC8ncOBXMxWblPMmzHGO5HJrpLg5ZmxjJ6VRvAWtZef4a3g7KxLNKb/AFr/AFohUGVQQCM+lFFR0Gf/2Q==",
 				"variants": [
 					{
-						"url": "/seed/cover-buriganga-night-crossing-256w.webp",
-						"width": 256
+						"url": "/seed/cover-buriganga-night-crossing-51w.webp",
+						"width": 51
 					},
 					{
-						"url": "/seed/cover-buriganga-night-crossing-480w.webp",
-						"width": 480
+						"url": "/seed/cover-buriganga-night-crossing-103w.webp",
+						"width": 103
 					},
 					{
-						"url": "/seed/cover-buriganga-night-crossing-512w.webp",
-						"width": 512
+						"url": "/seed/cover-buriganga-night-crossing-144w.webp",
+						"width": 144
 					},
 					{
-						"url": "/seed/cover-buriganga-night-crossing-768w.webp",
-						"width": 768
+						"url": "/seed/cover-buriganga-night-crossing-154w.webp",
+						"width": 154
 					},
 					{
-						"url": "/seed/cover-buriganga-night-crossing-1080w.webp",
-						"width": 1080
+						"url": "/seed/cover-buriganga-night-crossing-205w.webp",
+						"width": 205
+					},
+					{
+						"url": "/seed/cover-buriganga-night-crossing-288w.webp",
+						"width": 288
+					},
+					{
+						"url": "/seed/cover-buriganga-night-crossing-308w.webp",
+						"width": 308
+					},
+					{
+						"url": "/seed/cover-buriganga-night-crossing-400w.webp",
+						"width": 400
+					},
+					{
+						"url": "/seed/cover-buriganga-night-crossing-410w.webp",
+						"width": 410
+					},
+					{
+						"url": "/seed/cover-buriganga-night-crossing-432w.webp",
+						"width": 432
+					},
+					{
+						"url": "/seed/cover-buriganga-night-crossing-576w.webp",
+						"width": 576
+					},
+					{
+						"url": "/seed/cover-buriganga-night-crossing-615w.webp",
+						"width": 615
+					},
+					{
+						"url": "/seed/cover-buriganga-night-crossing-800w.webp",
+						"width": 800
+					},
+					{
+						"url": "/seed/cover-buriganga-night-crossing-820w.webp",
+						"width": 820
+					},
+					{
+						"url": "/seed/cover-buriganga-night-crossing-864w.webp",
+						"width": 864
+					},
+					{
+						"url": "/seed/cover-buriganga-night-crossing-1152w.webp",
+						"width": 1152
+					},
+					{
+						"url": "/seed/cover-buriganga-night-crossing-1200w.webp",
+						"width": 1200
+					},
+					{
+						"url": "/seed/cover-buriganga-night-crossing-1600w.webp",
+						"width": 1600
 					}
 				]
 			},
@@ -248,24 +508,76 @@
 					"lqip": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wAARCAALABQDASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwDXvri6lkG1vIwOikmobLzJrxIrl5JAecFiVNS3X+u/CpdKAa+JIztjJHtyK22iI1UhiRdqxoB6BRRUlFYjP//Z",
 					"variants": [
 						{
+							"url": "/seed/poster-buriganga-night-crossing-64w.webp",
+							"width": 64
+						},
+						{
+							"url": "/seed/poster-buriganga-night-crossing-128w.webp",
+							"width": 128
+						},
+						{
+							"url": "/seed/poster-buriganga-night-crossing-180w.webp",
+							"width": 180
+						},
+						{
+							"url": "/seed/poster-buriganga-night-crossing-192w.webp",
+							"width": 192
+						},
+						{
 							"url": "/seed/poster-buriganga-night-crossing-256w.webp",
 							"width": 256
 						},
 						{
-							"url": "/seed/poster-buriganga-night-crossing-480w.webp",
-							"width": 480
+							"url": "/seed/poster-buriganga-night-crossing-360w.webp",
+							"width": 360
+						},
+						{
+							"url": "/seed/poster-buriganga-night-crossing-384w.webp",
+							"width": 384
+						},
+						{
+							"url": "/seed/poster-buriganga-night-crossing-400w.webp",
+							"width": 400
 						},
 						{
 							"url": "/seed/poster-buriganga-night-crossing-512w.webp",
 							"width": 512
 						},
 						{
+							"url": "/seed/poster-buriganga-night-crossing-540w.webp",
+							"width": 540
+						},
+						{
+							"url": "/seed/poster-buriganga-night-crossing-720w.webp",
+							"width": 720
+						},
+						{
 							"url": "/seed/poster-buriganga-night-crossing-768w.webp",
 							"width": 768
 						},
 						{
+							"url": "/seed/poster-buriganga-night-crossing-800w.webp",
+							"width": 800
+						},
+						{
+							"url": "/seed/poster-buriganga-night-crossing-1024w.webp",
+							"width": 1024
+						},
+						{
 							"url": "/seed/poster-buriganga-night-crossing-1080w.webp",
 							"width": 1080
+						},
+						{
+							"url": "/seed/poster-buriganga-night-crossing-1200w.webp",
+							"width": 1200
+						},
+						{
+							"url": "/seed/poster-buriganga-night-crossing-1440w.webp",
+							"width": 1440
+						},
+						{
+							"url": "/seed/poster-buriganga-night-crossing-1600w.webp",
+							"width": 1600
 						}
 					]
 				}
@@ -310,24 +622,76 @@
 				"lqip": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wAARCAAUABADASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwCaaxmhlZGA4PXPWktVlguRJnaV5BFdFLje2cde9V0sRPLvzhPeq5jncNdCUfOxZuuatW/3D9aKKlmsdz//2Q==",
 				"variants": [
 					{
-						"url": "/seed/cover-monsoon-ledger-256w.webp",
-						"width": 256
+						"url": "/seed/cover-monsoon-ledger-51w.webp",
+						"width": 51
 					},
 					{
-						"url": "/seed/cover-monsoon-ledger-480w.webp",
-						"width": 480
+						"url": "/seed/cover-monsoon-ledger-103w.webp",
+						"width": 103
 					},
 					{
-						"url": "/seed/cover-monsoon-ledger-512w.webp",
-						"width": 512
+						"url": "/seed/cover-monsoon-ledger-144w.webp",
+						"width": 144
 					},
 					{
-						"url": "/seed/cover-monsoon-ledger-768w.webp",
-						"width": 768
+						"url": "/seed/cover-monsoon-ledger-154w.webp",
+						"width": 154
 					},
 					{
-						"url": "/seed/cover-monsoon-ledger-1080w.webp",
-						"width": 1080
+						"url": "/seed/cover-monsoon-ledger-205w.webp",
+						"width": 205
+					},
+					{
+						"url": "/seed/cover-monsoon-ledger-288w.webp",
+						"width": 288
+					},
+					{
+						"url": "/seed/cover-monsoon-ledger-308w.webp",
+						"width": 308
+					},
+					{
+						"url": "/seed/cover-monsoon-ledger-400w.webp",
+						"width": 400
+					},
+					{
+						"url": "/seed/cover-monsoon-ledger-410w.webp",
+						"width": 410
+					},
+					{
+						"url": "/seed/cover-monsoon-ledger-432w.webp",
+						"width": 432
+					},
+					{
+						"url": "/seed/cover-monsoon-ledger-576w.webp",
+						"width": 576
+					},
+					{
+						"url": "/seed/cover-monsoon-ledger-615w.webp",
+						"width": 615
+					},
+					{
+						"url": "/seed/cover-monsoon-ledger-800w.webp",
+						"width": 800
+					},
+					{
+						"url": "/seed/cover-monsoon-ledger-820w.webp",
+						"width": 820
+					},
+					{
+						"url": "/seed/cover-monsoon-ledger-864w.webp",
+						"width": 864
+					},
+					{
+						"url": "/seed/cover-monsoon-ledger-1152w.webp",
+						"width": 1152
+					},
+					{
+						"url": "/seed/cover-monsoon-ledger-1200w.webp",
+						"width": 1200
+					},
+					{
+						"url": "/seed/cover-monsoon-ledger-1600w.webp",
+						"width": 1600
 					}
 				]
 			},
@@ -344,24 +708,76 @@
 					"lqip": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wAARCAAPABQDASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwCwNLfHzK5PsKP7NlU5RWPsa6MwmQ5ChB9c09LeNeSNx9TVcxh7JM55NKnZckqvt1orpqKXMyvYxP/Z",
 					"variants": [
 						{
+							"url": "/seed/gallery-monsoon-1-64w.webp",
+							"width": 64
+						},
+						{
+							"url": "/seed/gallery-monsoon-1-128w.webp",
+							"width": 128
+						},
+						{
+							"url": "/seed/gallery-monsoon-1-180w.webp",
+							"width": 180
+						},
+						{
+							"url": "/seed/gallery-monsoon-1-192w.webp",
+							"width": 192
+						},
+						{
 							"url": "/seed/gallery-monsoon-1-256w.webp",
 							"width": 256
 						},
 						{
-							"url": "/seed/gallery-monsoon-1-480w.webp",
-							"width": 480
+							"url": "/seed/gallery-monsoon-1-360w.webp",
+							"width": 360
+						},
+						{
+							"url": "/seed/gallery-monsoon-1-384w.webp",
+							"width": 384
+						},
+						{
+							"url": "/seed/gallery-monsoon-1-400w.webp",
+							"width": 400
 						},
 						{
 							"url": "/seed/gallery-monsoon-1-512w.webp",
 							"width": 512
 						},
 						{
+							"url": "/seed/gallery-monsoon-1-540w.webp",
+							"width": 540
+						},
+						{
+							"url": "/seed/gallery-monsoon-1-720w.webp",
+							"width": 720
+						},
+						{
 							"url": "/seed/gallery-monsoon-1-768w.webp",
 							"width": 768
 						},
 						{
+							"url": "/seed/gallery-monsoon-1-800w.webp",
+							"width": 800
+						},
+						{
+							"url": "/seed/gallery-monsoon-1-1024w.webp",
+							"width": 1024
+						},
+						{
 							"url": "/seed/gallery-monsoon-1-1080w.webp",
 							"width": 1080
+						},
+						{
+							"url": "/seed/gallery-monsoon-1-1200w.webp",
+							"width": 1200
+						},
+						{
+							"url": "/seed/gallery-monsoon-1-1440w.webp",
+							"width": 1440
+						},
+						{
+							"url": "/seed/gallery-monsoon-1-1600w.webp",
+							"width": 1600
 						}
 					]
 				},
@@ -374,24 +790,76 @@
 					"lqip": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wAARCAAPABQDASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwDpjqUTDEe7PuKw54Io2Z3C7Sc7m71Fm5l5G2FfXq1OS2QNufMj/wB5zmrtY5XNy3I9sL8pbyOPVUOKK61I0CKAo6UVPMaeyP/Z",
 					"variants": [
 						{
+							"url": "/seed/gallery-monsoon-2-64w.webp",
+							"width": 64
+						},
+						{
+							"url": "/seed/gallery-monsoon-2-128w.webp",
+							"width": 128
+						},
+						{
+							"url": "/seed/gallery-monsoon-2-180w.webp",
+							"width": 180
+						},
+						{
+							"url": "/seed/gallery-monsoon-2-192w.webp",
+							"width": 192
+						},
+						{
 							"url": "/seed/gallery-monsoon-2-256w.webp",
 							"width": 256
 						},
 						{
-							"url": "/seed/gallery-monsoon-2-480w.webp",
-							"width": 480
+							"url": "/seed/gallery-monsoon-2-360w.webp",
+							"width": 360
+						},
+						{
+							"url": "/seed/gallery-monsoon-2-384w.webp",
+							"width": 384
+						},
+						{
+							"url": "/seed/gallery-monsoon-2-400w.webp",
+							"width": 400
 						},
 						{
 							"url": "/seed/gallery-monsoon-2-512w.webp",
 							"width": 512
 						},
 						{
+							"url": "/seed/gallery-monsoon-2-540w.webp",
+							"width": 540
+						},
+						{
+							"url": "/seed/gallery-monsoon-2-720w.webp",
+							"width": 720
+						},
+						{
 							"url": "/seed/gallery-monsoon-2-768w.webp",
 							"width": 768
 						},
 						{
+							"url": "/seed/gallery-monsoon-2-800w.webp",
+							"width": 800
+						},
+						{
+							"url": "/seed/gallery-monsoon-2-1024w.webp",
+							"width": 1024
+						},
+						{
 							"url": "/seed/gallery-monsoon-2-1080w.webp",
 							"width": 1080
+						},
+						{
+							"url": "/seed/gallery-monsoon-2-1200w.webp",
+							"width": 1200
+						},
+						{
+							"url": "/seed/gallery-monsoon-2-1440w.webp",
+							"width": 1440
+						},
+						{
+							"url": "/seed/gallery-monsoon-2-1600w.webp",
+							"width": 1600
 						}
 					]
 				},
@@ -404,24 +872,76 @@
 					"lqip": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wAARCAAPABQDASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwCOCCZmVlXAz948CumtJpVgCF9+OjGo10NPM3y3Ekn1FWVtmUYVcD61TdzCEHEN+fvFif8AexRTvIk9P1oqS9T/2Q==",
 					"variants": [
 						{
+							"url": "/seed/gallery-monsoon-3-64w.webp",
+							"width": 64
+						},
+						{
+							"url": "/seed/gallery-monsoon-3-128w.webp",
+							"width": 128
+						},
+						{
+							"url": "/seed/gallery-monsoon-3-180w.webp",
+							"width": 180
+						},
+						{
+							"url": "/seed/gallery-monsoon-3-192w.webp",
+							"width": 192
+						},
+						{
 							"url": "/seed/gallery-monsoon-3-256w.webp",
 							"width": 256
 						},
 						{
-							"url": "/seed/gallery-monsoon-3-480w.webp",
-							"width": 480
+							"url": "/seed/gallery-monsoon-3-360w.webp",
+							"width": 360
+						},
+						{
+							"url": "/seed/gallery-monsoon-3-384w.webp",
+							"width": 384
+						},
+						{
+							"url": "/seed/gallery-monsoon-3-400w.webp",
+							"width": 400
 						},
 						{
 							"url": "/seed/gallery-monsoon-3-512w.webp",
 							"width": 512
 						},
 						{
+							"url": "/seed/gallery-monsoon-3-540w.webp",
+							"width": 540
+						},
+						{
+							"url": "/seed/gallery-monsoon-3-720w.webp",
+							"width": 720
+						},
+						{
 							"url": "/seed/gallery-monsoon-3-768w.webp",
 							"width": 768
 						},
 						{
+							"url": "/seed/gallery-monsoon-3-800w.webp",
+							"width": 800
+						},
+						{
+							"url": "/seed/gallery-monsoon-3-1024w.webp",
+							"width": 1024
+						},
+						{
 							"url": "/seed/gallery-monsoon-3-1080w.webp",
 							"width": 1080
+						},
+						{
+							"url": "/seed/gallery-monsoon-3-1200w.webp",
+							"width": 1200
+						},
+						{
+							"url": "/seed/gallery-monsoon-3-1440w.webp",
+							"width": 1440
+						},
+						{
+							"url": "/seed/gallery-monsoon-3-1600w.webp",
+							"width": 1600
 						}
 					]
 				}
@@ -461,24 +981,76 @@
 				"lqip": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wAARCAAUABADASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwCe0VXuQGAI54NakEUaSqyIqsOhApgsmiuWcQFUBOD2qwiEHOBWNrCLsf71jv5A6DtU2B6CiitEM//Z",
 				"variants": [
 					{
-						"url": "/seed/cover-forty-mosques-one-azan-256w.webp",
-						"width": 256
+						"url": "/seed/cover-forty-mosques-one-azan-51w.webp",
+						"width": 51
 					},
 					{
-						"url": "/seed/cover-forty-mosques-one-azan-480w.webp",
-						"width": 480
+						"url": "/seed/cover-forty-mosques-one-azan-103w.webp",
+						"width": 103
 					},
 					{
-						"url": "/seed/cover-forty-mosques-one-azan-512w.webp",
-						"width": 512
+						"url": "/seed/cover-forty-mosques-one-azan-144w.webp",
+						"width": 144
 					},
 					{
-						"url": "/seed/cover-forty-mosques-one-azan-768w.webp",
-						"width": 768
+						"url": "/seed/cover-forty-mosques-one-azan-154w.webp",
+						"width": 154
 					},
 					{
-						"url": "/seed/cover-forty-mosques-one-azan-1080w.webp",
-						"width": 1080
+						"url": "/seed/cover-forty-mosques-one-azan-205w.webp",
+						"width": 205
+					},
+					{
+						"url": "/seed/cover-forty-mosques-one-azan-288w.webp",
+						"width": 288
+					},
+					{
+						"url": "/seed/cover-forty-mosques-one-azan-308w.webp",
+						"width": 308
+					},
+					{
+						"url": "/seed/cover-forty-mosques-one-azan-400w.webp",
+						"width": 400
+					},
+					{
+						"url": "/seed/cover-forty-mosques-one-azan-410w.webp",
+						"width": 410
+					},
+					{
+						"url": "/seed/cover-forty-mosques-one-azan-432w.webp",
+						"width": 432
+					},
+					{
+						"url": "/seed/cover-forty-mosques-one-azan-576w.webp",
+						"width": 576
+					},
+					{
+						"url": "/seed/cover-forty-mosques-one-azan-615w.webp",
+						"width": 615
+					},
+					{
+						"url": "/seed/cover-forty-mosques-one-azan-800w.webp",
+						"width": 800
+					},
+					{
+						"url": "/seed/cover-forty-mosques-one-azan-820w.webp",
+						"width": 820
+					},
+					{
+						"url": "/seed/cover-forty-mosques-one-azan-864w.webp",
+						"width": 864
+					},
+					{
+						"url": "/seed/cover-forty-mosques-one-azan-1152w.webp",
+						"width": 1152
+					},
+					{
+						"url": "/seed/cover-forty-mosques-one-azan-1200w.webp",
+						"width": 1200
+					},
+					{
+						"url": "/seed/cover-forty-mosques-one-azan-1600w.webp",
+						"width": 1600
 					}
 				]
 			},
@@ -544,24 +1116,76 @@
 				"lqip": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wAARCAAUABADASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwDrEnO4BuhqRpRnag3NWPc3hiiYq25h+VZTahdqfluJBn0Nc6qdDpVG+pZuf9Q1Zr9RRRWK3OmOx//Z",
 				"variants": [
 					{
-						"url": "/seed/cover-rickshaw-alphabet-256w.webp",
-						"width": 256
+						"url": "/seed/cover-rickshaw-alphabet-51w.webp",
+						"width": 51
 					},
 					{
-						"url": "/seed/cover-rickshaw-alphabet-480w.webp",
-						"width": 480
+						"url": "/seed/cover-rickshaw-alphabet-103w.webp",
+						"width": 103
 					},
 					{
-						"url": "/seed/cover-rickshaw-alphabet-512w.webp",
-						"width": 512
+						"url": "/seed/cover-rickshaw-alphabet-144w.webp",
+						"width": 144
 					},
 					{
-						"url": "/seed/cover-rickshaw-alphabet-768w.webp",
-						"width": 768
+						"url": "/seed/cover-rickshaw-alphabet-154w.webp",
+						"width": 154
 					},
 					{
-						"url": "/seed/cover-rickshaw-alphabet-1080w.webp",
-						"width": 1080
+						"url": "/seed/cover-rickshaw-alphabet-205w.webp",
+						"width": 205
+					},
+					{
+						"url": "/seed/cover-rickshaw-alphabet-288w.webp",
+						"width": 288
+					},
+					{
+						"url": "/seed/cover-rickshaw-alphabet-308w.webp",
+						"width": 308
+					},
+					{
+						"url": "/seed/cover-rickshaw-alphabet-400w.webp",
+						"width": 400
+					},
+					{
+						"url": "/seed/cover-rickshaw-alphabet-410w.webp",
+						"width": 410
+					},
+					{
+						"url": "/seed/cover-rickshaw-alphabet-432w.webp",
+						"width": 432
+					},
+					{
+						"url": "/seed/cover-rickshaw-alphabet-576w.webp",
+						"width": 576
+					},
+					{
+						"url": "/seed/cover-rickshaw-alphabet-615w.webp",
+						"width": 615
+					},
+					{
+						"url": "/seed/cover-rickshaw-alphabet-800w.webp",
+						"width": 800
+					},
+					{
+						"url": "/seed/cover-rickshaw-alphabet-820w.webp",
+						"width": 820
+					},
+					{
+						"url": "/seed/cover-rickshaw-alphabet-864w.webp",
+						"width": 864
+					},
+					{
+						"url": "/seed/cover-rickshaw-alphabet-1152w.webp",
+						"width": 1152
+					},
+					{
+						"url": "/seed/cover-rickshaw-alphabet-1200w.webp",
+						"width": 1200
+					},
+					{
+						"url": "/seed/cover-rickshaw-alphabet-1600w.webp",
+						"width": 1600
 					}
 				]
 			},
@@ -657,20 +1281,64 @@
 				"lqip": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wAARCAAUABADASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwDf1i8jSNoCxLnoifeNc68crMRMSAP4Af510g02ODITLM3V2OWJqvJozyyFvNXntXNOMmzrpzhFWNqlooroOQ//2Q==",
 				"variants": [
 					{
-						"url": "/seed/scrap-1-256w.webp",
-						"width": 256
+						"url": "/seed/scrap-1-51w.webp",
+						"width": 51
 					},
 					{
-						"url": "/seed/scrap-1-480w.webp",
-						"width": 480
+						"url": "/seed/scrap-1-103w.webp",
+						"width": 103
 					},
 					{
-						"url": "/seed/scrap-1-512w.webp",
-						"width": 512
+						"url": "/seed/scrap-1-144w.webp",
+						"width": 144
 					},
 					{
-						"url": "/seed/scrap-1-768w.webp",
-						"width": 768
+						"url": "/seed/scrap-1-154w.webp",
+						"width": 154
+					},
+					{
+						"url": "/seed/scrap-1-200w.webp",
+						"width": 200
+					},
+					{
+						"url": "/seed/scrap-1-205w.webp",
+						"width": 205
+					},
+					{
+						"url": "/seed/scrap-1-288w.webp",
+						"width": 288
+					},
+					{
+						"url": "/seed/scrap-1-308w.webp",
+						"width": 308
+					},
+					{
+						"url": "/seed/scrap-1-400w.webp",
+						"width": 400
+					},
+					{
+						"url": "/seed/scrap-1-410w.webp",
+						"width": 410
+					},
+					{
+						"url": "/seed/scrap-1-432w.webp",
+						"width": 432
+					},
+					{
+						"url": "/seed/scrap-1-576w.webp",
+						"width": 576
+					},
+					{
+						"url": "/seed/scrap-1-600w.webp",
+						"width": 600
+					},
+					{
+						"url": "/seed/scrap-1-615w.webp",
+						"width": 615
+					},
+					{
+						"url": "/seed/scrap-1-800w.webp",
+						"width": 800
 					}
 				]
 			},
@@ -686,20 +1354,64 @@
 				"lqip": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wAARCAAPABQDASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwDe1ZlW4QuwVdvJJx3rJd4pHPkQtKc9RkL+da8mixM4mkleVwOsnzVC1u4YhVGM8U0Jmb9kmbktGn+yATRWl5En939aKYj/2Q==",
 				"variants": [
 					{
+						"url": "/seed/scrap-2-64w.webp",
+						"width": 64
+					},
+					{
+						"url": "/seed/scrap-2-128w.webp",
+						"width": 128
+					},
+					{
+						"url": "/seed/scrap-2-180w.webp",
+						"width": 180
+					},
+					{
+						"url": "/seed/scrap-2-192w.webp",
+						"width": 192
+					},
+					{
+						"url": "/seed/scrap-2-200w.webp",
+						"width": 200
+					},
+					{
 						"url": "/seed/scrap-2-256w.webp",
 						"width": 256
 					},
 					{
-						"url": "/seed/scrap-2-480w.webp",
-						"width": 480
+						"url": "/seed/scrap-2-360w.webp",
+						"width": 360
+					},
+					{
+						"url": "/seed/scrap-2-384w.webp",
+						"width": 384
+					},
+					{
+						"url": "/seed/scrap-2-400w.webp",
+						"width": 400
 					},
 					{
 						"url": "/seed/scrap-2-512w.webp",
 						"width": 512
 					},
 					{
+						"url": "/seed/scrap-2-540w.webp",
+						"width": 540
+					},
+					{
+						"url": "/seed/scrap-2-600w.webp",
+						"width": 600
+					},
+					{
+						"url": "/seed/scrap-2-720w.webp",
+						"width": 720
+					},
+					{
 						"url": "/seed/scrap-2-768w.webp",
 						"width": 768
+					},
+					{
+						"url": "/seed/scrap-2-800w.webp",
+						"width": 800
 					}
 				]
 			},
@@ -715,20 +1427,64 @@
 				"lqip": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wAARCAAUABQDASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwCSMBmwakCKCCByK054orVfmCiPt61Tis7q6JMEW2PPDvxmuRxdzoTRdF7cYGZP0FFRf2LIeXO5vXdRVe+T7pbsLKGSNLiUGWVucuc4rRwPSiito7GctwoooqiT/9k=",
 				"variants": [
 					{
+						"url": "/seed/scrap-3-64w.webp",
+						"width": 64
+					},
+					{
+						"url": "/seed/scrap-3-128w.webp",
+						"width": 128
+					},
+					{
+						"url": "/seed/scrap-3-180w.webp",
+						"width": 180
+					},
+					{
+						"url": "/seed/scrap-3-192w.webp",
+						"width": 192
+					},
+					{
+						"url": "/seed/scrap-3-200w.webp",
+						"width": 200
+					},
+					{
 						"url": "/seed/scrap-3-256w.webp",
 						"width": 256
 					},
 					{
-						"url": "/seed/scrap-3-480w.webp",
-						"width": 480
+						"url": "/seed/scrap-3-360w.webp",
+						"width": 360
+					},
+					{
+						"url": "/seed/scrap-3-384w.webp",
+						"width": 384
+					},
+					{
+						"url": "/seed/scrap-3-400w.webp",
+						"width": 400
 					},
 					{
 						"url": "/seed/scrap-3-512w.webp",
 						"width": 512
 					},
 					{
+						"url": "/seed/scrap-3-540w.webp",
+						"width": 540
+					},
+					{
+						"url": "/seed/scrap-3-600w.webp",
+						"width": 600
+					},
+					{
+						"url": "/seed/scrap-3-720w.webp",
+						"width": 720
+					},
+					{
 						"url": "/seed/scrap-3-768w.webp",
 						"width": 768
+					},
+					{
+						"url": "/seed/scrap-3-800w.webp",
+						"width": 800
 					}
 				]
 			},
@@ -744,20 +1500,68 @@
 				"lqip": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wAARCAAUAA8DASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwDWm1AvIYbILI/dyfkX/GrmnadGg8+dvPnb+NuQPoK5+Cd0Ty1CgD0FaehzSC7MRYlHBOPQ+tU0YQld6mXtCyuB2Nbmgwp5bzY+fO36CiinLYVPc//Z",
 				"variants": [
 					{
-						"url": "/seed/scrap-4-256w.webp",
-						"width": 256
+						"url": "/seed/scrap-4-93w.webp",
+						"width": 93
 					},
 					{
-						"url": "/seed/scrap-4-480w.webp",
-						"width": 480
+						"url": "/seed/scrap-4-131w.webp",
+						"width": 131
 					},
 					{
-						"url": "/seed/scrap-4-512w.webp",
-						"width": 512
+						"url": "/seed/scrap-4-140w.webp",
+						"width": 140
 					},
 					{
-						"url": "/seed/scrap-4-768w.webp",
-						"width": 768
+						"url": "/seed/scrap-4-186w.webp",
+						"width": 186
+					},
+					{
+						"url": "/seed/scrap-4-200w.webp",
+						"width": 200
+					},
+					{
+						"url": "/seed/scrap-4-262w.webp",
+						"width": 262
+					},
+					{
+						"url": "/seed/scrap-4-279w.webp",
+						"width": 279
+					},
+					{
+						"url": "/seed/scrap-4-372w.webp",
+						"width": 372
+					},
+					{
+						"url": "/seed/scrap-4-393w.webp",
+						"width": 393
+					},
+					{
+						"url": "/seed/scrap-4-400w.webp",
+						"width": 400
+					},
+					{
+						"url": "/seed/scrap-4-524w.webp",
+						"width": 524
+					},
+					{
+						"url": "/seed/scrap-4-558w.webp",
+						"width": 558
+					},
+					{
+						"url": "/seed/scrap-4-600w.webp",
+						"width": 600
+					},
+					{
+						"url": "/seed/scrap-4-744w.webp",
+						"width": 744
+					},
+					{
+						"url": "/seed/scrap-4-786w.webp",
+						"width": 786
+					},
+					{
+						"url": "/seed/scrap-4-800w.webp",
+						"width": 800
 					}
 				]
 			},
@@ -773,20 +1577,64 @@
 				"lqip": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wAARCAAQABQDASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwC7PbM88jAjliazpLPyWPnzIg9uSfwrp/s5zzGSfpTl0y0kXdLaoX9T1rf2lhWI9DXOmR+Q5CZONw560Vfghjt4xHCgRB0AorBu7Gf/2Q==",
 				"variants": [
 					{
+						"url": "/seed/scrap-5-64w.webp",
+						"width": 64
+					},
+					{
+						"url": "/seed/scrap-5-128w.webp",
+						"width": 128
+					},
+					{
+						"url": "/seed/scrap-5-180w.webp",
+						"width": 180
+					},
+					{
+						"url": "/seed/scrap-5-192w.webp",
+						"width": 192
+					},
+					{
+						"url": "/seed/scrap-5-200w.webp",
+						"width": 200
+					},
+					{
 						"url": "/seed/scrap-5-256w.webp",
 						"width": 256
 					},
 					{
-						"url": "/seed/scrap-5-480w.webp",
-						"width": 480
+						"url": "/seed/scrap-5-360w.webp",
+						"width": 360
+					},
+					{
+						"url": "/seed/scrap-5-384w.webp",
+						"width": 384
+					},
+					{
+						"url": "/seed/scrap-5-400w.webp",
+						"width": 400
 					},
 					{
 						"url": "/seed/scrap-5-512w.webp",
 						"width": 512
 					},
 					{
+						"url": "/seed/scrap-5-540w.webp",
+						"width": 540
+					},
+					{
+						"url": "/seed/scrap-5-600w.webp",
+						"width": 600
+					},
+					{
+						"url": "/seed/scrap-5-720w.webp",
+						"width": 720
+					},
+					{
 						"url": "/seed/scrap-5-768w.webp",
 						"width": 768
+					},
+					{
+						"url": "/seed/scrap-5-800w.webp",
+						"width": 800
 					}
 				]
 			},
@@ -802,20 +1650,64 @@
 				"lqip": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wAARCAAUABIDASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwCytpNcDM7+Wn/PNev4mt7S4khswkagAHqO9Z2frWpYqPs4rKO4i1RSUVoMwa1rH/j3FFFRHcRZoooqxn//2Q==",
 				"variants": [
 					{
-						"url": "/seed/scrap-6-256w.webp",
-						"width": 256
+						"url": "/seed/scrap-6-57w.webp",
+						"width": 57
+					},
+					{
+						"url": "/seed/scrap-6-114w.webp",
+						"width": 114
+					},
+					{
+						"url": "/seed/scrap-6-160w.webp",
+						"width": 160
+					},
+					{
+						"url": "/seed/scrap-6-171w.webp",
+						"width": 171
+					},
+					{
+						"url": "/seed/scrap-6-200w.webp",
+						"width": 200
+					},
+					{
+						"url": "/seed/scrap-6-228w.webp",
+						"width": 228
+					},
+					{
+						"url": "/seed/scrap-6-320w.webp",
+						"width": 320
+					},
+					{
+						"url": "/seed/scrap-6-342w.webp",
+						"width": 342
+					},
+					{
+						"url": "/seed/scrap-6-400w.webp",
+						"width": 400
+					},
+					{
+						"url": "/seed/scrap-6-456w.webp",
+						"width": 456
 					},
 					{
 						"url": "/seed/scrap-6-480w.webp",
 						"width": 480
 					},
 					{
-						"url": "/seed/scrap-6-512w.webp",
-						"width": 512
+						"url": "/seed/scrap-6-600w.webp",
+						"width": 600
 					},
 					{
-						"url": "/seed/scrap-6-768w.webp",
-						"width": 768
+						"url": "/seed/scrap-6-640w.webp",
+						"width": 640
+					},
+					{
+						"url": "/seed/scrap-6-684w.webp",
+						"width": 684
+					},
+					{
+						"url": "/seed/scrap-6-800w.webp",
+						"width": 800
 					}
 				]
 			},
@@ -831,20 +1723,64 @@
 				"lqip": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wAARCAATABQDASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwDopyPOf61HyfasS8lmF3MBKwAcgAN2zVnTJS0cnmOWIbua8ycWtWdUXfQ6OOGMRr8gPHeisbe3Z2/OitlXil8JHs33My8/4/Jv+ujfzqXTfuS/79FFKrsENy7RRRXMbH//2Q==",
 				"variants": [
 					{
+						"url": "/seed/scrap-7-64w.webp",
+						"width": 64
+					},
+					{
+						"url": "/seed/scrap-7-128w.webp",
+						"width": 128
+					},
+					{
+						"url": "/seed/scrap-7-180w.webp",
+						"width": 180
+					},
+					{
+						"url": "/seed/scrap-7-192w.webp",
+						"width": 192
+					},
+					{
+						"url": "/seed/scrap-7-200w.webp",
+						"width": 200
+					},
+					{
 						"url": "/seed/scrap-7-256w.webp",
 						"width": 256
 					},
 					{
-						"url": "/seed/scrap-7-480w.webp",
-						"width": 480
+						"url": "/seed/scrap-7-360w.webp",
+						"width": 360
+					},
+					{
+						"url": "/seed/scrap-7-384w.webp",
+						"width": 384
+					},
+					{
+						"url": "/seed/scrap-7-400w.webp",
+						"width": 400
 					},
 					{
 						"url": "/seed/scrap-7-512w.webp",
 						"width": 512
 					},
 					{
+						"url": "/seed/scrap-7-540w.webp",
+						"width": 540
+					},
+					{
+						"url": "/seed/scrap-7-600w.webp",
+						"width": 600
+					},
+					{
+						"url": "/seed/scrap-7-720w.webp",
+						"width": 720
+					},
+					{
 						"url": "/seed/scrap-7-768w.webp",
 						"width": 768
+					},
+					{
+						"url": "/seed/scrap-7-800w.webp",
+						"width": 800
 					}
 				]
 			},
@@ -860,20 +1796,64 @@
 				"lqip": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wAARCAAUABADASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwDXtBE04xIJZTW4OgrjoJWgmSVTypzXYLggMAORnpQzetujjkALqD3IFdkBgADoKKKGFbof/9k=",
 				"variants": [
 					{
-						"url": "/seed/scrap-8-256w.webp",
-						"width": 256
+						"url": "/seed/scrap-8-51w.webp",
+						"width": 51
 					},
 					{
-						"url": "/seed/scrap-8-480w.webp",
-						"width": 480
+						"url": "/seed/scrap-8-103w.webp",
+						"width": 103
 					},
 					{
-						"url": "/seed/scrap-8-512w.webp",
-						"width": 512
+						"url": "/seed/scrap-8-144w.webp",
+						"width": 144
 					},
 					{
-						"url": "/seed/scrap-8-768w.webp",
-						"width": 768
+						"url": "/seed/scrap-8-154w.webp",
+						"width": 154
+					},
+					{
+						"url": "/seed/scrap-8-200w.webp",
+						"width": 200
+					},
+					{
+						"url": "/seed/scrap-8-205w.webp",
+						"width": 205
+					},
+					{
+						"url": "/seed/scrap-8-288w.webp",
+						"width": 288
+					},
+					{
+						"url": "/seed/scrap-8-308w.webp",
+						"width": 308
+					},
+					{
+						"url": "/seed/scrap-8-400w.webp",
+						"width": 400
+					},
+					{
+						"url": "/seed/scrap-8-410w.webp",
+						"width": 410
+					},
+					{
+						"url": "/seed/scrap-8-432w.webp",
+						"width": 432
+					},
+					{
+						"url": "/seed/scrap-8-576w.webp",
+						"width": 576
+					},
+					{
+						"url": "/seed/scrap-8-600w.webp",
+						"width": 600
+					},
+					{
+						"url": "/seed/scrap-8-615w.webp",
+						"width": 615
+					},
+					{
+						"url": "/seed/scrap-8-800w.webp",
+						"width": 800
 					}
 				]
 			},

@@ -36,9 +36,10 @@
 		const { width: w, height: h } = canvas;
 		const dpr = Math.min(window.devicePixelRatio || 1, 2);
 
-		const ground = tokenColor('--ground', '#FAFAF7');
-		const ink = tokenColor('--ink', '#141414');
-		const muted = tokenColor('--muted', '#6E6E68');
+		const ground = tokenColor('--ground', '#fafafa');
+		const ink = tokenColor('--ink', '#000');
+		// hierarchy is ink at an opacity step, never a hue (grammar §2.1)
+		const rest = parseFloat(tokenColor('--alpha-rest', '0.3'));
 
 		ctx.fillStyle = ground;
 		ctx.fillRect(0, 0, w, h);
@@ -55,9 +56,9 @@
 				const sx = gx * TILE - panX;
 				const sy = gy * TILE - panY;
 
-				// streets: jittered through-lines
-				ctx.strokeStyle = muted;
-				ctx.globalAlpha = 0.5;
+				// streets: jittered through-lines at the resting opacity step
+				ctx.strokeStyle = ink;
+				ctx.globalAlpha = rest;
 				ctx.lineWidth = 1;
 				const jx = hash(gx, gy, 1) * 60 - 30;
 				const jy = hash(gx, gy, 2) * 60 - 30;
@@ -170,19 +171,18 @@
 		aria-label="City memory map — drag or use the arrow keys to drift through the remembered city"
 		onkeydown={onKeydown}
 	></canvas>
-	<p class="hint type-meta" aria-hidden="true">Drag to drift</p>
-	<button class="fullscreen text-button type-meta" onclick={enterFullscreen}>
-		Enter fullscreen
+	<p class="hint type-base" aria-hidden="true">Drag to drift</p>
+	<button class="fullscreen button button--pill type-button" onclick={enterFullscreen}>
+		<span class="nudge">Enter fullscreen</span>
 	</button>
 </div>
 
 <style>
+	/* hard-cropped, border-less media surface (grammar §1 DNA 9) */
 	.stage {
 		position: relative;
 		height: 70dvh;
 		background: var(--ground);
-		border-top: 1px solid var(--line);
-		border-bottom: 1px solid var(--line);
 	}
 
 	.stage:fullscreen {
@@ -203,21 +203,34 @@
 
 	.hint {
 		position: absolute;
-		left: var(--gutter);
-		bottom: var(--space-4);
+		left: var(--axis-x);
+		bottom: var(--legal-bottom);
 		margin: 0;
-		color: var(--muted);
+		opacity: var(--alpha-rest);
 		pointer-events: none;
 	}
 
+	/* bottom-right pill, same anatomy as the deck switcher */
 	.fullscreen {
+		--pill-pad-x: 16px;
 		position: absolute;
-		right: var(--gutter);
-		bottom: var(--space-4);
+		right: var(--frame);
+		bottom: var(--frame);
+		display: inline-flex;
+		align-items: center;
+		min-height: 44px;
+		padding: 0 var(--pill-pad-x);
+		border: 0;
+		background: none;
 		color: var(--ink);
+		font: inherit;
+		letter-spacing: inherit;
+		text-transform: inherit;
+		cursor: pointer;
 	}
 
-	.fullscreen:hover {
-		text-decoration: underline;
+	.fullscreen .nudge {
+		display: inline-block;
+		transform: translateY(1.5px);
 	}
 </style>

@@ -1,17 +1,17 @@
 <script lang="ts">
 	import '../app.css';
 	import favicon from '$lib/assets/favicon.svg';
-	import { onNavigate } from '$app/navigation';
+	import { afterNavigate, onNavigate } from '$app/navigation';
 	import { page } from '$app/state';
 	import Nav from '$lib/components/Nav.svelte';
-	import FatFooter from '$lib/components/FatFooter.svelte';
 	import ContactOverlay from '$lib/components/ContactOverlay.svelte';
 	import CursorLabel from '$lib/components/CursorLabel.svelte';
+	import Preloader from '$lib/components/Preloader.svelte';
 
 	let { children, data } = $props();
 
-	// The Deck owns the whole viewport; every other route flows below the nav
-	// and ends in the fat footer.
+	// The Deck owns the whole viewport; every other route scrolls its own
+	// sheet and mounts the closing band at the end of its own content.
 	const isDeck = $derived(page.url.pathname === '/');
 
 	/* Container transform (golden rule 3): the View Transitions API morphs
@@ -34,6 +34,20 @@
 			});
 		});
 	});
+
+	/* Ground flash on client-side arrivals at home (grammar §6.3, gap W3-04):
+	   rises over the deck, holds while the rail rebuilds, then reveals the
+	   sweep. First loads are covered by the preloader instead. */
+	let flashOn = $state(false);
+	let flashOff: ReturnType<typeof setTimeout> | undefined;
+
+	afterNavigate((navigation) => {
+		if (!navigation.from || navigation.to?.url.pathname !== '/') return;
+		if (matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+		clearTimeout(flashOff);
+		flashOn = true;
+		flashOff = setTimeout(() => (flashOn = false), 1500); // fade-out starts 1.5s in (§6.3)
+	});
 </script>
 
 <svelte:head>
@@ -42,10 +56,10 @@
 
 <a class="skip type-base" href="#main">Skip to content</a>
 <Nav />
-<!-- persistent shell layers (grammar §2.5/§5.0): solid ground, then the
-     corner-fade gradient floating over it; route sheets stack above both -->
+<!-- persistent shell layers (grammar §2.5/§5.0), all at z-ground and
+     DOM-ordered: solid ground < deck (main) < corner-fade < flash; route
+     sheets (z-sheet) stack above the lot -->
 <div class="ground" aria-hidden="true"></div>
-<div class="corner-fade" aria-hidden="true"></div>
 {#if supportsViewTransitions}
 	<main id="main" class:deck={isDeck}>
 		{@render children()}
@@ -58,15 +72,23 @@
 		</main>
 	{/key}
 {/if}
-{#if !isDeck}
-	<FatFooter {...data.contact} />
-{/if}
+<div class="corner-fade" aria-hidden="true"></div>
+<div class="flash" class:on={flashOn} aria-hidden="true"></div>
 <ContactOverlay {...data.contact} />
 <CursorLabel />
+<Preloader />
 
 <style>
 	/* routes own their vertical rhythm now — each applies .route-sheet
 	   (fixed sheet, internal scroll, drop-top padding) on its own wrapper */
+
+	/* the deck route's main joins the z-ground layer so it paints above the
+	   ground sheet (earlier sibling) and below the corner-fade (later one);
+	   without this the fixed z-1 layers would cover the unpositioned main */
+	main.deck {
+		position: relative;
+		z-index: var(--z-ground);
+	}
 
 	.ground {
 		position: fixed;
@@ -100,8 +122,26 @@
 		}
 	}
 
+	/* home white flash: in over the beat after a short hold, out over the
+	   beat once the deck has rebuilt (grammar §6.3) */
+	.flash {
+		--flash-in-delay: 250ms; /* grammar §6.3 — not a global token */
+		position: fixed;
+		inset: 0;
+		z-index: var(--z-ground);
+		background: var(--ground);
+		opacity: 0;
+		pointer-events: none;
+		transition: opacity var(--dur-beat) var(--ease-quad-inout);
+	}
+
+	.flash.on {
+		opacity: 1;
+		transition-delay: var(--flash-in-delay);
+	}
+
 	.route-fade {
-		animation: route-fade var(--dur-fast) linear;
+		animation: route-fade var(--dur-micro) linear;
 	}
 
 	@keyframes route-fade {
@@ -112,12 +152,12 @@
 
 	.skip {
 		position: fixed;
-		top: var(--space-2);
-		left: var(--space-2);
+		top: var(--frame);
+		left: var(--frame);
 		z-index: var(--z-cursor);
 		background: var(--ground);
 		color: var(--ink);
-		padding: var(--space-3);
+		padding: var(--axis-x);
 		transform: translateY(-200%);
 	}
 

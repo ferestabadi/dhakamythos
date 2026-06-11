@@ -17,13 +17,15 @@ are **gates, not goals** — a feature that misses them doesn't merge.
 
 ## Images (Sanity CDN does the work)
 
-- Always through `@sanity/image-url` with `auto('format')` (AVIF/WebP),
-  `quality 75`, hotspot crops.
-- `srcset` widths: Cards `[480, 768, 1080]` · Case hero `[768, 1080, 1440, 1920]`
-  · Wall thumbs `256` fixed · OG `1200×675`. Cap effective DPR at 2.
+- Always through `@sanity/image-url` with hotspot crops; every image ships as
+  a webp `<source>` + fallback `<img>` pair (`pictureProps`).
+- `srcset` is a DPR ladder per role (grammar §7.2): fixed logical box —
+  thumb 256 q75 · card/body 720 q80 · hero 2048 q90 · lightbox 2048 q75 —
+  at DPR steps `[.25,.5,.75,1,1.5,2,3,4]`, sub-50px and beyond-intrinsic
+  candidates dropped, `src` = the dpr-1 width. OG stays `1200×675`.
 - Explicit `width`/`height` (or aspect-ratio) on every `<img>` — CLS rule.
 - LQIP: render `asset.metadata.lqip` as the background, fade in the real
-  image (`--dur-fast`).
+  image (`--dur-label`).
 - `loading="lazy"` everywhere except the first two Deck cards and the Case
   hero (those get `fetchpriority="high"`).
 

@@ -1,4 +1,5 @@
 <script lang="ts">
+	import ClosingBand from '$lib/components/ClosingBand.svelte';
 	import { reveal } from '$lib/reveal';
 
 	let { data } = $props();
@@ -9,6 +10,9 @@
 		month: 'long',
 		year: 'numeric'
 	});
+
+	/* mirrors --stagger-rows (50ms) — reveal() takes plain ms */
+	const STEP = 50;
 </script>
 
 <svelte:head>
@@ -16,95 +20,98 @@
 	<meta name="description" content="Calls for collaboration — submit your work." />
 </svelte:head>
 
-<div class="page">
-	<h1 class="type-display">Open calls</h1>
+<div class="sheet route-sheet">
+	<div class="axis-x">
+		<h1 class="visually-hidden">Open calls</h1>
 
-	{#if calls.length}
-		<ul class="calls">
-			{#each calls as call (call.slug)}
-				<li use:reveal>
-					<a class="row" href="/open-calls/{call.slug}">
-						<span class="pill type-meta" class:closed={call.status === 'closed'}>
-							{call.status === 'open' ? 'Open' : 'Closed'}
-						</span>
-						<span class="title type-title">{call.title}</span>
-						<span class="summary type-body">{call.summary}</span>
-						{#if call.status === 'open' && call.deadline}
-							<span class="deadline type-meta">
-								Open until {deadlineFormat.format(new Date(call.deadline))}
+		{#if calls.length}
+			<ul class="calls">
+				{#each calls as call, i (call.slug)}
+					<li use:reveal={{ delay: i * STEP }}>
+						<a class="row" href="/open-calls/{call.slug}">
+							<span class="pill button button--pill" class:active={call.status === 'open'}>
+								<span class="pill-label type-button">
+									{call.status === 'open' ? 'Open' : 'Closed'}
+								</span>
 							</span>
-						{/if}
-					</a>
-				</li>
-			{/each}
-		</ul>
-	{:else}
-		<p class="empty type-meta">No calls open right now</p>
-	{/if}
+							<span class="title type-list">{call.title}</span>
+							<span class="summary prose-case type-base">{call.summary}</span>
+							{#if call.status === 'open' && call.deadline}
+								<span class="deadline type-base">
+									Open until {deadlineFormat.format(new Date(call.deadline))}
+								</span>
+							{/if}
+						</a>
+					</li>
+				{/each}
+			</ul>
+		{:else}
+			<p class="empty type-base">No calls open right now</p>
+		{/if}
+	</div>
+
+	<ClosingBand />
 </div>
 
 <style>
-	.page {
-		padding: 0 var(--gutter) var(--space-9);
-	}
-
-	h1 {
-		margin: 0;
+	.sheet {
+		--stack-gap: 1.25rem; /* 20px rhythm inside a call row */
+		--call-gap: 2.5rem; /* 40px between calls — rhythm separates, not dividers */
+		--measure: 27rem; /* 432px text column */
+		--pill-pad-x: 1rem; /* 16px pill label inset (grammar §2.3) */
+		--pill-pad-y: 0.875rem; /* 14px pill label inset */
+		padding-bottom: 12.5vh;
+		padding-bottom: 12.5svh;
 	}
 
 	.calls {
 		list-style: none;
-		margin: var(--space-7) 0 0;
+		margin: 0;
 		padding: 0;
-		border-top: 1px solid var(--line);
+		max-width: var(--measure);
 	}
 
-	.calls li {
-		border-bottom: 1px solid var(--line);
+	.calls li + li {
+		margin-top: var(--call-gap);
 	}
 
 	.row {
 		display: flex;
 		flex-direction: column;
 		align-items: flex-start;
-		gap: var(--space-2);
-		padding: var(--space-5) 0;
-		color: var(--ink);
+		gap: calc(var(--stack-gap) / 2);
+		color: inherit;
 		text-decoration: none;
 	}
 
 	.pill {
-		padding: var(--space-1) var(--space-2);
-		border-radius: var(--radius);
-		background: var(--ink);
-		color: var(--ground);
+		display: inline-flex;
+		align-items: center;
+		padding: var(--pill-pad-y) var(--pill-pad-x);
 	}
 
-	.pill.closed {
-		padding: var(--space-1) 0;
-		background: none;
-		color: var(--muted);
+	.pill-label {
+		transform: translateY(1.5px); /* optical pill centering (grammar §2.3) */
 	}
 
+	/* the title speaks the label language: rest .3, whole-row hover lifts it */
 	.title {
-		transition: transform var(--dur-fast) var(--ease-out);
+		opacity: var(--alpha-rest);
+		transition: opacity var(--dur-label) var(--ease-out-cubic);
 	}
 
-	.row:hover .title {
-		transform: translateX(8px);
-	}
-
-	.summary {
-		max-width: 68ch;
-		color: var(--muted);
+	@media (hover: hover) {
+		.row:hover .title,
+		.row:hover .pill span {
+			opacity: var(--alpha-active);
+		}
 	}
 
 	.deadline {
-		color: var(--muted);
+		opacity: var(--alpha-rest);
 	}
 
 	.empty {
-		color: var(--muted);
-		margin-top: var(--space-5);
+		opacity: var(--alpha-rest);
 	}
 </style>

@@ -1,24 +1,46 @@
 <script lang="ts">
 	import { page } from '$app/state';
+	import ClosingBand from '$lib/components/ClosingBand.svelte';
+	import { reveal } from '$lib/reveal';
 </script>
 
 <svelte:head>
 	<title>{page.status === 404 ? 'Not found' : 'Error'} — DHAKAMYTHOS</title>
 </svelte:head>
 
-<div class="page">
-	<h1 class="type-display">{page.status === 404 ? 'Lost in the myth' : 'Something broke'}</h1>
-	<a class="back text-button type-meta" href="/">Back to the deck</a>
+<!-- error grammar mirrors /404: our copy at the meta scale, single fade -->
+<div class="sheet route-sheet" use:reveal>
+	<div class="axis-x">
+		<h1 class="type-base">{page.status === 404 ? 'Lost in the myth' : 'Something broke'}</h1>
+		<a class="back type-base" href="/">Back to the deck</a>
+	</div>
+
+	<ClosingBand />
 </div>
 
 <style>
-	.page {
-		padding: 0 var(--gutter) var(--space-9);
+	.sheet {
+		--stack-gap: 1.25rem; /* 20px to the back link */
+	}
+
+	h1 {
+		margin: 0;
 	}
 
 	.back {
-		margin-top: var(--space-6);
-		color: var(--ink);
-		text-decoration: underline;
+		display: inline-flex;
+		align-items: center;
+		min-height: 44px;
+		margin-top: var(--stack-gap);
+		color: inherit;
+		text-decoration: none;
+		opacity: var(--alpha-rest);
+		transition: opacity var(--dur-label) var(--ease-out-cubic);
+	}
+
+	@media (hover: hover) {
+		.back:hover {
+			opacity: var(--alpha-active);
+		}
 	}
 </style>

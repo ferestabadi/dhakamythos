@@ -4,6 +4,22 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<meta name="theme-color" content="#fafafa" />
+		<!-- first-paint gate for the home intro: flags <html> so the preloader
+		     sheet exists before hydration (grammar §6.1; Preloader.svelte owns
+		     both the CSS and the class removal). No JS → no class → the
+		     prerendered page renders normally. -->
+		<script>
+			(function () {
+				try {
+					if (
+						location.pathname === '/' &&
+						!sessionStorage.getItem('dm-intro') &&
+						!matchMedia('(prefers-reduced-motion: reduce)').matches
+					)
+						document.documentElement.classList.add('intro-pending');
+				} catch (e) {}
+			})();
+		</script>
 		<!-- fetchpriority low keeps the font off the LCP image's bandwidth;
 		     the metric-matched fallback renders text instantly either way -->
 		<link

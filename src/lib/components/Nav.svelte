@@ -1,169 +1,192 @@
 <script lang="ts">
 	import { page } from '$app/state';
-	import { contactOverlay } from '$lib/contact-overlay.svelte';
+	import { appState } from '$lib/app-state.svelte';
 
 	const links = [
-		{ href: '/index', label: 'Index' },
+		{ href: '/index', label: 'Work' },
 		{ href: '/archive', label: 'Archive' },
 		{ href: '/collective', label: 'Collective' },
 		{ href: '/open-calls', label: 'Open calls' }
 	];
 
-	/* Mobile: wordmark + Contact persistent, the rest behind a full-screen
-	   menu (native <dialog> — focus trap, Esc, focus restore for free). */
-	let menu: HTMLDialogElement | undefined = $state();
+	const path = $derived(page.url.pathname.replace(/\/$/, ''));
 
-	function openContact() {
-		menu?.close();
-		contactOverlay.open();
-	}
+	/* The brand cell carries the current section word ≥768px (grammar §5.0).
+	   Root-level dynamic routes are case pages, so unmatched paths read Work. */
+	const sectionWord = $derived(
+		path === ''
+			? ''
+			: (links.find((l) => path === l.href || path.startsWith(l.href + '/'))?.label ??
+				(path.startsWith('/legal') ? 'Legal' : 'Work'))
+	);
+
+	/* Prerendered markup ships visible so the nav survives no-JS; after
+	   hydration the header obeys the intro and contact choreography
+	   (gaps W3-10, W3-05): in only once appState.ready, out while the
+	   contact overlay is open. */
+	let hydrated = $state(false);
+	$effect(() => {
+		hydrated = true;
+	});
+	const shown = $derived(!hydrated || (appState.ready && !appState.contactOpen));
 </script>
 
-<header class="nav">
-	<a href="/" class="wordmark text-button type-meta">Dhakamythos</a>
-
-	<nav class="row" aria-label="Primary">
-		{#each links as { href, label } (href)}
-			<a
-				class="text-button type-meta"
-				{href}
-				aria-current={page.url.pathname.replace(/\/$/, '') === href ? 'page' : undefined}
-				>{label}</a
-			>
-		{/each}
-	</nav>
-
-	<div class="cluster">
-		<button class="text-button type-meta" onclick={contactOverlay.open}>Contact</button>
-		<button
-			class="menu-trigger text-button type-meta"
-			onclick={() => menu?.showModal()}
-			aria-haspopup="dialog"
-		>
-			Menu
-		</button>
-	</div>
-</header>
-
-<dialog bind:this={menu} class="menu" aria-label="Menu">
-	<button class="close text-button type-meta" onclick={() => menu?.close()}>Close</button>
-	<nav aria-label="Menu">
+<header class="nav type-button" class:shown class:inverse={appState.theme === 'inverse'}>
+	<nav aria-label="Primary">
 		<ul>
-			{#each links as { href, label }, i (href)}
-				<li style="--i: {i}">
-					<a class="text-button type-display" {href} onclick={() => menu?.close()}>{label}</a>
+			<li class="brand">
+				<a
+					class="button cell"
+					href="/"
+					class:active={path === ''}
+					aria-current={path === '' ? 'page' : undefined}
+				>
+					<span>Dhakamythos<small class="mark">®</small></span>
+					{#if sectionWord}<span class="section">{sectionWord}</span>{/if}
+				</a>
+			</li>
+			{#each links as { href, label } (href)}
+				<li>
+					<a
+						class="button cell"
+						{href}
+						class:active={path === href}
+						aria-current={path === href ? 'page' : undefined}
+					>
+						<span>{label}</span>
+					</a>
 				</li>
 			{/each}
-			<li style="--i: {links.length}">
-				<button class="text-button type-display" onclick={openContact}>Contact</button>
+			<li>
+				<button class="button cell" onclick={() => (appState.contactOpen = true)}>
+					<span>Contact</span>
+				</button>
 			</li>
 		</ul>
 	</nav>
-</dialog>
+</header>
 
 <style>
-	/* Floats above the page; absolute so it never sticks over the deck
-	   during card scroll (docs/DESIGN.md nav rule). */
 	.nav {
-		position: absolute;
+		/* cell anatomy (grammar §5.0) — measures absent from the global set */
+		--cell-h: 58px;
+		--cell-pad: 40px 10px 7px;
+		--brand-w: 200px;
+		--nav-cap: 36.25rem; /* 580px */
+		position: fixed;
 		top: 0;
 		left: 0;
-		right: 0;
-		z-index: var(--z-nav);
-		display: flex;
-		align-items: center;
-		justify-content: space-between;
-		gap: var(--space-5);
-		padding: var(--space-3) var(--gutter);
-		color: var(--ink);
-	}
-
-	.wordmark {
-		font-weight: 700;
-	}
-
-	.row {
-		display: none;
-		gap: var(--space-5);
-	}
-
-	/* color shifts instantly — only transform and opacity ever animate */
-	.row a {
-		color: var(--muted);
-	}
-
-	.row a:hover,
-	.row a[aria-current='page'] {
-		color: var(--ink);
-	}
-
-	.cluster {
-		display: flex;
-		gap: var(--space-5);
-	}
-
-	@media (min-width: 1024px) {
-		.row {
-			display: flex;
-		}
-
-		.menu-trigger {
-			display: none;
-		}
-	}
-
-	/* full-screen menu */
-	.menu {
-		position: fixed;
-		inset: 0;
 		width: 100%;
-		height: 100%;
-		max-width: none;
-		max-height: none;
-		margin: 0;
-		border: 0;
-		padding: var(--space-10) var(--gutter) var(--gutter);
-		background: var(--ground);
+		z-index: var(--z-header);
+		padding: var(--frame);
+		pointer-events: none;
 		color: var(--ink);
+		user-select: none;
+		-webkit-user-select: none;
+		backface-visibility: hidden;
+		opacity: 0;
+		/* show/hide rides the beat; the color tween is the spec's ONE
+		   permitted color transition — the theme flip over dark media
+		   (grammar §2.1) */
+		transition:
+			opacity var(--dur-beat) var(--ease-quad-inout),
+			color var(--dur-label) var(--ease-quad-inout);
 	}
 
-	.menu::backdrop {
-		background: transparent;
+	.nav.shown {
+		opacity: 1;
 	}
 
-	.close {
-		position: absolute;
-		top: var(--space-3);
-		right: var(--gutter);
+	.nav.inverse {
+		color: var(--ink-inverse);
 	}
 
-	.menu ul {
-		list-style: none;
+	/* a hidden header must not catch clicks above the contact overlay */
+	.nav:not(.shown) :is(a, button) {
+		pointer-events: none;
+	}
+
+	nav {
+		width: 100%;
+	}
+
+	@media (min-width: 640px) {
+		nav {
+			max-width: var(--nav-cap);
+		}
+	}
+
+	/* base: equal-width cells filling the row minus the frame, wrapping to a
+	   second row of three (six destinations — our IA) */
+	ul {
 		margin: 0;
 		padding: 0;
+		list-style: none;
 		display: grid;
-		gap: var(--space-4);
+		grid-template-columns: repeat(3, minmax(0, 1fr));
+		gap: var(--gap-cell);
 	}
 
-	/* staggered reveal: transform + opacity only, one delay step per row */
-	.menu li {
-		opacity: 0;
-		transform: translateY(24px);
-		transition:
-			opacity var(--dur-base) var(--ease-out),
-			transform var(--dur-base) var(--ease-out);
-		transition-delay: calc(var(--i) * var(--stagger));
+	@media (min-width: 640px) {
+		ul {
+			display: flex;
+			flex-wrap: wrap;
+		}
+
+		li {
+			flex: 1 1 auto;
+			min-width: 0;
+		}
+
+		.brand {
+			flex: 1 1 25%;
+		}
 	}
 
-	.menu[open] li {
-		opacity: 1;
-		transform: none;
+	@media (min-width: 768px) {
+		.brand {
+			flex: 0 0 var(--brand-w);
+		}
 	}
 
-	@starting-style {
-		.menu[open] li {
-			opacity: 0;
-			transform: translateY(24px);
+	/* label sits bottom-left of each frosted cell */
+	.cell {
+		display: flex;
+		align-items: flex-end;
+		justify-content: flex-start;
+		width: 100%;
+		height: var(--cell-h);
+		padding: var(--cell-pad);
+		border: 0;
+		background: none;
+		color: inherit;
+		font: inherit;
+		letter-spacing: inherit;
+		text-transform: inherit;
+		text-align: left;
+		text-decoration: none;
+		cursor: pointer;
+		pointer-events: all;
+		white-space: nowrap;
+	}
+
+	.brand .cell {
+		justify-content: space-between;
+	}
+
+	/* ® at preflight 80%, optically lifted (grammar §2.2) */
+	.mark {
+		position: relative;
+		top: -0.5px;
+	}
+
+	.section {
+		display: none;
+	}
+
+	@media (min-width: 768px) {
+		.section {
+			display: inline;
 		}
 	}
 </style>

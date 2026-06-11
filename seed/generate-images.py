@@ -99,24 +99,44 @@ SPECS = [
     ('scrap-8.jpg', 800, 1000, 'magenta', 108),
 ]
 
-# widths mirror the CDN srcset ladders in src/lib/sanity/image.ts; fixture
-# mode serves these so srcset behavior (and perf) matches live mode
-VARIANT_WIDTHS = [256, 480, 512, 768, 1080]
+# Variant widths mirror the CDN's DPR-ladder output (src/lib/sanity/image.ts,
+# grammar §7.2): per role box (grid 256 / card 720 / hero+lightbox 2048),
+# width = fit-max base × dpr step, dropping sub-50px and beyond-intrinsic
+# candidates — so fixture srcsets match live descriptor math exactly.
+BOXES = (256, 720, 2048)
+DPR_STEPS = (0.25, 0.5, 0.75, 1, 1.5, 2, 3, 4)
+MIN_CANDIDATE = 50
+
+
+def jround(x):
+    return int(x + 0.5)  # JS Math.round — Python round() is banker's
+
+
+def ladder_widths(w, h):
+    widths = set()
+    for box in BOXES:
+        base = jround(w * min(box / w, box / h, 1.0))
+        for d in DPR_STEPS:
+            cand = jround(base * d)
+            if cand == base or MIN_CANDIDATE <= cand <= w:
+                widths.add(cand)
+    return sorted(widths)
+
 
 OUT.mkdir(parents=True, exist_ok=True)
 STATIC.mkdir(parents=True, exist_ok=True)
+for stale in STATIC.glob('*-*w.webp'):  # ladder changes orphan old variants
+    stale.unlink()
 manifest = {}
 for name, w, h, pal, seed in SPECS:
     img = compose(w, h, PALETTES[pal], seed)
     img.save(OUT / name, 'JPEG', quality=80, optimize=True)
     img.save(STATIC / name, 'JPEG', quality=80, optimize=True)
-    # variants ship as WebP to mirror the CDN's auto(format) delivery
+    # variants ship as WebP to mirror the CDN's webp <source> delivery
     variants = []
     stem = name.rsplit('.', 1)[0]
-    for vw in VARIANT_WIDTHS:
-        if vw >= w:
-            continue
-        vimg = img.resize((vw, round(h * vw / w)), Image.LANCZOS)
+    for vw in ladder_widths(w, h):
+        vimg = img if vw == w else img.resize((vw, jround(h * vw / w)), Image.LANCZOS)
         vname = f'{stem}-{vw}w.webp'
         vimg.save(STATIC / vname, 'WEBP', quality=72, method=6)
         variants.append({'file': vname, 'width': vw})

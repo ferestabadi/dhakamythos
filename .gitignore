@@ -26,3 +26,4 @@ reports/
 # Sanity studio build artifacts
 studio/dist/
 studio/.sanity/
+.claude/
