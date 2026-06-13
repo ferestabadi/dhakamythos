@@ -28,13 +28,28 @@
 	const SWEEP_STEPS = 20;
 	/* the rail line's rise: px up per px of rightward offset from center —
 	   the source's high camera (y 13.33 looking at origin) projects the rail
-	   as a diagonal from bottom-left to top-right (operator call, 2026-06-11) */
-	const RISE = 0.45;
+	   as a diagonal from bottom-left to top-right (operator call, 2026-06-11).
+	   Read from the --deck-rise token in measure() so portrait can steepen the
+	   diagonal to run the fan corner to corner on tall screens. */
+	let RISE = 0.45;
 
 	let step = 1; // card stride in px (one li), remeasured lazily
 	let railW = 0;
 	let tiles: HTMLLIElement[] = [];
 	let tileCenters: number[] = [];
+	/* last z-index written per tile. The stacking order only flips when a tile
+	   crosses a half-stride boundary, so caching it lets the frame loop skip
+	   the z-index write on the ~95% of frames where the order is unchanged —
+	   each write forces a paint-order re-evaluation the compositor can't fold
+	   into the transform, the DOM rail's chief jank source. */
+	let tileZ: number[] = [];
+	/* the render window: which tiles are close enough to show. Tiles fully off
+	   the viewport get neither a transform write nor a compositor layer (see
+	   decorate's cull) — the rAF would otherwise pin a layer off-screen for the
+	   whole ~38-tile strip. cardHalfMax (widest card's half-width) is the cull
+	   margin, so a card stays live until it has fully left the frame. */
+	let tileLive: boolean[] = [];
+	let cardHalfMax = 0;
 	/* every li is exactly one stride wide, so the strip's cycle is
 	   step × tile count — exact, where scrollWidth would fold in padding
 	   and card overflow */
@@ -43,12 +58,22 @@
 	function measure() {
 		if (!rail) return;
 		tiles = Array.from(rail.querySelectorAll('li'));
-		// center of the card itself — it overflows its stride-wide li
-		tileCenters = tiles.map(
-			(t) => t.offsetLeft + ((t.firstElementChild as HTMLElement)?.offsetWidth || t.offsetWidth) / 2
-		);
+		// center of the card itself (it overflows its stride-wide li) and the
+		// widest card half-width — the cull margin used by decorate()
+		cardHalfMax = 0;
+		tileCenters = tiles.map((t) => {
+			const w = (t.firstElementChild as HTMLElement)?.offsetWidth || t.offsetWidth;
+			if (w / 2 > cardHalfMax) cardHalfMax = w / 2;
+			return t.offsetLeft + w / 2;
+		});
 		railW = rail.clientWidth;
 		step = tiles.length > 1 ? tiles[1].offsetLeft - tiles[0].offsetLeft : railW;
+		// the diagonal slope is a token (portrait steepens it) — read once per
+		// layout change, never in the frame loop
+		const rise = parseFloat(getComputedStyle(rail).getPropertyValue('--deck-rise'));
+		if (!Number.isNaN(rise)) RISE = rise;
+		tileZ = []; // geometry changed — every z-index re-writes next pass
+		tileLive = []; // re-evaluate the cull window against the new geometry
 		lastPos = NaN; // force a transform pass with the new geometry
 	}
 
@@ -73,12 +98,19 @@
 	   the rail falls back to plain native overflow scroll. */
 	const LERP = 0.15;
 	const DRAG_LERP = 0.1;
+	/* ceiling on how far pos may move in one frame, as a fraction of the stride.
+	   The lerp still eases the tail; only the fast head of a hard flick or
+	   wheel-spin is clamped, so a single notch stays snappy while the top scroll
+	   speed is bounded. Scaled by the stride so the cap is the same
+	   cards-per-second on mobile and desktop (operator call, 2026-06-13). */
+	const MAX_STRIDES_PER_FRAME = 0.18;
 	/* gains, tuned to the dense stride (~1/4 of a full card width): a wheel
-	   notch still moves about a third of a card, and touch runs at twice the
-	   mouse rate — §6.2's touch divisor is half the mouse one */
-	const WHEEL_GAIN = 0.3; // px of rail per px of wheel delta
-	const DRAG_GAIN = 0.5; // px of rail per px of mouse-drag
-	const TOUCH_GAIN = 1;
+	   notch moves about half a card — a calm average pace, well under the
+	   velocity cap — and touch runs at twice the mouse rate (§6.2's touch
+	   divisor is half the mouse one) */
+	const WHEEL_GAIN = 0.4; // px of rail per px of wheel delta
+	const DRAG_GAIN = 0.4; // px of rail per px of mouse-drag
+	const TOUCH_GAIN = 0.8;
 	let pos = 0; // virtual scroll position along the strip, px
 	let target = 0;
 	let virtual = $state(false); // flips once JS takes the rail over
@@ -99,8 +131,15 @@
 		// ease toward the hand or the wheel; snap the sub-pixel tail closed
 		const d = target - pos;
 		if (reduceMotion) pos = target;
-		else if (Math.abs(d) >= 0.5) pos += d * (dragScaled ? DRAG_LERP : LERP);
-		else pos = target;
+		else if (Math.abs(d) >= 0.5) {
+			let v = d * (dragScaled ? DRAG_LERP : LERP);
+			// bound the top speed: clamp the per-frame step to the cap (small
+			// inputs never reach it, so single notches stay snappy)
+			const maxV = step * MAX_STRIDES_PER_FRAME;
+			if (v > maxV) v = maxV;
+			else if (v < -maxV) v = -maxV;
+			pos += v;
+		} else pos = target;
 		const cycle = looping ? span() : 0;
 		// keep the numbers small — the rail is cyclic, so this is invisible
 		if (cycle > 0) {
@@ -146,14 +185,36 @@
 				nearestDist = Math.abs(off);
 				nearest = i;
 			}
+			const s = tiles[i].style;
+			/* cull tiles that have fully left the viewport — card half-width plus
+			   a stride of margin, so a tile is positioned and layer-promoted just
+			   before it shows. Culled tiles get neither a transform write nor a
+			   compositor layer (the rAF would otherwise pin one off-screen for the
+			   whole strip): the DOM stand-in for the source's |z| >= 12.5 cull
+			   (grammar §6.2). will-change rides the same window — it is only worth
+			   its layer on the handful of tiles actually animating; the per-frame
+			   transform already promotes those, so this just steadies it. */
+			const live = Math.abs(off) <= mid + cardHalfMax + step;
+			if (tileLive[i] !== live) {
+				s.visibility = live ? '' : 'hidden';
+				s.willChange = live ? 'transform' : '';
+				tileLive[i] = live;
+			}
+			if (!live) continue;
 			/* depth from the half-frame-clamped offset: past the frame edge a
 			   tile is off-screen, and an unclamped translateZ would run toward
 			   the perspective distance and blow the projection up */
 			const zoff = Math.max(-mid, Math.min(mid, off));
-			tiles[i].style.transform =
+			s.transform =
 				`translate3d(${(c - tileCenters[i]).toFixed(2)}px, ${(-off * RISE).toFixed(2)}px, 0) perspective(var(--deck-perspective)) rotateY(var(--deck-rot)) translateZ(${(-zoff * depthPerPx).toFixed(1)}px)`;
-			// nearer (left) tiles paint over receded ones where they overlap
-			tiles[i].style.zIndex = String(200 - Math.round(off / step));
+			// nearer (left) tiles paint over receded ones where they overlap;
+			// write z-index only when the rounded order actually changes (see
+			// tileZ) so a steady glide doesn't repaint the stack every frame
+			const z = 200 - Math.round(off / step);
+			if (tileZ[i] !== z) {
+				s.zIndex = String(z);
+				tileZ[i] = z;
+			}
 		}
 		/* touch stand-in for hover: flip the auto-offset class only when the
 		   centered tile changes (Card.svelte styles it) */
@@ -463,10 +524,15 @@
 		   the measured camera projects them (fov 5 at z 35); neighbors
 		   overlap ~3/4 of a tile width — world stride 0.375 against a tile
 		   ~1.31 wide ⇒ each li is one stride, 23% of the tile height (≈29%
-		   of a 4:5 tile's width), and the cards overflow it. Portrait keeps
-		   the camera's retreat to z 55 (smaller apparent tiles). */
-		--tile-h: clamp(200px, 28svh, 320px);
+		   of a 4:5 tile's width), and the cards overflow it. Portrait overrides
+		   the source's z-55 retreat — see --deck-rise below. */
+		--tile-h: clamp(260px, 42svh, 420px);
 		--deck-stride: calc(var(--tile-h) * 0.23);
+		/* portrait steepens the rail's diagonal so the card fan runs corner to
+		   corner on a tall screen, and enlarges the tiles for mobile presence
+		   (operator call, 2026-06-13 — overrides the source's portrait camera
+		   retreat). Landscape resets both to the measured shallow rake below. */
+		--deck-rise: 1.1;
 		display: flex;
 		align-items: center;
 		margin: 0;
@@ -484,6 +550,7 @@
 	@media (orientation: landscape) {
 		.rail {
 			--tile-h: clamp(260px, 44svh, 520px);
+			--deck-rise: 0.45;
 		}
 	}
 
@@ -510,6 +577,11 @@
 		   the telephoto flattening (§6.2) — where a shared vanishing point
 		   would skew edge tiles wide-angle. */
 		transform: perspective(var(--deck-perspective)) rotateY(var(--deck-rot));
+		/* the card is a slab, not a sheet (Card.svelte's .slab/.edge): its
+		   extruded side must render in this tile's 3D space, so the tile keeps
+		   its children in 3D rather than flattening them into its plane. The
+		   tile's own perspective() above foreshortens that depth. */
+		transform-style: preserve-3d;
 	}
 
 	.switcher {

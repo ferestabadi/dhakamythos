@@ -72,6 +72,16 @@
 	--deck-perspective: 1600px;
 	--deck-rot: -30deg;
 	--deck-scale-drag: 0.825;
+	/* each card is a thin slab, not a sheet: the visible right edge is
+	   extruded this deep, shaded top-lit to read as physical thickness in
+	   the telephoto fan (the cards all sit at one apparent angle, so one
+	   fixed edge reads true on every tile). */
+	--deck-thickness: 12px;
+	--deck-edge: linear-gradient(
+		180deg,
+		color-mix(in srgb, var(--ink) 9%, var(--ground)) 0%,
+		color-mix(in srgb, var(--ink) 20%, var(--ground)) 100%
+	);
 }
 
 /* Tailwind reads the tokens — utilities like bg-ground, text-ink,

@@ -79,23 +79,25 @@
 	style:aspect-ratio="{work.cover.width} / {work.cover.height}"
 	draggable="false"
 >
-	<span class="cover" style:view-transition-name={vtName}>
-		<LqipImage img={work.cover} role="card" {eager} {priority} fill />
-		{#if loopAllowed && work.coverLoop}
-			<video
-				class="loop"
-				src={work.coverLoop.url}
-				poster={imgProps(work.cover, 'card').src}
-				width={work.cover.width}
-				height={work.cover.height}
-				muted
-				playsinline
-				loop
-				preload="none"
-				aria-hidden="true"
-				use:loopWhenVisible
-			></video>
-		{/if}
+	<span class="slab">
+		<span class="cover" style:view-transition-name={vtName}>
+			<LqipImage img={work.cover} role="card" {eager} {priority} fill />
+			{#if loopAllowed && work.coverLoop}
+				<video
+					class="loop"
+					src={work.coverLoop.url}
+					poster={imgProps(work.cover, 'card').src}
+					width={work.cover.width}
+					height={work.cover.height}
+					muted
+					playsinline
+					loop
+					preload="none"
+					aria-hidden="true"
+					use:loopWhenVisible
+				></video>
+			{/if}
+		</span>
 	</span>
 </a>
 
@@ -109,6 +111,34 @@
 		height: var(--tile-h, clamp(220px, 33svh, 360px));
 		color: var(--ink);
 		-webkit-tap-highlight-color: transparent;
+		/* the slab and its edge live in 3D, foreshortened by the tile's
+		   perspective (Deck.svelte sets the matching preserve-3d on the li) */
+		transform-style: preserve-3d;
+	}
+
+	/* the physical card: front face (.cover) plus the extruded right edge,
+	   moved as one unit so the hover/centre lift carries the thickness with
+	   it (a lift on the cover alone would slide the image off its edge) */
+	.slab {
+		position: absolute;
+		inset: 0;
+		transform-style: preserve-3d;
+		transition: transform var(--dur-label) var(--ease-out-expo);
+	}
+
+	/* the slab's right side — the edge that turns toward the camera at the
+	   rail's −30° yaw. Hinged at the front face's right edge and folded a
+	   token's depth back, so the card reads as a thin solid panel (§6.2). */
+	.slab::after {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 100%;
+		width: var(--deck-thickness);
+		height: 100%;
+		background: var(--deck-edge);
+		transform-origin: left center;
+		transform: rotateY(-90deg);
 	}
 
 	.cover {
@@ -117,7 +147,6 @@
 		overflow: hidden;
 		/* missing cover → ink block; the aria-label stays the name */
 		background: var(--ink);
-		transition: transform var(--dur-label) var(--ease-out-expo);
 	}
 
 	.loop {
@@ -132,7 +161,7 @@
 	   tile pulls (2/3, −0.1) world units out of the dense fan — ~0.4 of the
 	   tile height sideways, scaled with the rail geometry */
 	@media (hover: hover) and (pointer: fine) {
-		.card:hover .cover {
+		.card:hover .slab {
 			transform: translate(
 				calc(var(--tile-h, 300px) * 0.4),
 				calc(var(--tile-h, 300px) * -0.06)
@@ -141,18 +170,18 @@
 	}
 
 	/* touch: brief press scale, no hover dependency */
-	.card:active .cover {
+	.card:active .slab {
 		transform: scale(0.98);
 	}
 
 	/* touch stand-in for hover: the centered tile (class set by the Deck's
 	   rAF) offsets forward ±0.325 world, every other tile the inverse (§6.2) */
 	@media (hover: none) {
-		.cover {
+		.slab {
 			transform: translate(calc(var(--tile-h, 300px) * -0.2), 0);
 		}
 
-		:global(li.is-center) .cover {
+		:global(li.is-center) .slab {
 			transform: translate(
 				calc(var(--tile-h, 300px) * 0.2),
 				calc(var(--tile-h, 300px) * -0.06)
